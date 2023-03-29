@@ -1,1 +1,291 @@
-[{"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/App.tsx":"1","/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/components/Footer.tsx":"2","/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/components/header/Header.tsx":"3","/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/hooks.ts":"4","/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/index.tsx":"5","/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/react-app-env.d.ts":"6","/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/setupTests.ts":"7","/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/store/actionCreators.ts":"8","/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/store/goodSlice.ts":"9","/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/store/reducers.ts":"10","/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/types/IProduct.ts":"11"},{"size":632,"mtime":1680103801166,"results":"12","hashOfConfig":"13"},{"size":17,"mtime":1680090874335,"results":"14","hashOfConfig":"13"},{"size":1182,"mtime":1680095288354,"results":"15","hashOfConfig":"13"},{"size":311,"mtime":1680008508398,"results":"16","hashOfConfig":"13"},{"size":366,"mtime":1680089262165,"results":"17","hashOfConfig":"13"},{"size":40,"mtime":1679992524706,"results":"18","hashOfConfig":"13"},{"size":241,"mtime":1679992514546,"results":"19","hashOfConfig":"13"},{"size":452,"mtime":1680087229016,"results":"20","hashOfConfig":"13"},{"size":896,"mtime":1680087220439,"results":"21","hashOfConfig":"13"},{"size":394,"mtime":1680019854579,"results":"22","hashOfConfig":"13"},{"size":204,"mtime":1680022272339,"results":"23","hashOfConfig":"13"},{"filePath":"24","messages":"25","suppressedMessages":"26","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},"z5bxio",{"filePath":"27","messages":"28","suppressedMessages":"29","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},{"filePath":"30","messages":"31","suppressedMessages":"32","errorCount":0,"fatalErrorCount":0,"warningCount":1,"fixableErrorCount":0,"fixableWarningCount":0,"source":"33"},{"filePath":"34","messages":"35","suppressedMessages":"36","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},{"filePath":"37","messages":"38","suppressedMessages":"39","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},{"filePath":"40","messages":"41","suppressedMessages":"42","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},{"filePath":"43","messages":"44","suppressedMessages":"45","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},{"filePath":"46","messages":"47","suppressedMessages":"48","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},{"filePath":"49","messages":"50","suppressedMessages":"51","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},{"filePath":"52","messages":"53","suppressedMessages":"54","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},{"filePath":"55","messages":"56","suppressedMessages":"57","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/App.tsx",[],["58"],"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/components/Footer.tsx",[],[],"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/components/header/Header.tsx",["59"],[],"import React, { FC } from \"react\";\nimport styles from './headerStyle.module.scss';\nimport iconAddress from './assets/icon-address.svg';\nimport iconImail from './assets/icon-email.svg';\n\nconst Header: FC = () => {\n\treturn (\n\t\t<header className=\"header\">\n\t\t\t<div className=\"container\">\n\t\t\t\t<div className=\"info\">\n\t\t\t\t\t<div className=\"address\">\n\t\t\t\t\t\t<img className=\"address_icon\" src={iconAddress} alt=\"Icon\" />\n\t\t\t\t\t\t<p className=\"address_info\">г. Кокчетав, ул. Ж. Ташенова 129Б</p>\n\t\t\t\t\t\t<p className=\"address_details\">(Рынок Восточный)</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div className=\"email\">\n\t\t\t\t\t\t<img className=\"email_icon\" src={iconImail} alt=\"Icon\" />\n\t\t\t\t\t\t<p className=\"email_info\">opt.sultan@mail.ru</p>\n\t\t\t\t\t\t<p className=\"email_details\">На связи в любое время</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div className=\"navBar\">\n\t\t\t\t\t<span className=\"navBar_item\">О компании</span>\n\t\t\t\t\t<span className=\"navBar_item\">Доставка и оплата</span>\n\t\t\t\t\t<span className=\"navBar_item\">Возврат</span>\n\t\t\t\t\t<span className=\"navBar_item\">Контакты</span>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</header>\n\t)\n}\n\nexport default Header;","/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/hooks.ts",[],[],"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/index.tsx",[],[],"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/react-app-env.d.ts",[],[],"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/setupTests.ts",[],[],"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/store/actionCreators.ts",[],[],"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/store/goodSlice.ts",[],[],"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/store/reducers.ts",[],[],"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/types/IProduct.ts",[],[],{"ruleId":"60","severity":2,"message":"61","line":14,"column":5,"nodeType":"62","messageId":"63","endLine":14,"endColumn":27,"suggestions":"64","suppressions":"65"},{"ruleId":"66","severity":1,"message":"67","line":2,"column":8,"nodeType":"68","messageId":"69","endLine":2,"endColumn":14},"@typescript-eslint/no-floating-promises","Promises must be awaited, end with a call to .catch, end with a call to .then with a rejection handler or be explicitly marked as ignored with the `void` operator.","ExpressionStatement","floatingVoid",["70"],["71"],"@typescript-eslint/no-unused-vars","'styles' is defined but never used.","Identifier","unusedVar",{"messageId":"72","fix":"73","desc":"74"},{"kind":"75","justification":"76"},"floatingFixVoid",{"range":"77","text":"78"},"Add void operator to ignore.","directive","",[503,503],"void "]
+[
+	{
+		"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/App.tsx": "1",
+		"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/components/Footer.tsx": "2",
+		"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/components/header/Header.tsx": "3",
+		"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/hooks.ts": "4",
+		"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/index.tsx": "5",
+		"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/react-app-env.d.ts": "6",
+		"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/setupTests.ts": "7",
+		"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/store/actionCreators.ts": "8",
+		"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/store/goodSlice.ts": "9",
+		"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/store/reducers.ts": "10",
+		"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/types/IProduct.ts": "11"
+	},
+	{
+		"size": 632,
+		"mtime": 1680103801166,
+		"results": "12",
+		"hashOfConfig": "13"
+	},
+	{
+		"size": 17,
+		"mtime": 1680090874335,
+		"results": "14",
+		"hashOfConfig": "13"
+	},
+	{
+		"size": 1182,
+		"mtime": 1680095288354,
+		"results": "15",
+		"hashOfConfig": "13"
+	},
+	{
+		"size": 311,
+		"mtime": 1680008508398,
+		"results": "16",
+		"hashOfConfig": "13"
+	},
+	{
+		"size": 366,
+		"mtime": 1680089262165,
+		"results": "17",
+		"hashOfConfig": "13"
+	},
+	{
+		"size": 40,
+		"mtime": 1679992524706,
+		"results": "18",
+		"hashOfConfig": "13"
+	},
+	{
+		"size": 241,
+		"mtime": 1679992514546,
+		"results": "19",
+		"hashOfConfig": "13"
+	},
+	{
+		"size": 452,
+		"mtime": 1680087229016,
+		"results": "20",
+		"hashOfConfig": "13"
+	},
+	{
+		"size": 896,
+		"mtime": 1680087220439,
+		"results": "21",
+		"hashOfConfig": "13"
+	},
+	{
+		"size": 394,
+		"mtime": 1680019854579,
+		"results": "22",
+		"hashOfConfig": "13"
+	},
+	{
+		"size": 204,
+		"mtime": 1680022272339,
+		"results": "23",
+		"hashOfConfig": "13"
+	},
+	{
+		"filePath": "24",
+		"messages": "25",
+		"suppressedMessages": "26",
+		"errorCount": 0,
+		"fatalErrorCount": 0,
+		"warningCount": 0,
+		"fixableErrorCount": 0,
+		"fixableWarningCount": 0
+	},
+	"z5bxio",
+	{
+		"filePath": "27",
+		"messages": "28",
+		"suppressedMessages": "29",
+		"errorCount": 0,
+		"fatalErrorCount": 0,
+		"warningCount": 0,
+		"fixableErrorCount": 0,
+		"fixableWarningCount": 0
+	},
+	{
+		"filePath": "30",
+		"messages": "31",
+		"suppressedMessages": "32",
+		"errorCount": 0,
+		"fatalErrorCount": 0,
+		"warningCount": 1,
+		"fixableErrorCount": 0,
+		"fixableWarningCount": 0,
+		"source": "33"
+	},
+	{
+		"filePath": "34",
+		"messages": "35",
+		"suppressedMessages": "36",
+		"errorCount": 0,
+		"fatalErrorCount": 0,
+		"warningCount": 0,
+		"fixableErrorCount": 0,
+		"fixableWarningCount": 0
+	},
+	{
+		"filePath": "37",
+		"messages": "38",
+		"suppressedMessages": "39",
+		"errorCount": 0,
+		"fatalErrorCount": 0,
+		"warningCount": 0,
+		"fixableErrorCount": 0,
+		"fixableWarningCount": 0
+	},
+	{
+		"filePath": "40",
+		"messages": "41",
+		"suppressedMessages": "42",
+		"errorCount": 0,
+		"fatalErrorCount": 0,
+		"warningCount": 0,
+		"fixableErrorCount": 0,
+		"fixableWarningCount": 0
+	},
+	{
+		"filePath": "43",
+		"messages": "44",
+		"suppressedMessages": "45",
+		"errorCount": 0,
+		"fatalErrorCount": 0,
+		"warningCount": 0,
+		"fixableErrorCount": 0,
+		"fixableWarningCount": 0
+	},
+	{
+		"filePath": "46",
+		"messages": "47",
+		"suppressedMessages": "48",
+		"errorCount": 0,
+		"fatalErrorCount": 0,
+		"warningCount": 0,
+		"fixableErrorCount": 0,
+		"fixableWarningCount": 0
+	},
+	{
+		"filePath": "49",
+		"messages": "50",
+		"suppressedMessages": "51",
+		"errorCount": 0,
+		"fatalErrorCount": 0,
+		"warningCount": 0,
+		"fixableErrorCount": 0,
+		"fixableWarningCount": 0
+	},
+	{
+		"filePath": "52",
+		"messages": "53",
+		"suppressedMessages": "54",
+		"errorCount": 0,
+		"fatalErrorCount": 0,
+		"warningCount": 0,
+		"fixableErrorCount": 0,
+		"fixableWarningCount": 0
+	},
+	{
+		"filePath": "55",
+		"messages": "56",
+		"suppressedMessages": "57",
+		"errorCount": 0,
+		"fatalErrorCount": 0,
+		"warningCount": 0,
+		"fixableErrorCount": 0,
+		"fixableWarningCount": 0
+	},
+	"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/App.tsx",
+	[],
+	[
+		"58"
+	],
+	"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/components/Footer.tsx",
+	[],
+	[],
+	"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/components/header/Header.tsx",
+	[
+		"59"
+	],
+	[],
+	"import React, { FC } from \"react\";\nimport styles from './headerStyle.module.scss';\nimport iconAddress from './assets/icon-address.svg';\nimport iconImail from './assets/icon-email.svg';\n\nconst Header: FC = () => {\n\treturn (\n\t\t<header className=\"header\">\n\t\t\t<div className=\"container\">\n\t\t\t\t<div className=\"info\">\n\t\t\t\t\t<div className=\"address\">\n\t\t\t\t\t\t<img className=\"address_icon\" src={iconAddress} alt=\"Icon\" />\n\t\t\t\t\t\t<p className=\"address_info\">г. Кокчетав, ул. Ж. Ташенова 129Б</p>\n\t\t\t\t\t\t<p className=\"address_details\">(Рынок Восточный)</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div className=\"email\">\n\t\t\t\t\t\t<img className=\"email_icon\" src={iconImail} alt=\"Icon\" />\n\t\t\t\t\t\t<p className=\"email_info\">opt.sultan@mail.ru</p>\n\t\t\t\t\t\t<p className=\"email_details\">На связи в любое время</p>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div className=\"navBar\">\n\t\t\t\t\t<span className=\"navBar_item\">О компании</span>\n\t\t\t\t\t<span className=\"navBar_item\">Доставка и оплата</span>\n\t\t\t\t\t<span className=\"navBar_item\">Возврат</span>\n\t\t\t\t\t<span className=\"navBar_item\">Контакты</span>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</header>\n\t)\n}\n\nexport default Header;",
+	"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/hooks.ts",
+	[],
+	[],
+	"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/index.tsx",
+	[],
+	[],
+	"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/react-app-env.d.ts",
+	[],
+	[],
+	"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/setupTests.ts",
+	[],
+	[],
+	"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/store/actionCreators.ts",
+	[],
+	[],
+	"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/store/goodSlice.ts",
+	[],
+	[],
+	"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/store/reducers.ts",
+	[],
+	[],
+	"/Users/tatianats/Projects/F-F_Zebras_IT_Start/sultan-online-store/src/types/IProduct.ts",
+	[],
+	[],
+	{
+		"ruleId": "60",
+		"severity": 2,
+		"message": "61",
+		"line": 14,
+		"column": 5,
+		"nodeType": "62",
+		"messageId": "63",
+		"endLine": 14,
+		"endColumn": 27,
+		"suggestions": "64",
+		"suppressions": "65"
+	},
+	{
+		"ruleId": "66",
+		"severity": 1,
+		"message": "67",
+		"line": 2,
+		"column": 8,
+		"nodeType": "68",
+		"messageId": "69",
+		"endLine": 2,
+		"endColumn": 14
+	},
+	"@typescript-eslint/no-floating-promises",
+	"Promises must be awaited, end with a call to .catch, end with a call to .then with a rejection handler or be explicitly marked as ignored with the `void` operator.",
+	"ExpressionStatement",
+	"floatingVoid",
+	[
+		"70"
+	],
+	[
+		"71"
+	],
+	"@typescript-eslint/no-unused-vars",
+	"'styles' is defined but never used.",
+	"Identifier",
+	"unusedVar",
+	{
+		"messageId": "72",
+		"fix": "73",
+		"desc": "74"
+	},
+	{
+		"kind": "75",
+		"justification": "76"
+	},
+	"floatingFixVoid",
+	{
+		"range": "77",
+		"text": "78"
+	},
+	"Add void operator to ignore.",
+	"directive",
+	"",
+	[
+		503,
+		503
+	],
+	"void "
+]
