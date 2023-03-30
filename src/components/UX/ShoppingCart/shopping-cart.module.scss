@@ -1,0 +1,45 @@
+.container {
+	display: flex;
+	justify-content: space-between;
+
+	margin-right: 3px;
+	.cart {
+		position: relative;
+
+		margin-right: 56px;
+		img {
+			margin-top: 6px;
+		}
+		.count {
+			position: absolute;
+			bottom: 16px;
+			left: 30px;
+
+			text-align: center;
+			line-height: 17px;
+			padding: 3px 0 0;
+			width: 26px;
+			height: 26px;
+			background-color: rgba(255, 200, 94, 1);
+			border: 2px solid #fff;
+			border-radius: 50%;
+
+			color: #fff;
+			font-weight: 700;
+		}
+	}
+	.amount_container {
+		margin-left: -28px;
+
+		.title {
+			font-weight: 300;
+			font-size: 12px;
+			line-height: 150%;
+			color: rgba(63, 78, 101, 1);
+		}
+		.amount {
+			font-weight: 600;
+			line-height: 150%;
+		}
+	}
+}
