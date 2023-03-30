@@ -3,8 +3,11 @@ import { useAppDispatch, useAppSelector } from '../../hooks';
 import { fetchGoods } from '../../store/actionCreators';
 import Header from '../Header/Header';
 import resetStyles from './reset-styles.module.scss';
+import style from './app.module.scss';
+import Footer from '../Footer/Footer';
 
 const App: FC = () => {
+
   const dispatch = useAppDispatch()
   const { goods } = useAppSelector(state => state.goodReducer)
   console.log(goods);
@@ -14,10 +17,12 @@ const App: FC = () => {
     dispatch(fetchGoods())
   }, [])
 
+
   return (
-    <div style={resetStyles}>
+    <div style={resetStyles} className={style.app}>
       <Header />
-    </div>
+      <Footer />
+    </div >
   )
 }
 
