@@ -15,3 +15,19 @@ export const fetchGoods = createAsyncThunk(
 		}
 	}
 );
+
+// export const fetchFilteredGoodsByPrice = createAsyncThunk(
+// 	'goods/fetchFilteredGoodsByPrice',
+// 	async (params: string[], { rejectWithValue }) => {
+// 		// const currentParams = new URLSearchParams();
+
+
+// 		try {
+// 			const response = await axios.get<IProduct[]>('http://localhost:5000/goods');
+// 			console.log(response.data);
+// 			//title=json-server&author=typicode'
+// 		} catch (e) {
+// 			return rejectWithValue('Не удалось загрузить товары!')
+// 		}
+// 	}
+// )
