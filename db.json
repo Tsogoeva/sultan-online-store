@@ -1,220 +1,331 @@
 {
   "goods": [
     {
-      "id": 1,
-      "imgUrl": "./assets.image1.png",
+      "id": "1",
+      "imgUrl": "/static/media/image1.ed6dca372948f0c22f85.png",
       "title": "Средство для мытья посуды AOS Crystal",
+      "type": [
+        "Для мытья посуды"
+      ],
+      "subtype": [
+        "Гель"
+      ],
       "typeSize": "мл",
       "size": "450",
       "barcode": "4604049097548",
       "manufacturer": "Нэфис",
       "brand": "AOS",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi quia, natus ratione soluta sunt quaerat accusamus dolores ut sapiente aut incidunt a ea nostrum, iste, molestias dolore? Sequi, ad alias.",
-      "price": 200
+      "price": "200"
     },
     {
-      "id": 2,
-      "imgUrl": "./assets.image1.png",
+      "id": "2",
+      "imgUrl": "/static/media/image1.ed6dca372948f0c22f85.png",
       "title": "Средство для мытья посуды AOS Освежающая мята",
+      "type": [
+        "Для мытья посуды"
+      ],
+      "subtype": [
+        "Гель"
+      ],
       "typeSize": "мл",
       "size": "450",
       "barcode": "4694049687358",
       "manufacturer": "Нэфис",
       "brand": "AOS",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. A quasi beatae officiis consectetur? Fugiat magnam repellendus aspernatur quis nesciunt veniam similique consequuntur fuga sunt. Earum laudantium aspernatur fugiat exercitationem dicta.",
-      "price": 210
+      "price": "210"
     },
     {
-      "id": 3,
-      "imgUrl": "./assets.image6.png",
+      "id": "3",
+      "imgUrl": "/static/media/image6.8ebf1497447f5fb2fc5c.png",
       "title": "Средство для мытья посуды AOS Глицерин Лаванда",
+      "type": [
+        "Для мытья посуды"
+      ],
+      "subtype": [
+        "Гель"
+      ],
       "typeSize": "мл",
       "size": "650",
       "barcode": "4304749094548",
       "manufacturer": "Нэфис",
       "brand": "AOS",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, fuga magnam? Dolor sed dignissimos numquam omnis nisi saepe, porro exercitationem ab aut perferendis! Qui consequatur similique voluptate rem cupiditate ipsum.",
-      "price": 350
+      "price": "350"
     },
     {
-      "id": 4,
-      "imgUrl": "./assets.image6.png",
+      "id": "4",
+      "imgUrl": "/static/media/image6.8ebf1497447f5fb2fc5c.png",
       "title": "Средство для мытья посуды AOS Экстракт Черники",
+      "type": [
+        "Для мытья посуды"
+      ],
+      "subtype": [
+        "Гель"
+      ],
       "typeSize": "мл",
       "size": "650",
       "barcode": "4300649093948",
       "manufacturer": "Нэфис",
       "brand": "AOS",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, accusantium vel obcaecati velit, reiciendis eaque dolorum quis, dolorem culpa eveniet quos delectus tenetur quidem ipsam blanditiis quisquam necessitatibus nobis sequi!",
-      "price": 340
+      "price": "340"
     },
     {
-      "id": 5,
-      "imgUrl": "./assets.image1.png",
+      "id": "5",
+      "imgUrl": "/static/media/image1.ed6dca372948f0c22f85.png",
       "title": "Средство для мытья посуды AOS Морозная свежесть",
+      "type": [
+        "Для мытья посуды"
+      ],
+      "subtype": [
+        "Гель"
+      ],
       "typeSize": "мл",
       "size": "450",
       "barcode": "4694044667408",
       "manufacturer": "Нэфис",
       "brand": "AOS",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. A quasi beatae officiis consectetur? Fugiat magnam repellendus aspernatur quis nesciunt veniam similique consequuntur fuga sunt. Earum laudantium aspernatur fugiat exercitationem dicta.",
-      "price": 220
+      "price": "220"
     },
     {
-      "id": 6,
-      "imgUrl": "./assets.image6.png",
+      "id": "6",
+      "imgUrl": "/static/media/image6.8ebf1497447f5fb2fc5c.png",
       "title": "Средство для мытья посуды AOS Сила Единорога",
+      "type": [
+        "Для мытья посуды"
+      ],
+      "subtype": [
+        "Гель"
+      ],
       "typeSize": "мл",
       "size": "650",
       "barcode": "4378989343948",
       "manufacturer": "Нэфис",
       "brand": "AOS",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, accusantium vel obcaecati velit, reiciendis eaque dolorum quis, dolorem culpa eveniet quos delectus tenetur quidem ipsam blanditiis quisquam necessitatibus nobis sequi!",
-      "price": 400
+      "price": "400"
     },
     {
-      "id": 7,
-      "imgUrl": "./assets.image2.png",
+      "id": "7",
+      "imgUrl": "/static/media/image2.01ad6b54c0755d4e0dbe.png",
       "title": "ARIEL Автомат Гель СМС жидкое в растворимых капсулах Liquid Capsules Горный родник",
+      "type": [
+        "Стирка"
+      ],
+      "subtype": [
+        "Гель"
+      ],
       "typeSize": "г",
       "size": "615X28.8",
       "barcode": "4376759684548",
-      "manufacturer": "Нэфис",
+      "manufacturer": "Данон",
       "brand": "ARIEL",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos eum recusandae exercitationem quo eius totam nisi qui omnis ea iusto fuga accusamus tempora, debitis, est, maxime nobis neque ducimus quasi!",
-      "price": 300
+      "price": "300"
     },
     {
-      "id": 8,
-      "imgUrl": "./assets.image2.png",
+      "id": "8",
+      "imgUrl": "/static/media/image2.01ad6b54c0755d4e0dbe.png",
       "title": "ARIEL Автомат Гель СМС жидкое в растворимых капсулах Liquid Capsules Сила Альпийских Гор",
+      "type": [
+        "Стирка"
+      ],
+      "subtype": [
+        "Гель"
+      ],
       "typeSize": "г",
       "size": "615X28.8",
       "barcode": "4366659654708",
-      "manufacturer": "Нэфис",
+      "manufacturer": "Данон",
       "brand": "ARIEL",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos eum recusandae exercitationem quo eius totam nisi qui omnis ea iusto fuga accusamus tempora, debitis, est, maxime nobis neque ducimus quasi!",
-      "price": 310
+      "price": "310"
     },
     {
-      "id": 9,
-      "imgUrl": "./assets.image3.png",
+      "id": "9",
+      "imgUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ozon.ru%2Fcategory%2Fstiralnye-poroshki-bimax-100-pyaten%2F&psig=AOvVaw2VZdS6o7Z4HKVxyqAHiodd&ust=1680524568891000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOj61IKYi_4CFQAAAAAdAAAAABAE",
       "title": "BIMAX Порошок стиральный Автомат 100 пятен COMPACT",
+      "type": [
+        "Стирка"
+      ],
+      "subtype": [
+        "Порошок"
+      ],
       "typeSize": "г",
       "size": "1500",
       "barcode": "4089659564608",
-      "manufacturer": "Нэфис",
+      "manufacturer": "Кока-Кола",
       "brand": "BIMAX",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. In quasi voluptatum eum corrupti quia, consequatur sit illo? Enim cupiditate laudantium eos, laboriosam reprehenderit deserunt quas in incidunt, unde a consectetur.",
-      "price": 450
+      "price": "450"
     },
     {
-      "id": 10,
-      "imgUrl": "./assets.image3.png",
+      "id": "10",
+      "imgUrl": "/static/media/image3.64dd8f7232999d624d76.png",
       "title": "BIMAX Порошок стиральный Автомат 1 пятно COMPACT Extra",
+      "type": [
+        "Стирка"
+      ],
+      "subtype": [
+        "Порошок"
+      ],
       "typeSize": "г",
       "size": "1500",
       "barcode": "4034659674608",
-      "manufacturer": "Нэфис",
+      "manufacturer": "Кока-Кола",
       "brand": "BIMAX",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. In quasi voluptatum eum corrupti quia, consequatur sit illo? Enim cupiditate laudantium eos, laboriosam reprehenderit deserunt quas in incidunt, unde a consectetur.",
-      "price": 650
+      "price": "650"
     },
     {
-      "id": 11,
-      "imgUrl": "./assets.image3.png",
+      "id": "11",
+      "imgUrl": "/static/media/image3.64dd8f7232999d624d76.png",
       "title": "BIMAX Порошок стиральный Автомат Все пятна мира COMPACT Super",
+      "type": [
+        "Стирка"
+      ],
+      "subtype": [
+        "Порошок"
+      ],
       "typeSize": "г",
       "size": "1500",
       "barcode": "4039075676708",
-      "manufacturer": "Нэфис",
+      "manufacturer": "Кока-Кола",
       "brand": "BIMAX",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. In quasi voluptatum eum corrupti quia, consequatur sit illo? Enim cupiditate laudantium eos, laboriosam reprehenderit deserunt quas in incidunt, unde a consectetur.",
-      "price": 950
+      "price": "950"
     },
     {
-      "id": 12,
-      "imgUrl": "./assets.image4.png",
+      "id": "12",
+      "imgUrl": "/static/media/image4.f800430f5262834f2d13.png",
       "title": "BioMio BIO-SOAP Экологичное туалетное мыло. Литсея и бергамот",
+      "type": [
+        "Для мытья посуды",
+        "Стирка"
+      ],
+      "subtype": [
+        "Мыло твердое"
+      ],
       "typeSize": "г",
       "size": "100",
       "barcode": "4455675786708",
-      "manufacturer": "Нэфис",
+      "manufacturer": "BioMio",
       "brand": "BioMio",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque voluptatum quam eveniet, nihil voluptate quo, cupiditate voluptas quisquam dicta delectus ipsam amet minus accusamus quae nemo, modi vitae unde repudiandae.",
-      "price": 100
+      "price": "100"
     },
     {
-      "id": 13,
-      "imgUrl": "./assets.image4.png",
+      "id": "13",
+      "imgUrl": "/static/media/image4.f800430f5262834f2d13.png",
       "title": "BioMio BIO-SOAP Экологичное туалетное мыло. Фиалка",
+      "type": [
+        "Для мытья посуды",
+        "Стирка"
+      ],
+      "subtype": [
+        "Мыло твердое"
+      ],
       "typeSize": "г",
       "size": "100",
       "barcode": "4498672286668",
-      "manufacturer": "Нэфис",
+      "manufacturer": "BioMio",
       "brand": "BioMio",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque voluptatum quam eveniet, nihil voluptate quo, cupiditate voluptas quisquam dicta delectus ipsam amet minus accusamus quae nemo, modi vitae unde repudiandae.",
-      "price": 101
+      "price": "101"
     },
     {
-      "id": 14,
-      "imgUrl": "./assets.image4.png",
+      "id": "14",
+      "imgUrl": "/static/media/image4.f800430f5262834f2d13.png",
       "title": "BioMio BIO-SOAP Экологичное туалетное мыло. Роза",
+      "type": [
+        "Для мытья посуды",
+        "Стирка"
+      ],
+      "subtype": [
+        "Мыло твердое"
+      ],
       "typeSize": "г",
       "size": "100",
       "barcode": "4488676600968",
-      "manufacturer": "Нэфис",
+      "manufacturer": "BioMio",
       "brand": "BioMio",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque voluptatum quam eveniet, nihil voluptate quo, cupiditate voluptas quisquam dicta delectus ipsam amet minus accusamus quae nemo, modi vitae unde repudiandae.",
-      "price": 103
+      "price": "103"
     },
     {
-      "id": 15,
-      "imgUrl": "./assets.image5.png",
+      "id": "15",
+      "imgUrl": "/static/media/image5.65caa7eb1c54779e75f8.png",
       "title": "AOS Средство для мытья посуды Апельсин + Мята",
+      "type": [
+        "Для мытья посуды"
+      ],
+      "subtype": [
+        "Гель"
+      ],
       "typeSize": "мл",
       "size": "450",
       "barcode": "4490667700968",
       "manufacturer": "Нэфис",
       "brand": "AOS",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit et veritatis enim eligendi nesciunt neque sit provident iusto libero consequuntur? Sapiente laborum molestias repellat maxime non laudantium ut aspernatur praesentium.",
-      "price": 198
+      "price": "198"
     },
     {
-      "id": 16,
-      "imgUrl": "./assets.image5.png",
+      "id": "16",
+      "imgUrl": "/static/media/image5.65caa7eb1c54779e75f8.png",
       "title": "AOS Средство для мытья посуды Клубника + Банан",
+      "type": [
+        "Для мытья посуды"
+      ],
+      "subtype": [
+        "Гель"
+      ],
       "typeSize": "мл",
       "size": "450",
       "barcode": "4198267866968",
       "manufacturer": "Нэфис",
       "brand": "AOS",
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus doloremque, eum blanditiis nam molestiae temporibus provident tenetur a? Molestias dolor quibusdam illo quae repellat blanditiis optio voluptate, asperiores nostrum nemo.",
-      "price": 204
+      "price": "204"
     },
     {
-      "id": 17,
-      "imgUrl": "./assets.image5.png",
+      "id": "17",
+      "imgUrl": "/static/media/image5.65caa7eb1c54779e75f8.png",
       "title": "AOS Средство для мытья посуды Крыжовник + Сирень",
+      "type": [
+        "Для мытья посуды"
+      ],
+      "subtype": [
+        "Гель"
+      ],
       "typeSize": "мл",
       "size": "450",
       "barcode": "4111267877966",
       "manufacturer": "Нэфис",
       "brand": "AOS",
       "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus doloremque, eum blanditiis nam molestiae temporibus provident tenetur a? Molestias dolor quibusdam illo quae repellat blanditiis optio voluptate, asperiores nostrum nemo.",
-      "price": 215
+      "price": "215"
     },
     {
-      "id": 18,
-      "imgUrl": "./assets.image2.png",
+      "id": "18",
+      "imgUrl": "/static/media/image2.01ad6b54c0755d4e0dbe.png",
       "title": "ARIEL Автомат Гель СМС жидкое в растворимых капсулах Liquid Capsules Дух Водопада",
+      "type": [
+        "Стирка"
+      ],
+      "subtype": [
+        "Гель"
+      ],
       "typeSize": "г",
       "size": "615X28.8",
       "barcode": "4476809554708",
-      "manufacturer": "Нэфис",
+      "manufacturer": "Данон",
       "brand": "ARIEL",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos eum recusandae exercitationem quo eius totam nisi qui omnis ea iusto fuga accusamus tempora, debitis, est, maxime nobis neque ducimus quasi!",
-      "price": 330
+      "price": "330"
     }
   ]
 }
