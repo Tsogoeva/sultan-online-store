@@ -5,7 +5,7 @@ import cartImg from './assets/shopping-cart.svg';
 
 const ShoppingCart: FC = () => {
 	const count = 3;
-	const amount = '10000' + ' ' + '₽';
+	const amount = '10000';
 
 	return (
 		<div className={styles.container}>
@@ -15,7 +15,7 @@ const ShoppingCart: FC = () => {
 			</div>
 			<div className={styles.amount_container}>
 				<p className={styles.title}>Корзина</p>
-				<p className={styles.amount}>{amount}</p>
+				<p className={styles.amount}>{`${amount} ₽`}</p>
 			</div>
 		</div >
 	)
