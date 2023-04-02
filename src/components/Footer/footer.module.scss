@@ -1,0 +1,80 @@
+.text {
+	color: rgba(255, 255, 255, 1);
+	line-height: 150%;
+}
+
+.section_up {
+	margin-bottom: 40px;
+}
+
+.footer {
+	flex: 0 0 auto;
+
+	background-color: rgba(63, 78, 101, 1);
+
+	.content {
+		min-height: 500px;
+		max-width: 1366px;
+		margin: 0 auto;
+
+		.container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+
+			min-height: 500px;
+
+			.about {
+				.description {
+					font-size: 16px;
+
+					max-width: 320px;
+					margin: 15px 3px 45px 1px;
+				}
+				.appeal {
+					font-size: 12px;
+
+					margin: 0 3px 14px 1px;
+				}
+			}
+
+			.section_title {
+				font-weight: 600;
+				font-size: 20px;
+
+				margin-bottom: 25px;
+			}
+			.section_item {
+				margin-bottom: 20px;
+			}
+
+			.connection_text {
+				margin: 20px 2px 15px 0;
+			}
+			.connection_icons {
+				display: flex;
+
+				.connection_whatsapp {
+					margin-right: 10px;
+				}
+			}
+
+			.email {
+				margin: 25px 0;
+
+				.email_info {
+					font-weight: 600;
+				}
+				.email_details {
+					font-weight: 300;
+					font-size: 12px;
+				}
+			}
+
+			.logo_visa {
+				margin-right: 5px;
+			}
+		}
+	}
+}
