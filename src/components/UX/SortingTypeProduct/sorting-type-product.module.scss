@@ -1,25 +1,29 @@
-.sorting_type_product {
+.container {
 	display: flex;
-	justify-content: flex-start;
-	flex-direction: row;
 
-	margin-bottom: 28px;
-
-	.type {
+	.sorting_type_product {
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		justify-content: flex-start;
+		flex-direction: row;
 
-		margin: 2px 11px 2px 2px;
-		padding: 10px;
+		margin-bottom: 28px;
 
-		width: 100px;
-		height: 70px;
+		.type {
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
-		box-shadow: 0px 15px 70px -11px rgba(43, 28, 1, 0.1);
-		border-radius: 10px;
+			margin: 2px 11px 2px 2px;
+			padding: 10px;
 
-		color: rgba(63, 78, 101, 1);
-		text-align: center;
+			width: 100px;
+			height: 70px;
+
+			box-shadow: 0px 15px 70px -11px rgba(43, 28, 1, 0.1);
+			border-radius: 10px;
+
+			color: rgba(63, 78, 101, 1);
+			text-align: center;
+		}
 	}
 }
