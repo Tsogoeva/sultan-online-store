@@ -1,5 +1,4 @@
 import { FC } from "react";
-import cn from 'classnames';
 import styles from './sorting-type-product.module.scss';
 
 import { useAppSelector } from "../../../hooks";
