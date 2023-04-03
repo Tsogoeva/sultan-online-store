@@ -28,7 +28,7 @@ const Footer: FC = () => {
 						<Logo theme={"light"} />
 						<p className={styles.description}>Компания «Султан» — снабжаем розничные магазины товарами "под ключ" в Кокчетаве и Акмолинской области</p>
 						<p className={styles.appeal}>Подпишись на скидки и акции</p>
-						<Input placeholder={'Введите ваш E-mail'} icon={emailIcon} />
+						<Input placeholder={'Введите ваш E-mail'} icon={emailIcon} size={'big'} />
 					</div>
 					<div className={cn(styles.text, styles.section_up)}>
 						<h3 className={styles.section_title}>Меню сайта:</h3>

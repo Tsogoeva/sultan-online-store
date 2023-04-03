@@ -46,7 +46,7 @@ const Header: FC = () => {
 				<div className={styles.container_options}>
 					<Logo theme={'dark'} />
 					<Button text={'Каталог'} icon={buttonCatalogIcon} size={'big'} />
-					<Input placeholder={'Поиск...'} icon={searchIcon} />
+					<Input placeholder={'Поиск...'} icon={searchIcon} size={'big'} />
 					<div className={styles.short_info}>
 						<ShortInfo color={'header'} />
 						<div className={styles.operator}>

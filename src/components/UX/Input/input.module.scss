@@ -1,11 +1,17 @@
-.container {
-	position: relative;
+.big_size {
 	width: 263px;
 	height: 60px;
+}
+
+.mini_size {
+	width: 238px;
+	height: 59px;
+}
+
+.container {
+	position: relative;
 
 	.input {
-		width: 263px;
-		height: 60px;
 		padding: 13px 10px 13px 20px;
 		background-color: rgba(237, 237, 237, 1);
 		border-radius: 36px;
