@@ -151,8 +151,11 @@
 			margin-bottom: 20px;
 
 			color: rgba(63, 78, 101, 1);
-			img {
-				margin: 7px 0 0 5px;
+			.close::after {
+				content: " всё  ▼";
+			}
+			.open::after {
+				content: " меньше  ▲";
 			}
 		}
 

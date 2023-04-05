@@ -1,32 +1,36 @@
-import React, { FC, useState } from "react";
+import React, { FC, useMemo, useState } from "react";
 import styles from './filter-form-by-manufacturer.module.scss';
 
-import { useAppSelector } from "../../../hooks";
-import { SubmitHandler, useForm, UseFormRegister } from "react-hook-form";
+import { useAppDispatch, useAppSelector } from "../../../hooks";
 
 import icon from './assets/search-icon.svg';
-import show from './assets/show-icon.svg';
-import Input from "../Input/Input";
+import { runFilterByManufacturer } from "../../../store/goodSlice";
+import InputFilterByManufacturer from "../InputFilterByManufacturer/InputFilterByManufacturer";
 
-export interface IManufacturer {
-	manufacturer: string[]
-}
 
 export interface ICheckboxProps {
 	value: string;
-	register: UseFormRegister<IManufacturer>
+	isChecked: boolean;
 }
 
 
-const Checkbox: FC<ICheckboxProps> = ({ value, register }) => {
-	const [checked, setChecked] = useState(false);
+const Checkbox: FC<ICheckboxProps> = ({ value, isChecked }) => {
+	const [checked, toggleChecked] = useState(isChecked);
+	const dispatch = useAppDispatch();
 
-	console.log(checked)
+
+	const clickHandler = () => {
+		console.log('CLICK')
+		console.log({ beforeToggle: checked })
+		toggleChecked(!checked);
+		console.log({ afterToggle: checked })
+		dispatch(runFilterByManufacturer({ name: value, isChecked: !checked }));
+	}
 
 	return (
-		<div className={styles.checkbox_container} onChange={() => setChecked(!checked)}>
+		<div className={styles.checkbox_container} onClick={clickHandler}>
 
-			<input className={styles.checkbox} type="checkbox" checked={checked} value={value} {...register('manufacturer')} />
+			<input className={styles.checkbox} name={value} type="checkbox" checked={checked} value={value} />
 			<label htmlFor={value} className={styles.label}>{value}</label>
 
 		</div>
@@ -36,29 +40,42 @@ const Checkbox: FC<ICheckboxProps> = ({ value, register }) => {
 
 
 const FilterFormByManufacturer: FC = () => {
-	const { manufacturers } = useAppSelector(state => state.goodReducer)
-	const { register, handleSubmit } = useForm<IManufacturer>();
+	const { manufacturers } = useAppSelector(state => state.goodReducer);
+	const [show, toggleShow] = useState(false);
 
-	const onSubmit: SubmitHandler<IManufacturer> = (data) => {
-		console.log(data)
+	let shownManufacturers = manufacturers;
+
+	if (manufacturers.length > 4) {
+		shownManufacturers = shownManufacturers.slice(0, 4);
 	}
 
+	const clickShowHandler = () => {
+		toggleShow(!show);
+	}
+
+	useMemo(() => {
+		if (show) {
+			shownManufacturers = manufacturers;
+			console.log(shownManufacturers)
+		} else {
+			shownManufacturers = shownManufacturers.slice(0, 4);
+		}
+	}, [shownManufacturers, show])
+
 	return (
-		// eslint-disable-next-line @typescript-eslint/no-misused-promises
-		<div className={styles.container} onChange={handleSubmit(onSubmit)}>
+		<div className={styles.container}>
 			<h4 className={styles.title}>Производитель</h4>
-			<Input placeholder={'Поиск...'} icon={icon} size={'mini'} />
+			<InputFilterByManufacturer placeholder={'Поиск...'} icon={icon} />
 			<form className={styles.form}>
-				{manufacturers.map((manufacturer) => {
+				{shownManufacturers.map(({ name, isChecked }) => {
 					return (
-						<Checkbox key={manufacturer} register={register} value={manufacturer} />
+						<Checkbox key={name} value={name} isChecked={isChecked} />
 					)
 				})}
 			</form>
 
 			<div className={styles.show}>
-				{'Показать всё'}
-				<img src={show} alt="Показать всё" />
+				<span onClick={clickShowHandler} className={show ? styles.open : styles.close}>Показать</span>
 			</div>
 			<div className={styles.border_buttom}></div>
 		</div>

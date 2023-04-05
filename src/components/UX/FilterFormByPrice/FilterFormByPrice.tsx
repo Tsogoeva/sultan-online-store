@@ -4,15 +4,14 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import styles from './filter-form-by-price.module.scss';
 
 import { useAppDispatch } from "../../../hooks";
-import { fetchGoods } from "../../../store/actionCreators";
-import { filterByPrice } from "../../../store/goodSlice";
+import { runFilterByPrice } from "../../../store/goodSlice";
 
 export interface IPriceRange {
 	min: number;
 	max: number;
 }
 
-const defaultValues = { min: 0, max: 10000 }
+const defaultValues = { min: 0, max: 10000 };
 
 const FilterFormByPrice: FC = () => {
 	const dispatch = useAppDispatch();
@@ -22,12 +21,9 @@ const FilterFormByPrice: FC = () => {
 		handleSubmit,
 	} = useForm<IPriceRange>({ defaultValues });
 
-	const onSubmit: SubmitHandler<IPriceRange> = async (data) => {
-		console.log(data.max)
-
-		// eslint-disable-next-line @typescript-eslint/no-floating-promises
-		await dispatch(fetchGoods())
-		dispatch(filterByPrice({
+	const onSubmit: SubmitHandler<IPriceRange> = (data) => {
+		// eslint-disable-next-line @typescript-eslint/no-unsafe-call
+		dispatch(runFilterByPrice({
 			min: data.min || defaultValues.min,
 			max: data.max || defaultValues.max,
 		}));

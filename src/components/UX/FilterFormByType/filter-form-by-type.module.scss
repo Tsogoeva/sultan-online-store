@@ -1,0 +1,38 @@
+.content {
+	max-width: 220px;
+	.container {
+		.title {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 150%;
+			text-transform: uppercase;
+
+			margin: 15px 0;
+
+			cursor: pointer;
+		}
+
+		.active {
+			color: rgba(255, 200, 94, 1);
+		}
+
+		ul {
+			.subtype {
+				line-height: 150%;
+				color: rgba(63, 78, 101, 1);
+				margin: 10px 0;
+
+				cursor: pointer;
+			}
+
+			.active {
+				color: rgba(255, 200, 94, 1);
+			}
+		}
+
+		.border {
+			border-bottom: 1px solid rgba(63, 78, 101, 0.2);
+			margin-top: 20px;
+		}
+	}
+}
