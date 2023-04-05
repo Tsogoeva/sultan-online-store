@@ -1,0 +1,36 @@
+.container {
+	.form {
+		position: relative;
+
+		width: 238px;
+		height: 59px;
+
+		.input {
+			width: 238px;
+			height: 59px;
+
+			padding: 13px 10px 13px 20px;
+			background-color: rgba(237, 237, 237, 1);
+			border-radius: 36px;
+		}
+
+		::placeholder {
+			color: rgba(92, 99, 112, 0.5);
+		}
+
+		.button {
+			position: absolute;
+			top: 10px;
+			right: 12px;
+
+			width: 40px;
+			height: 40px;
+			background-color: rgba(255, 200, 94, 1);
+
+			border-radius: 50%;
+			.icon {
+				width: 15px;
+			}
+		}
+	}
+}
