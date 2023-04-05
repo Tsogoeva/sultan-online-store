@@ -6,8 +6,7 @@ import grams from './assets/type-g.svg';
 import milliliters from './assets/type-ml.svg';
 import cartIcon from './assets/cart-icon.svg';
 import Button from "../Button/Button";
-import { Link, Route } from "react-router-dom";
-import Product from "../../../pages/Product/Product";
+import { Link } from "react-router-dom";
 
 interface IProductBoxProps {
 	product: IProduct,
