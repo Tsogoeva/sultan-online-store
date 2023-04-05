@@ -1,13 +1,15 @@
-import React, { FC } from "react";
+import React, { FC } from 'react';
 import styles from './product.module.scss';
+
+import { Link } from 'react-router-dom';
+import { IProduct } from '../../types/IProduct';
+import ManagingQuantityInCart from '../../components/UX/ManagingQuantityInCart/ManagingQuantityInCart';
+import ButtonToCartFromProduct from '../../components/UX/ButtonToCartFromProduct/ButtonToCartFromProduct';
 
 import grams from './assets/type-g.svg';
 import milliliters from './assets/type-ml.svg';
 import shareIcon from './assets/share-icon.svg';
 import downloadIcon from './assets/download-icon.svg';
-import { IProduct } from "../../types/IProduct";
-import ManagingQuantityInCart from "../../components/UX/ManagingQuantityInCart/ManagingQuantityInCart";
-import ButtonToCartFromProduct from "../../components/UX/ButtonToCartFromProduct/ButtonToCartFromProduct";
 
 interface IProductProp {
 	product: IProduct
@@ -29,7 +31,14 @@ const Product: FC<IProductProp> = ({ product }) => {
 
 	return (
 		<div className={styles.content}>
-			<p className={styles.path}>{`Главная / Каталог / ${title}`}</p>
+			<div className={styles.path_and_back}>
+				<p className={styles.path}>{`Главная / Каталог / ${title}`}</p>
+				<Link to={'/sultan-online-store/'}>
+					<button type="button" className={styles.back}>
+						{'Вернуться назад'}
+					</button>
+				</Link>
+			</div>
 			<div className={styles.container}>
 				<div className={styles.image}>
 					<img src={imgUrl} alt="Изображение товара" />
