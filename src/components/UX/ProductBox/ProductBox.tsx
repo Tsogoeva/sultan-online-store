@@ -6,14 +6,8 @@ import grams from './assets/type-g.svg';
 import milliliters from './assets/type-ml.svg';
 import cartIcon from './assets/cart-icon.svg';
 import Button from "../Button/Button";
-
-// import image1 from './assets/assetsDb/image1.png';
-// import image2 from './assets/assetsDb/image2.png';
-// import image3 from './assets/assetsDb/image3.png';
-// import image4 from './assets/assetsDb/image4.png';
-// import image5 from './assets/assetsDb/image5.png';
-// import image6 from './assets//assetsDb/image6.png';
-
+import { Link, Route } from "react-router-dom";
+import Product from "../../../pages/Product/Product";
 
 interface IProductBoxProps {
 	product: IProduct,
@@ -21,9 +15,9 @@ interface IProductBoxProps {
 
 const ProductBox: FC<IProductBoxProps> = ({ product }) => {
 	const {
+		id,
 		imgUrl,
 		title,
-		// type,
 		typeSize,
 		size,
 		barcode,
@@ -31,7 +25,6 @@ const ProductBox: FC<IProductBoxProps> = ({ product }) => {
 		brand,
 		price
 	} = product;
-
 
 	return (
 		<div className={styles.content}>
@@ -45,7 +38,7 @@ const ProductBox: FC<IProductBoxProps> = ({ product }) => {
 						<span className={styles.count}>{size}</span>
 						<span>{typeSize}</span>
 					</div>
-					<h4 className={styles.title}>{title}</h4>
+					<Link className={styles.title} to={`/product/${id}`}>{title}</Link>
 					<span className={styles.feature_title}>Штрихкод: <span className={styles.feature_data}>{barcode}</span></span>
 					<span className={styles.feature_title}>Производитель: <span className={styles.feature_data}>{manufacturer}</span></span>
 					<span className={styles.feature_title}>Бренд: <span className={styles.feature_data}>{brand}</span></span>
