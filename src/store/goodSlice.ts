@@ -1,67 +1,143 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { IPriceRange } from "../components/UX/FilterFormByPrice/FilterFormByPrice";
-import { IProduct } from "../types/IProduct";
-import { fetchGoods } from "./actionCreators";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { IPriceRange } from '../components/UX/FilterFormByPrice/FilterFormByPrice';
+import { IProduct } from '../types/IProduct';
+import { fetchData } from './actionCreators';
 
-interface GoodState {
-	goods: IProduct[],
-	types: string[],
-	subtypes: string[],
-	manufacturers: string[],
-	isLoading: boolean,
-	error: string
+export interface IManufacturers {
+	name: string,
+	isChecked: boolean
+}
+interface IForm {
+	minPrice: number,
+	maxPrice: number,
+	currentType: string,
+	currentSubtype: string,
+	inputManufacturerValue: string,
+	currentSorting: string
 }
 
-const initialState: GoodState = {
+export interface ITypes {
+	type: string,
+	subtypes: string[]
+}
+
+interface IPagination {
+	currentPage: number,
+	perPage: number
+}
+interface IGoodState {
+	goods: IProduct[],
+	form: IForm,
+	subtypeByTypeList: ITypes[],
+	types: string[],
+	subtypes: string[],
+	manufacturers: IManufacturers[],
+	isLoading: boolean,
+	error: string,
+	pagination: IPagination
+}
+
+interface IFetchedData {
+	goods: IProduct[],
+	types: ITypes[]
+}
+
+
+const initialState: IGoodState = {
 	goods: [],
+	form: {
+		minPrice: 0,
+		maxPrice: 10000,
+		currentType: '',
+		currentSubtype: '',
+		inputManufacturerValue: '',
+		currentSorting: ''
+	},
+	subtypeByTypeList: [],
 	types: [],
 	subtypes: [],
 	manufacturers: [],
 	isLoading: false,
-	error: ''
+	error: '',
+	pagination: {
+		currentPage: 1,
+		perPage: 9,
+	}
 }
 
 export const goodSlice = createSlice({
 	name: 'goods',
 	initialState,
 	reducers: {
-		filterByPrice: (state, action: PayloadAction<IPriceRange>) => {
-
-			const filteredGoods = state.goods.filter((product) => {
-				const productPrice = Number(product.price);
-				const minPrice = action.payload.min;
-				const maxPrice = action.payload.max;
-
-				if (productPrice >= minPrice && productPrice <= maxPrice) {
-					return product;
+		runFilterByPrice: (state, { payload }: PayloadAction<IPriceRange>) => {
+			state.form.minPrice = payload.min;
+			state.form.maxPrice = payload.max;
+		},
+		runFilterByManufacturer: (state, { payload }: PayloadAction<IManufacturers>) => {
+			state.manufacturers.forEach((manufacturer) => {
+				if (payload.name === manufacturer.name) {
+					manufacturer.isChecked = payload.isChecked;
 				}
-			});
-
-			state.goods = filteredGoods;
+			})
+		},
+		runFilterByManufacturerForInput: (state, { payload }: PayloadAction<string>) => {
+			state.form.inputManufacturerValue = payload;
+		},
+		setCurrentPage: (state, { payload }: PayloadAction<number>) => {
+			state.pagination.currentPage = payload;
+		},
+		toggleCurrentType: (state, { payload }: PayloadAction<string>) => {
+			if (state.form.currentType === payload) {
+				state.form.currentType = '';
+				state.form.currentSubtype = '';
+			} else {
+				state.form.currentType = payload;
+			}
+		},
+		toggleCurrentSubtype: (state, { payload }: PayloadAction<string>) => {
+			if (state.form.currentSubtype === payload) {
+				state.form.currentSubtype = '';
+			} else {
+				state.form.currentSubtype = payload;
+			}
+		},
+		setCurrentSorting: (state, { payload }: PayloadAction<string>) => {
+			state.form.currentSorting = payload;
 		}
+
 	},
 	extraReducers: (builder) => {
 		builder
-			.addCase(fetchGoods.pending.type, (state) => {
+			.addCase(fetchData.pending.type, (state) => {
 				state.isLoading = true;
 			})
-			.addCase(fetchGoods.fulfilled.type, (state, action: PayloadAction<IProduct[]>) => {
+			.addCase(fetchData.fulfilled.type, (state, { payload }: PayloadAction<IFetchedData>) => {
 				state.isLoading = false;
 				state.error = '';
-				state.goods = action.payload;
-				state.types = Array.from(new Set([...state.goods.map(({ type }) => type)].flat()));
-				state.subtypes = Array.from(new Set([...state.goods.map(({ subtype }) => subtype)].flat()));
-				state.manufacturers = Array.from(new Set([...state.goods.map(({ manufacturer }) => manufacturer)].flat()));
+				state.goods = payload.goods;
+				state.types = payload.types.map((type) => type.type);
+				state.subtypes = payload.types.flatMap((type) => type.subtypes);
+				state.subtypeByTypeList = payload.types;
 
+				const uniqManufacturers = Array.from(new Set([...state.goods.map(({ manufacturer }) => manufacturer)].flat()));
+				state.manufacturers = uniqManufacturers.map((manufacturer) => ({ name: manufacturer, isChecked: false }));
 
 			})
-			.addCase(fetchGoods.rejected.type, (state, action: PayloadAction<string>) => {
+			.addCase(fetchData.rejected.type, (state, action: PayloadAction<string>) => {
 				state.isLoading = false;
 				state.error = action.payload;
 			})
 	}
 })
 
-export const { filterByPrice } = goodSlice.actions;
+export const {
+	runFilterByPrice,
+	runFilterByManufacturer,
+	runFilterByManufacturerForInput,
+	setCurrentPage,
+	toggleCurrentType,
+	toggleCurrentSubtype,
+	setCurrentSorting
+} = goodSlice.actions;
 
 export default goodSlice.reducer;
