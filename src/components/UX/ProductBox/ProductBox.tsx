@@ -37,7 +37,7 @@ const ProductBox: FC<IProductBoxProps> = ({ product }) => {
 						<span className={styles.count}>{size}</span>
 						<span>{typeSize}</span>
 					</div>
-					<Link className={styles.title} to={`/product/${id}`}>{title}</Link>
+					<Link className={styles.title} to={`/sultan-online-store/product/${id}`}>{title}</Link>
 					<span className={styles.feature_title}>Штрихкод: <span className={styles.feature_data}>{barcode}</span></span>
 					<span className={styles.feature_title}>Производитель: <span className={styles.feature_data}>{manufacturer}</span></span>
 					<span className={styles.feature_title}>Бренд: <span className={styles.feature_data}>{brand}</span></span>

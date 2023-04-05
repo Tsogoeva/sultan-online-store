@@ -14,12 +14,12 @@ const AppRouter: FC = () => {
 		<Routes>
 			<Route path="/" element={<ProductCatalog />} />
 			{goods.map((product) => <Route
-				path={`/product/${product.id}`}
+				path={`/sultan-online-store/product/${product.id}`}
 				element={<Product product={product}
 				/>}
 			/>
 			)}
-			<Route path="/cart" element={<Cart />} />
+			<Route path="/sultan-online-store/cart" element={<Cart />} />
 			<Route path="*" element={<ProductCatalog />} />
 		</Routes>
 	)
