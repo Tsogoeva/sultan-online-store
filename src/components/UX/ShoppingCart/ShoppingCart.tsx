@@ -3,14 +3,20 @@ import styles from './shopping-cart.module.scss';
 
 import cartImg from './assets/shopping-cart.svg';
 import { useAppSelector } from "../../../hooks";
+import { useNavigate } from "react-router";
 
 const ShoppingCart: FC = () => {
+	const navigate = useNavigate();
 	const { cart } = useAppSelector(state => state.goodReducer);
 	const totalAmount = cart.reduce((sum, productData) => sum + productData.price, 0);
 	const totalCount = cart.reduce((sum, productData) => sum + productData.count, 0);
 
+	const clickHandler = () => {
+		navigate('/sultan-online-store/cart');
+	}
+
 	return (
-		<div className={styles.container}>
+		<div className={styles.container} onClick={clickHandler}>
 			<div className={styles.cart}>
 				<img src={cartImg} alt="Корзина" />
 				<div className={styles.count}>{totalCount}</div>
