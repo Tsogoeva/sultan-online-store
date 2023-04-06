@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { Link } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from "../../hooks";
 import styles from './cart.module.scss';
@@ -7,13 +7,20 @@ import grams from './assets/type-g.svg';
 import milliliters from './assets/type-ml.svg';
 import removeIcon from './assets/remove-icon.svg';
 import ManagingQuantityInCart from "../../components/UX/ManagingQuantityInCart/ManagingQuantityInCart";
-import { removeProductFromCart } from "../../store/goodSlice";
+import { changeStateModal, removeProductFromCart } from "../../store/goodSlice";
 
 const Cart: FC = () => {
 	const dispatch = useAppDispatch();
-	const { cart } = useAppSelector(state => state.goodReducer)
+	const { cart } = useAppSelector(state => state.goodReducer);
 
-	const totalAmount = cart.reduce((sum, productData) => sum + productData.price, 0)
+	const totalAmount = cart.reduce((sum, productData) => sum + productData.price, 0);
+
+	const [isOpenedModal, toggleModalState] = useState(false);
+
+	const submitHandler = () => {
+		dispatch(changeStateModal(isOpenedModal));
+		toggleModalState(!isOpenedModal);
+	}
 
 	return (
 		<div className={styles.content}>
@@ -70,12 +77,12 @@ const Cart: FC = () => {
 						</div>
 					)
 				}) : <div className={styles.empty}>
-					<h3 className={styles.empty_title}>Корзина пустая</h3>
+					<h3 className={styles.empty_title}>Корзина пуста!</h3>
 				</div>}
 			</div>
 
 			<div className={styles.place_order_container}>
-				<button type="button" className={styles.order_button}>Оформить заказ</button>
+				<button type="button" onClick={submitHandler} className={styles.order_button}>Оформить заказ</button>
 				<div className={styles.total_order_amount}>{`${totalAmount} ₽`}</div>
 			</div>
 		</div>
