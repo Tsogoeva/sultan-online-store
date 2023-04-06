@@ -25,6 +25,12 @@ interface IPagination {
 	currentPage: number,
 	perPage: number
 }
+
+interface ICart {
+	product: IProduct,
+	count: number,
+	price: number
+}
 interface IGoodState {
 	goods: IProduct[],
 	form: IForm,
@@ -34,13 +40,16 @@ interface IGoodState {
 	manufacturers: IManufacturers[],
 	isLoading: boolean,
 	error: string,
-	pagination: IPagination
+	pagination: IPagination,
+	cart: ICart[],
+	removingProductIdFromCart: string
 }
 
 interface IFetchedData {
 	goods: IProduct[],
 	types: ITypes[]
 }
+
 
 
 const initialState: IGoodState = {
@@ -62,7 +71,9 @@ const initialState: IGoodState = {
 	pagination: {
 		currentPage: 1,
 		perPage: 9,
-	}
+	},
+	cart: [],
+	removingProductIdFromCart: '',
 }
 
 export const goodSlice = createSlice({
@@ -103,7 +114,19 @@ export const goodSlice = createSlice({
 		},
 		setCurrentSorting: (state, { payload }: PayloadAction<string>) => {
 			state.form.currentSorting = payload;
+		},
+		changeProductToCartCount: (state, { payload }: PayloadAction<ICart>) => {
+			state.cart = state.cart.filter((current) => current.product.id !== payload.product.id);
+			state.cart = [...state.cart, payload];
+
+			console.log(state.cart)
+
+
+		},
+		removeProductFromCart: (state, { payload }: PayloadAction<string>) => {
+			state.cart = state.cart.filter(({ product }) => product.id !== payload);
 		}
+
 
 	},
 	extraReducers: (builder) => {
@@ -137,7 +160,10 @@ export const {
 	setCurrentPage,
 	toggleCurrentType,
 	toggleCurrentSubtype,
-	setCurrentSorting
+	setCurrentSorting,
+	changeProductToCartCount,
+	removeProductFromCart
+
 } = goodSlice.actions;
 
 export default goodSlice.reducer;

@@ -10,6 +10,7 @@ import grams from './assets/type-g.svg';
 import milliliters from './assets/type-ml.svg';
 import shareIcon from './assets/share-icon.svg';
 import downloadIcon from './assets/download-icon.svg';
+import { useAppSelector } from '../../hooks';
 
 interface IProductProp {
 	product: IProduct
@@ -25,9 +26,11 @@ const Product: FC<IProductProp> = ({ product }) => {
 		barcode,
 		manufacturer,
 		brand,
-		description,
-
+		description
 	} = product;
+
+	const { cart } = useAppSelector(state => state.goodReducer);
+	const findedProductInCart = cart.find((content) => content.product.id === product.id);
 
 	return (
 		<div className={styles.content}>
@@ -54,7 +57,10 @@ const Product: FC<IProductProp> = ({ product }) => {
 					</div>
 					<div className={styles.price_and_cart}>
 						<span className={styles.price}>{`${price} ₽`}</span>
-						<ManagingQuantityInCart />
+						<ManagingQuantityInCart
+							product={product}
+							alreadyAddedCount={findedProductInCart ? findedProductInCart.count : 0}
+						/>
 						<ButtonToCartFromProduct />
 					</div>
 					<div className={styles.extra_options}>

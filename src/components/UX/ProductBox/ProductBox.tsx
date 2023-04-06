@@ -6,13 +6,18 @@ import grams from './assets/type-g.svg';
 import milliliters from './assets/type-ml.svg';
 import cartIcon from './assets/cart-icon.svg';
 import Button from "../Button/Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAppDispatch } from "../../../hooks";
+import { changeProductToCartCount } from "../../../store/goodSlice";
 
 interface IProductBoxProps {
 	product: IProduct,
 }
 
 const ProductBox: FC<IProductBoxProps> = ({ product }) => {
+	const dispatch = useAppDispatch();
+	const navigate = useNavigate();
+
 	const {
 		id,
 		imgUrl,
@@ -24,6 +29,12 @@ const ProductBox: FC<IProductBoxProps> = ({ product }) => {
 		brand,
 		price
 	} = product;
+
+	const clickHandler = () => {
+
+		dispatch(changeProductToCartCount({ product, count: 1, price: Number(price) }));
+		navigate('/sultan-online-store/cart');
+	}
 
 	return (
 		<div className={styles.content}>
@@ -43,7 +54,9 @@ const ProductBox: FC<IProductBoxProps> = ({ product }) => {
 					<span className={styles.feature_title}>Бренд: <span className={styles.feature_data}>{brand}</span></span>
 					<div className={styles.price_and_button}>
 						<span className={styles.price}>{`${price} ₽`}</span>
-						<Button text={'В корзину'} icon={cartIcon} size={'mini'} />
+						<div onClick={clickHandler}>
+							<Button text={'В корзину'} icon={cartIcon} size={'mini'} />
+						</div>
 					</div>
 
 				</div>
