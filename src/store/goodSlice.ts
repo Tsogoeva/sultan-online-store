@@ -42,7 +42,8 @@ interface IGoodState {
 	error: string,
 	pagination: IPagination,
 	cart: ICart[],
-	removingProductIdFromCart: string
+	removingProductIdFromCart: string,
+	modal: boolean
 }
 
 interface IFetchedData {
@@ -74,6 +75,7 @@ const initialState: IGoodState = {
 	},
 	cart: [],
 	removingProductIdFromCart: '',
+	modal: false
 }
 
 export const goodSlice = createSlice({
@@ -117,7 +119,7 @@ export const goodSlice = createSlice({
 		},
 		changeProductToCartCount: (state, { payload }: PayloadAction<ICart>) => {
 			state.cart = state.cart.filter((current) => current.product.id !== payload.product.id);
-			state.cart = [...state.cart, payload];
+			state.cart = [payload, ...state.cart];
 
 			console.log(state.cart)
 
@@ -125,6 +127,13 @@ export const goodSlice = createSlice({
 		},
 		removeProductFromCart: (state, { payload }: PayloadAction<string>) => {
 			state.cart = state.cart.filter(({ product }) => product.id !== payload);
+		},
+
+		changeStateModal: (state, { payload }: PayloadAction<boolean>) => {
+			state.modal = !payload;
+		},
+		resetCart: (state) => {
+			state.cart = [];
 		}
 
 
@@ -162,7 +171,9 @@ export const {
 	toggleCurrentSubtype,
 	setCurrentSorting,
 	changeProductToCartCount,
-	removeProductFromCart
+	removeProductFromCart,
+	changeStateModal,
+	resetCart
 
 } = goodSlice.actions;
 
