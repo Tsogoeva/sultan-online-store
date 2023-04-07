@@ -9,12 +9,15 @@ import ShoppingCart from "../UX/ShoppingCart/ShoppingCart";
 
 import iconAddress from './assets/icon-address.svg';
 import iconImail from './assets/icon-email.svg';
+import miniInfoIcon from './assets/mini-info.svg';
 
 import buttonCatalogIcon from './assets/catalog-button-icon.svg';
 import buttonDownloadIcon from './assets/download-button-icon.svg';
 
 import searchIcon from './assets/search-icon.svg';
 import operatorImg from './assets/operator.svg';
+import LogoMini from "../UI/LogoMini/LogoMini";
+import MiniShoppingCart from "../UX/MiniShoppingCart/MiniShoppingCart";
 
 
 const Header: FC = () => {
@@ -34,11 +37,23 @@ const Header: FC = () => {
 							<p className={styles.email_details}>На связи в любое время</p>
 						</div>
 					</div>
+					<div className={styles.mini_info}>
+						<div className={styles.mini_info_icon}>
+							<img src={miniInfoIcon} alt="Инфо" />
+						</div>
+						<div className={styles.mini_logo}>
+							<LogoMini theme={'dark'} />
+						</div>
+						<MiniShoppingCart />
+					</div>
 					<div className={styles.navBar}>
 						<span className={styles.navBar_item}>О компании</span>
 						<span className={styles.navBar_item}>Доставка и оплата</span>
 						<span className={styles.navBar_item}>Возврат</span>
 						<span className={styles.navBar_item_last}>Контакты</span>
+					</div>
+					<div className={styles.mini_navBar}>
+
 					</div>
 				</div>
 			</div>

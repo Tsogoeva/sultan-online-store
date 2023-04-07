@@ -81,6 +81,9 @@
 					}
 				}
 			}
+			.mini_info {
+				display: none;
+			}
 			.navBar {
 				.navBar_item {
 					line-height: 21px;
@@ -94,6 +97,52 @@
 				.navBar_item_last {
 					line-height: 21px;
 					color: rgba(63, 78, 101, 1);
+				}
+			}
+			.mini_navBar {
+				display: none;
+			}
+		}
+
+		@media screen and (max-width: 320px) {
+			.container_top {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				min-height: 61px;
+				max-width: 100%;
+				margin: 0 auto;
+
+				.info {
+					display: none;
+				}
+
+				.mini_info {
+					width: 320px;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					.mini_info_icon {
+						background-color: rgba(255, 200, 94, 1);
+						border-radius: 50%;
+						width: 32px;
+						height: 32px;
+
+						display: flex;
+						justify-content: center;
+						align-items: center;
+					}
+					.mini_logo {
+					}
+				}
+
+				.navBar {
+					display: none;
+				}
+
+				.mini_navBar {
 				}
 			}
 		}
