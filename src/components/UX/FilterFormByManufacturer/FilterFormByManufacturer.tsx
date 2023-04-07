@@ -30,7 +30,7 @@ const Checkbox: FC<ICheckboxProps> = ({ value, isChecked }) => {
 	return (
 		<div className={styles.checkbox_container} onClick={clickHandler}>
 
-			<input className={styles.checkbox} name={value} type="checkbox" checked={checked} value={value} />
+			<input readOnly className={styles.checkbox} name={value} type="checkbox" checked={checked} value={value} />
 			<label htmlFor={value} className={styles.label}>{value}</label>
 
 		</div>
