@@ -5,18 +5,33 @@
 		max-width: 1366px;
 		margin: 0 auto;
 
-		.path {
-			display: inline-block;
-			color: rgba(63, 78, 101, 1);
-			font-weight: 300;
-			line-height: 120%;
+		.header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
 
-			margin: 45px 0 50px 0;
+			.path {
+				display: inline-block;
+				color: rgba(63, 78, 101, 1);
+				font-weight: 300;
+				line-height: 120%;
+
+				margin: 45px 0 50px 0;
+			}
+			.manage {
+				padding: 20px;
+				background-color: rgba(255, 200, 94, 1);
+				border-radius: 30px;
+				color: #ffffff;
+				font-weight: 700;
+				font-size: 16px;
+			}
 		}
 		.sorting {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+
 			.category {
 				color: rgba(17, 17, 17, 1);
 				font-weight: 500;
