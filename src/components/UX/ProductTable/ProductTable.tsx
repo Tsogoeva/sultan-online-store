@@ -6,7 +6,7 @@ import { fetchData } from "../../../store/actionCreators";
 
 import ProductBox from "../ProductBox/ProductBox";
 import { IProduct } from "../../../types/IProduct";
-import { IManufacturers } from "../../../store/goodSlice";
+import { IChecked } from "../../../store/goodSlice";
 import Pagination from "../Pagination/Pagination";
 
 const filterByPrice = (goods: IProduct[], min: number, max: number) => goods.filter((product) => {
@@ -17,7 +17,7 @@ const filterByPrice = (goods: IProduct[], min: number, max: number) => goods.fil
 	}
 });
 
-const filterByManufacturer = (goods: IProduct[], manufacturers: IManufacturers[], value: string) => goods.filter((product) => {
+const filterByManufacturer = (goods: IProduct[], manufacturers: IChecked[], value: string) => goods.filter((product) => {
 	let countOfFalse = 0;
 
 	manufacturers.forEach((manufacturer) => {
@@ -68,7 +68,6 @@ const filterBySubtype = (goods: IProduct[], currentSubtype: string) => {
 }
 
 const getSortingProducts = (goods: IProduct[], typeSorting: string) => {
-	console.log(typeSorting)
 	switch (typeSorting) {
 		case 'sortByPriceUp':
 			return goods.sort((a, b) => Number(a.price) < Number(b.price) ? -1 : 1);
@@ -114,7 +113,7 @@ const ProductTable: FC = () => {
 			currentPage,
 			perPage,
 		}
-	} = useAppSelector(state => state.goodReducer)
+	} = useAppSelector(state => state.goodReducer);
 
 	let relatedGoods: IProduct[] = goods;
 	let productsForCureentPage: IProduct[] = goods;
@@ -135,12 +134,7 @@ const ProductTable: FC = () => {
 		relatedGoods = filterBySubtype(relatedGoods, currentSubtype);
 		relatedGoods = getSortingProducts(relatedGoods, currentSorting);
 
-		productsForCureentPage = changePage(relatedGoods, currentPage, perPage)
-
-
-		console.log({ relatedGoods: relatedGoods })
-		console.log({ productsForCureentPage: productsForCureentPage })
-
+		productsForCureentPage = changePage(relatedGoods, currentPage, perPage);
 	}, [
 		minPrice,
 		maxPrice,
