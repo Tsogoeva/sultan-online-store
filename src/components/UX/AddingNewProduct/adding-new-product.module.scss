@@ -1,0 +1,64 @@
+.container {
+	.title {
+		font-weight: 500;
+		font-size: 30px;
+		line-height: 120%;
+
+		text-transform: uppercase;
+
+		margin-bottom: 50px;
+	}
+	.form {
+		.input_container {
+			margin: 20px 0 0 0;
+			.label {
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 150%;
+				margin-right: 20px;
+			}
+			.input {
+				border: 1px solid rgba(255, 200, 94, 0.5);
+				border-radius: 30px;
+				padding: 5px;
+			}
+			.textarea {
+				height: 80px;
+				border: 1px solid rgba(255, 200, 94, 0.5);
+				border-radius: 10px;
+				padding: 5px;
+
+				resize: none;
+			}
+		}
+
+		.checkbox_container {
+			margin: 20px 0 0 0;
+			.checkbox_title {
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 150%;
+			}
+			.checkbox {
+				font-size: 16px;
+				line-height: 150%;
+				color: rgba(63, 78, 101, 1);
+				border-radius: 30px;
+				margin-right: 10px;
+			}
+		}
+		.submit {
+			width: 192px;
+			height: 59px;
+
+			background-color: rgba(255, 200, 94, 1);
+			border-radius: 30px;
+
+			color: rgba(255, 255, 255, 1);
+			font-weight: 700;
+			line-height: 17px;
+
+			margin: 50px 70px;
+		}
+	}
+}
