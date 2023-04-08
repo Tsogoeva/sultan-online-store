@@ -189,17 +189,9 @@ export const goodSlice = createSlice({
 				state.isLoading = true;
 			})
 			.addCase(fetchData.fulfilled.type, (state, { payload }: PayloadAction<IFetchedData>) => {
-				const storage = localStorage.getItem('addedGoods');
-				let parsedData: IProduct[] = [];
-
-				if (typeof storage === 'string') {
-					// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-					parsedData = JSON.parse(storage);
-				}
-
 				state.isLoading = false;
 				state.error = '';
-				state.goods = [...payload.goods, ...parsedData];
+				state.goods = payload.goods;
 				state.types = payload.types.map((type) => type.type);
 				state.subtypes = payload.types.flatMap((type) => type.subtypes);
 				state.subtypeByTypeList = payload.types;
