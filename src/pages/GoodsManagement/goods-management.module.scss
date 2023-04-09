@@ -5,12 +5,16 @@
 	margin: 50px auto;
 
 	.container {
+		display: flex;
+		flex-direction: column;
 		margin-bottom: 50px;
 
 		.header {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+
+			margin-bottom: 50px;
 
 			.title {
 				font-weight: 500;
@@ -29,7 +33,9 @@
 			}
 		}
 		.panels {
+			flex: 0 1 33.333%;
 			display: flex;
+			justify-content: space-between;
 		}
 	}
 }
