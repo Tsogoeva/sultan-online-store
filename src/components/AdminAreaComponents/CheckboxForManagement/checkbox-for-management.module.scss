@@ -1,0 +1,20 @@
+.checkbox_container {
+	margin: 20px 0 0 0;
+	.checkbox_title {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 150%;
+	}
+	.checkbox {
+		font-size: 16px;
+		line-height: 150%;
+		color: rgba(63, 78, 101, 1);
+		border-radius: 30px;
+		margin-right: 10px;
+	}
+	.label {
+		display: inline;
+		line-height: 150%;
+		color: rgba(63, 78, 101, 1);
+	}
+}

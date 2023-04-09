@@ -1,0 +1,17 @@
+.not_found_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.not_found_info {
+		margin: 5px;
+		padding: 10px 8px;
+		text-align: center;
+
+		border: 1px solid rgba(63, 78, 101, 0.3);
+		border-radius: 30px;
+		background-color: rgba(63, 78, 101, 0.2);
+		color: rgba(255, 255, 255, 1);
+	}
+}

@@ -1,0 +1,105 @@
+.content {
+	flex: 0 1 30%;
+	border-left: 1px dashed rgba(63, 78, 101, 0.2);
+	border-right: 1px dashed rgba(63, 78, 101, 0.2);
+
+	padding: 0 20px 0 20px;
+	.title {
+		font-weight: 500;
+		font-size: 26px;
+		line-height: 120%;
+
+		text-transform: uppercase;
+
+		margin-bottom: 50px;
+	}
+
+	.input_container_for_barcode {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		margin: 20px 0;
+
+		.label {
+			// display: block;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 150%;
+			margin: 10px;
+		}
+		.input {
+			border: 1px solid rgba(255, 200, 94, 0.5);
+			border-radius: 30px;
+			padding: 5px 30px;
+		}
+		.search {
+			align-self: center;
+			padding: 5px 40px;
+			margin: 5px;
+			border-radius: 30px;
+			color: rgba(255, 255, 255, 1);
+			background-color: rgba(255, 200, 94, 1);
+		}
+	}
+
+	.form {
+		display: flex;
+		flex-direction: column;
+
+		border-top: 1px solid rgba(63, 78, 101, 0.2);
+
+		.input_container {
+			margin: 20px 0 0 0;
+			.label {
+				display: block;
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 150%;
+				margin-right: 20px;
+			}
+			.input {
+				border: 1px solid rgba(255, 200, 94, 0.5);
+				border-radius: 30px;
+				padding: 5px 40px;
+			}
+			.textarea {
+				height: 80px;
+				border: 1px solid rgba(255, 200, 94, 0.5);
+				border-radius: 10px;
+				padding: 5px 40px;
+
+				resize: none;
+			}
+		}
+
+		.checkbox_container {
+			margin: 20px 0 0 0;
+			.checkbox_title {
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 150%;
+			}
+			.checkbox {
+				font-size: 16px;
+				line-height: 150%;
+				color: rgba(63, 78, 101, 1);
+				border-radius: 30px;
+				margin-right: 10px;
+			}
+		}
+		.button {
+			background-color: rgba(255, 200, 94, 1);
+			border-radius: 30px;
+
+			color: rgba(255, 255, 255, 1);
+			font-weight: 700;
+			line-height: 17px;
+
+			margin: 30px 10px 10px;
+			padding: 10px 40px;
+
+			align-self: center;
+		}
+	}
+}
