@@ -1,11 +1,25 @@
-import { FC } from "react";
-import { useNavigate } from "react-router";
-import AddingNewProduct from "../../components/UX/AddingNewProduct/AddingNewProduct";
+import { FC } from 'react';
+import { useNavigate } from 'react-router';
 import styles from './goods-management.module.scss';
+
+import { useAppDispatch, useAppSelector } from '../../hooks';
+import { fetchData } from '../../store/actionCreators';
+import AddingNewProduct from '../../components/AdminAreaComponents/AddingNewProduct/AddingNewProduct';
+import ProductDataChange from '../../components/AdminAreaComponents/ProductDataChange/ProductDataChange';
+import ProductRemoval from '../../components/AdminAreaComponents/ProductRemoval/ProductRemoval';
 
 
 const GoodsManagement: FC = () => {
+	const dispatch = useAppDispatch();
 	const navigate = useNavigate();
+
+	const { goods } = useAppSelector(state => state.goodReducer);
+
+	if (!goods.length) {
+		// eslint-disable-next-line @typescript-eslint/no-floating-promises
+		dispatch(fetchData());
+	}
+
 
 	const clickHandler = () => {
 		navigate('/sultan-online-store');
@@ -20,6 +34,8 @@ const GoodsManagement: FC = () => {
 				</div>
 				<div className={styles.panels}>
 					<AddingNewProduct />
+					<ProductDataChange />
+					<ProductRemoval />
 				</div>
 			</div>
 
