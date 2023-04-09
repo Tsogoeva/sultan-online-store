@@ -1,7 +1,8 @@
-import { ChangeEvent, FC, FormEvent, useState } from "react";
-import { useAppDispatch } from "../../../hooks";
-import { runFilterByManufacturerForInput } from "../../../store/goodSlice";
+import { ChangeEvent, FC, FormEvent, useState } from 'react';
 import styles from './input-filter-by-manufacturer.module.scss';
+
+import { useAppDispatch } from '../../../hooks';
+import { runFilterByManufacturerForInput } from '../../../store/goodSlice';
 
 interface IInputProps {
 	placeholder: string;
@@ -27,7 +28,13 @@ const InputFilterByManufacturer: FC<IInputProps> = ({ placeholder, icon }) => {
 	return (
 		<div className={styles.container}>
 			<form className={styles.form} onSubmit={submitHandler}>
-				<input className={styles.input} type="text" onChange={changeHandler} value={name} placeholder={placeholder} />
+				<input
+					className={styles.input}
+					type="text"
+					onChange={changeHandler}
+					value={name}
+					placeholder={placeholder}
+				/>
 				<button className={styles.button} type="submit">
 					<img className={styles.icon} src={icon} alt="Иконка" />
 				</button>

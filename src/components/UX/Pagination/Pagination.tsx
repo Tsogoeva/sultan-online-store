@@ -1,13 +1,15 @@
-import { FC } from "react";
-import { useAppDispatch, useAppSelector } from "../../../hooks";
+import { FC } from 'react';
 import cn from 'classnames';
-import { setCurrentPage } from "../../../store/goodSlice";
-import { IProduct } from "../../../types/IProduct";
 import styles from './pagination.module.scss';
+
+import { setCurrentPage } from '../../../store/goodSlice';
+import { useAppDispatch, useAppSelector } from '../../../hooks';
+import { IProduct } from '../../../interfaces';
 
 interface IPaginationProps {
 	goods: IProduct[],
 }
+
 
 const Pagination: FC<IPaginationProps> = ({ goods }) => {
 	const dispatch = useAppDispatch();
@@ -26,7 +28,9 @@ const Pagination: FC<IPaginationProps> = ({ goods }) => {
 			{pages
 				.map((page) => <div
 					key={page}
-					className={currentPage === page ? cn(styles.page, styles.active) : styles.page}
+					className={currentPage === page
+						? cn(styles.page, styles.active)
+						: styles.page}
 					onClick={() => dispatch(setCurrentPage(page))}
 				>
 					{page}

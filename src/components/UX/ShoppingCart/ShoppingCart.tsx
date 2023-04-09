@@ -1,9 +1,11 @@
-import { FC } from "react";
+import { FC } from 'react';
+import { useNavigate } from 'react-router';
 import styles from './shopping-cart.module.scss';
 
+import { useAppSelector } from '../../../hooks';
+
 import cartImg from './assets/shopping-cart.svg';
-import { useAppSelector } from "../../../hooks";
-import { useNavigate } from "react-router";
+
 
 const ShoppingCart: FC = () => {
 	const navigate = useNavigate();

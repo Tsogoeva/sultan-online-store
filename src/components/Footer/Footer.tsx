@@ -1,12 +1,12 @@
-import React, { FC } from "react";
+import React, { FC } from 'react';
 import cn from 'classnames';
 
 import styles from './footer.module.scss';
 
-import Logo from "../UI/Logo/Logo";
-import Input from "../UX/Input/Input";
-import Button from "../UX/Button/Button";
-import ShortInfo from "../UI/ShortInfo/ShortInfo";
+import Logo from '../UI/Logo/Logo';
+import Input from '../UX/Input/Input';
+import Button from '../UX/Button/Button';
+import ShortInfo from '../UI/ShortInfo/ShortInfo';
 
 import emailIcon from './assets/email-icon.svg';
 import buttonDownloadIcon from '../Header/assets/download-button-icon.svg';

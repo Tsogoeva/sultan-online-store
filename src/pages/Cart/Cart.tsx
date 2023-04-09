@@ -1,13 +1,15 @@
-import React, { FC, useState } from "react";
+import { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useAppDispatch, useAppSelector } from "../../hooks";
 import styles from './cart.module.scss';
+
+import { useAppDispatch, useAppSelector } from '../../hooks';
+import { changeStateModal, removeProductFromCart } from '../../store/goodSlice';
+import ManagingQuantityInCart from '../../components/UX/ManagingQuantityInCart/ManagingQuantityInCart';
 
 import grams from './assets/type-g.svg';
 import milliliters from './assets/type-ml.svg';
 import removeIcon from './assets/remove-icon.svg';
-import ManagingQuantityInCart from "../../components/UX/ManagingQuantityInCart/ManagingQuantityInCart";
-import { changeStateModal, removeProductFromCart } from "../../store/goodSlice";
+
 
 const Cart: FC = () => {
 	const dispatch = useAppDispatch();
@@ -18,8 +20,10 @@ const Cart: FC = () => {
 	const [isOpenedModal, toggleModalState] = useState(false);
 
 	const submitHandler = () => {
-		dispatch(changeStateModal(isOpenedModal));
-		toggleModalState(!isOpenedModal);
+		if (cart.length) {
+			dispatch(changeStateModal(isOpenedModal));
+			toggleModalState(!isOpenedModal);
+		}
 	}
 
 	return (
@@ -35,27 +39,45 @@ const Cart: FC = () => {
 			<h2 className={styles.title}>Корзина</h2>
 			<div className={styles.product_container}>
 				{cart.length ? cart.map((cartItem) => {
-					const findedProductInCart = cart.find((content) => content.product.id === cartItem.product.id);
-					const formatedTitle = cartItem.product.title.length > 40 ? cartItem.product.title.slice(0, 40) + '...' : cartItem.product.title;
+					const findedProductInCart = cart
+						.find((content) => content.product.id === cartItem.product.id);
+					const formatedTitle = cartItem.product.title.length > 40
+						? cartItem.product.title.slice(0, 40) + '...'
+						: cartItem.product.title;
 
 					const removeHandler = () => {
 						dispatch(removeProductFromCart(cartItem.product.id));
 					}
 
-
 					return (
-						<div className={styles.product}>
+						<div key={cartItem.product.id} className={styles.product}>
 							<div className={styles.info}>
-								<img className={styles.image} src={cartItem.product.imgUrl} alt="Изображение товара" />
+								<img
+									className={styles.image}
+									src={cartItem.product.imgUrl}
+									alt="Изображение товара"
+								/>
 								<div className={styles.text}>
 									<div className={styles.size}>
-										<img className={styles.icon} src={cartItem.product.typeSize === 'г' ? grams : milliliters} alt="Тип" />
+										<img
+											className={styles.icon}
+											src={cartItem.product.typeSize === 'г' ? grams : milliliters}
+											alt="Тип"
+										/>
 										<span className={styles.count}>{cartItem.product.size}</span>
 										<span>{cartItem.product.typeSize}</span>
 									</div>
 									<div className={styles.description_block}>
-										<h5 className={styles.title_product}>{formatedTitle}</h5>
-										<p className={styles.description}>{cartItem.product.description}</p>
+										<h5
+											className={styles.title_product}
+										>
+											{formatedTitle}
+										</h5>
+										<p
+											className={styles.description}
+										>
+											{cartItem.product.description}
+										</p>
 									</div>
 								</div>
 							</div>
@@ -70,7 +92,11 @@ const Cart: FC = () => {
 								<div className={styles.sum_product}>
 									{`${cartItem.price} ₽`}
 								</div>
-								<button type="button" onClick={removeHandler} className={styles.remove_button}>
+								<button
+									type="button"
+									onClick={removeHandler}
+									className={styles.remove_button}
+								>
 									<img src={removeIcon} alt="Удалить из корзины" />
 								</button>
 							</div>
@@ -82,8 +108,18 @@ const Cart: FC = () => {
 			</div>
 
 			<div className={styles.place_order_container}>
-				<button type="button" onClick={submitHandler} className={styles.order_button}>Оформить заказ</button>
-				<div className={styles.total_order_amount}>{`${totalAmount} ₽`}</div>
+				<button
+					type="button"
+					onClick={submitHandler}
+					className={styles.order_button}
+				>
+					Оформить заказ
+				</button>
+				<div
+					className={styles.total_order_amount}
+				>
+					{`${totalAmount} ₽`}
+				</div>
 			</div>
 		</div>
 	)

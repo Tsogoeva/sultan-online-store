@@ -1,67 +1,13 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { IPriceRange } from '../components/UX/FilterFormByPrice/FilterFormByPrice';
-import { IProduct } from '../types/IProduct';
+import { ICart, IChecked, IFetchedData, IGoodState, IProduct } from '../interfaces';
 import { fetchData } from './actionCreators';
-
-export interface IChecked {
-	name: string,
-	isChecked: boolean
-}
-interface IForm {
-	minPrice: number,
-	maxPrice: number,
-	currentType: string,
-	currentSubtype: string,
-	inputManufacturerValue: string,
-	currentSorting: string
-}
-
-
-
-export interface ITypes {
-	type: string,
-	subtypes: string[]
-}
-
-interface IPagination {
-	currentPage: number,
-	perPage: number
-}
-
-interface ICart {
-	product: IProduct,
-	count: number,
-	price: number
-}
-interface IGoodState {
-	goods: IProduct[],
-	// addedGoods: IProduct[],
-	form: IForm,
-	subtypeByTypeList: ITypes[],
-	types: string[],
-	subtypes: string[],
-	manufacturers: IChecked[],
-	isLoading: boolean,
-	error: string,
-	pagination: IPagination,
-	cart: ICart[],
-	removingProductIdFromCart: string,
-	modal: boolean,
-	managingTypes: IChecked[],
-	managingSubtypes: IChecked[]
-
-}
-
-interface IFetchedData {
-	goods: IProduct[],
-	types: ITypes[]
-}
-
 
 
 const initialState: IGoodState = {
+	isLoading: false,
+	error: '',
 	goods: [],
-	// addedGoods: [],
 	form: {
 		minPrice: 0,
 		maxPrice: 10000,
@@ -74,17 +20,14 @@ const initialState: IGoodState = {
 	types: [],
 	subtypes: [],
 	manufacturers: [],
-	isLoading: false,
-	error: '',
 	pagination: {
 		currentPage: 1,
 		perPage: 9,
 	},
 	cart: [],
-	removingProductIdFromCart: '',
 	modal: false,
 	managingTypes: [],
-	managingSubtypes: []
+	managingSubtypes: [],
 }
 
 export const goodSlice = createSlice({
@@ -137,7 +80,6 @@ export const goodSlice = createSlice({
 		changeProductToCartCount: (state, { payload }: PayloadAction<ICart>) => {
 			state.cart = state.cart.filter((current) => current.product.id !== payload.product.id);
 			state.cart = [payload, ...state.cart];
-
 		},
 
 		removeProductFromCart: (state, { payload }: PayloadAction<string>) => {
@@ -165,7 +107,7 @@ export const goodSlice = createSlice({
 			})
 		},
 
-		manageSybtypeForNewProduct: (state, { payload }: PayloadAction<IChecked>) => {
+		manageSubtypeForNewProduct: (state, { payload }: PayloadAction<IChecked>) => {
 			state.managingSubtypes = state.managingSubtypes.map((subtype) => {
 				if (subtype.name === payload.name) {
 					subtype.isChecked = payload.isChecked;
@@ -180,9 +122,19 @@ export const goodSlice = createSlice({
 
 		resetSubtypeForNewProduct: (state) => {
 			state.managingSubtypes = Array.from(new Set(state.subtypes)).map((subtype) => ({ name: subtype, isChecked: false }));
+		},
+
+		addModifiedProductToGoods: (state, { payload }: PayloadAction<IProduct>) => {
+			const filteredGoods = state.goods.filter((product) => payload.id !== product.id);
+			state.goods = [...filteredGoods, payload];
+		},
+
+		removeProductFromGoods: (state, { payload }: PayloadAction<string>) => {
+			state.goods = state.goods.filter((product) => payload !== product.id);
 		}
 
 	},
+
 	extraReducers: (builder) => {
 		builder
 			.addCase(fetchData.pending.type, (state) => {
@@ -225,8 +177,10 @@ export const {
 	addNewProduct,
 	manageTypeForNewProduct,
 	resetTypeForNewProduct,
-	manageSybtypeForNewProduct,
-	resetSubtypeForNewProduct
+	manageSubtypeForNewProduct,
+	resetSubtypeForNewProduct,
+	addModifiedProductToGoods,
+	removeProductFromGoods
 
 } = goodSlice.actions;
 

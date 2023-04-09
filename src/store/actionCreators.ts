@@ -1,8 +1,3 @@
-// import axios from 'axios';
-
-// import { IProduct } from '../types/IProduct';
-// import { ITypes } from './goodSlice';
-
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import db from './db.json';
 

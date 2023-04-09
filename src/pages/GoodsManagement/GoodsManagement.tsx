@@ -29,8 +29,17 @@ const GoodsManagement: FC = () => {
 		<div className={styles.content}>
 			<div className={styles.container}>
 				<div className={styles.header}>
-					<h2 className={styles.title}>Управление товарами</h2>
-					<div className={styles.back} onClick={clickHandler}>Вернуться в каталог</div>
+					<h2
+						className={styles.title}
+					>
+						Управление товарами
+					</h2>
+					<div
+						className={styles.back}
+						onClick={clickHandler}
+					>
+						Вернуться в каталог
+					</div>
 				</div>
 				<div className={styles.panels}>
 					<AddingNewProduct />

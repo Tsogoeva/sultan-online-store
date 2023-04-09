@@ -1,9 +1,10 @@
-import { FC, useEffect, useState } from "react";
-import { useAppDispatch, useAppSelector } from "../../../hooks";
-import { removeProductFromGoods } from "../../../store/goodSlice";
-import { IProduct } from "../../../types/IProduct";
-import ProductNotFound from "../ProductNotFound/ProductNotFound";
+import { FC, useEffect, useState } from 'react';
 import styles from './product-removal.module.scss';
+
+import { useAppDispatch, useAppSelector } from '../../../hooks';
+import { removeProductFromGoods } from '../../../store/goodSlice';
+import ProductNotFound from '../ProductNotFound/ProductNotFound';
+import { IProduct } from '../../../interfaces';
 
 interface IConfirmationProps {
 	removeClick: React.Dispatch<React.SetStateAction<boolean>>,

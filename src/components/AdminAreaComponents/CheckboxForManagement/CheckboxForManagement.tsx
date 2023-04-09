@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC } from 'react';
 import styles from './checkbox-for-management.module.scss';
 
 
@@ -7,7 +7,6 @@ export interface ICheckboxProps {
 	isChecked: boolean,
 	onClick: (type: string, isChecked: boolean) => void
 }
-
 
 const CheckboxForManagement: FC<ICheckboxProps> = ({ name, isChecked, onClick }) => {
 

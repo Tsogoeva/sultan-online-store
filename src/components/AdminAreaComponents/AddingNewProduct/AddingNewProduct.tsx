@@ -3,9 +3,9 @@ import _ from 'lodash';
 import styles from './adding-new-product.module.scss';
 
 import { useAppDispatch, useAppSelector } from '../../../hooks';
-import { addNewProduct, IChecked } from '../../../store/goodSlice';
+import { addNewProduct } from '../../../store/goodSlice';
 import CheckboxForManagement from '../CheckboxForManagement/CheckboxForManagement';
-import { IProduct } from '../../../types/IProduct';
+import { IChecked, IProduct } from '../../../interfaces';
 
 
 const AddingNewProduct: FC = () => {

@@ -1,9 +1,9 @@
-import { FC } from "react";
+import { FC } from 'react';
 import cn from 'classnames';
 import styles from './filter-form-by-type.module.scss';
 
-import { useAppDispatch, useAppSelector } from "../../../hooks";
-import { toggleCurrentSubtype, toggleCurrentType } from "../../../store/goodSlice";
+import { useAppDispatch, useAppSelector } from '../../../hooks';
+import { toggleCurrentSubtype, toggleCurrentType } from '../../../store/goodSlice';
 
 const FilterFormByType: FC = () => {
 	const dispatch = useAppDispatch();

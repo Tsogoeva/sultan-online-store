@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { useAppSelector } from '../hooks';
 
@@ -9,7 +9,7 @@ import ProductCatalog from '../pages/ProductCatalog/ProductCatalog';
 
 
 const AppRouter: FC = () => {
-	const { goods } = useAppSelector(state => state.goodReducer)
+	const { goods } = useAppSelector(state => state.goodReducer);
 
 	return (
 		<Routes>
@@ -17,12 +17,23 @@ const AppRouter: FC = () => {
 			{goods.map((product) => <Route
 				key={product.id}
 				path={`/sultan-online-store/product/${product.id}`}
-				element={<Product product={product}
-				/>}
+				element={
+					<Product product={product}
+					/>}
 			/>
 			)}
-			<Route path="/sultan-online-store/cart" element={<Cart />} />
-			<Route path="/sultan-online-store/management" element={<GoodsManagement />} />
+			<Route
+				path="/sultan-online-store/cart"
+				element={
+					<Cart />
+				}
+			/>
+			<Route
+				path="/sultan-online-store/management"
+				element={
+					<GoodsManagement />
+				}
+			/>
 			<Route path="*" element={<ProductCatalog />} />
 		</Routes>
 	)

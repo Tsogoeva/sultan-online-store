@@ -1,8 +1,9 @@
 import { FC } from 'react';
+import styles from './managing-quantity-in.cart.module.scss';
+
 import { useAppDispatch, useAppSelector } from '../../../hooks';
 import { changeProductToCartCount, removeProductFromCart } from '../../../store/goodSlice';
-import { IProduct } from '../../../types/IProduct';
-import styles from './managing-quantity-in.cart.module.scss';
+import { IProduct } from '../../../interfaces';
 
 interface IManagingQuantityInCartProps {
 	product: IProduct,
@@ -33,9 +34,19 @@ const ManagingQuantityInCart: FC<IManagingQuantityInCartProps> = ({ product, alr
 
 	return (
 		<div className={styles.container}>
-			<button className={styles.changing} onClick={decrementHandler}>{'-'}</button>
+			<button
+				className={styles.changing}
+				onClick={decrementHandler}
+			>
+				{'-'}
+			</button>
 			<div className={styles.count}>{count}</div>
-			<button className={styles.changing} onClick={incrementHandler}>{'+'}</button>
+			<button
+				className={styles.changing}
+				onClick={incrementHandler}
+			>
+				{'+'}
+			</button>
 		</div>
 	)
 }

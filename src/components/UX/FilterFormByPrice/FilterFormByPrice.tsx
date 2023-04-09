@@ -1,10 +1,9 @@
-import { FC } from "react";
-import { SubmitHandler, useForm } from "react-hook-form";
-
+import { FC } from 'react';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import styles from './filter-form-by-price.module.scss';
 
-import { useAppDispatch } from "../../../hooks";
-import { runFilterByPrice } from "../../../store/goodSlice";
+import { useAppDispatch } from '../../../hooks';
+import { runFilterByPrice } from '../../../store/goodSlice';
 
 export interface IPriceRange {
 	min: number;

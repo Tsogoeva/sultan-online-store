@@ -1,11 +1,15 @@
-import React, { FC } from "react";
+import { FC } from 'react';
 import styles from './header.module.scss';
 
-import Logo from "../UI/Logo/Logo";
-import Button from "../UX/Button/Button";
-import Input from "../UX/Input/Input";
+import Logo from '../UI/Logo/Logo';
+import LogoMini from "../UI/LogoMini/LogoMini";
+
+import Button from '../UX/Button/Button';
+import Input from '../UX/Input/Input';
 import ShortInfo from '../UI/ShortInfo/ShortInfo';
-import ShoppingCart from "../UX/ShoppingCart/ShoppingCart";
+
+import ShoppingCart from '../UX/ShoppingCart/ShoppingCart';
+import MiniShoppingCart from '../UX/MiniShoppingCart/MiniShoppingCart';
 
 import iconAddress from './assets/icon-address.svg';
 import iconImail from './assets/icon-email.svg';
@@ -16,8 +20,6 @@ import buttonDownloadIcon from './assets/download-button-icon.svg';
 
 import searchIcon from './assets/search-icon.svg';
 import operatorImg from './assets/operator.svg';
-import LogoMini from "../UI/LogoMini/LogoMini";
-import MiniShoppingCart from "../UX/MiniShoppingCart/MiniShoppingCart";
 
 
 const Header: FC = () => {

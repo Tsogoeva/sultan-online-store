@@ -1,9 +1,11 @@
-import { FC } from "react";
+import { FC } from 'react';
 import styles from './mini-shopping-cart.module.scss';
 
+import { useAppSelector } from '../../../hooks';
+import { useNavigate } from 'react-router';
+
 import cartImg from './assets/mini-shopping-cart-icon.svg';
-import { useAppSelector } from "../../../hooks";
-import { useNavigate } from "react-router";
+
 
 const MiniShoppingCart: FC = () => {
 	const navigate = useNavigate();

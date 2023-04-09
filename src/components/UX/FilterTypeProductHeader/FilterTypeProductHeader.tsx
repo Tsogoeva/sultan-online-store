@@ -1,9 +1,9 @@
-import { FC } from "react";
+import { FC } from 'react';
 import cn from 'classnames';
 import styles from './filter-type-product-header.module.scss';
 
-import { useAppDispatch, useAppSelector } from "../../../hooks";
-import { toggleCurrentType } from "../../../store/goodSlice";
+import { useAppDispatch, useAppSelector } from '../../../hooks';
+import { toggleCurrentType } from '../../../store/goodSlice';
 
 const FilterTypeProductHeader: FC = () => {
 	const dispatch = useAppDispatch();

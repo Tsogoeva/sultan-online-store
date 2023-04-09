@@ -1,11 +1,11 @@
-import React, { FC, useMemo, useState } from "react";
+import { FC, useMemo, useState } from 'react';
 import styles from './filter-form-by-manufacturer.module.scss';
 
-import { useAppDispatch, useAppSelector } from "../../../hooks";
+import { useAppDispatch, useAppSelector } from '../../../hooks';
 
 import icon from './assets/search-icon.svg';
-import { runFilterByManufacturer } from "../../../store/goodSlice";
-import InputFilterByManufacturer from "../InputFilterByManufacturer/InputFilterByManufacturer";
+import { runFilterByManufacturer } from '../../../store/goodSlice';
+import InputFilterByManufacturer from '../InputFilterByManufacturer/InputFilterByManufacturer';
 
 
 export interface ICheckboxProps {

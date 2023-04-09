@@ -3,10 +3,10 @@ import _ from 'lodash';
 import styles from './product-data-change.module.scss';
 
 import { useAppDispatch, useAppSelector } from '../../../hooks';
-import { addModifiedProductToGoods, IChecked } from '../../../store/goodSlice';
+import { addModifiedProductToGoods } from '../../../store/goodSlice';
 import CheckboxForManagement from '../CheckboxForManagement/CheckboxForManagement';
 import ProductNotFound from '../ProductNotFound/ProductNotFound';
-import { IProduct } from '../../../types/IProduct';
+import { IChecked, IProduct } from '../../../interfaces';
 
 
 interface IEditProductProp {

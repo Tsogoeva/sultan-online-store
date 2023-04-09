@@ -2,7 +2,8 @@ import React, { FC } from 'react';
 import styles from './product.module.scss';
 
 import { Link } from 'react-router-dom';
-import { IProduct } from '../../types/IProduct';
+import { IProduct } from '../../interfaces';
+import { useAppSelector } from '../../hooks';
 import ManagingQuantityInCart from '../../components/UX/ManagingQuantityInCart/ManagingQuantityInCart';
 import ButtonToCartFromProduct from '../../components/UX/ButtonToCartFromProduct/ButtonToCartFromProduct';
 
@@ -10,11 +11,11 @@ import grams from './assets/type-g.svg';
 import milliliters from './assets/type-ml.svg';
 import shareIcon from './assets/share-icon.svg';
 import downloadIcon from './assets/download-icon.svg';
-import { useAppSelector } from '../../hooks';
 
 interface IProductProp {
 	product: IProduct
 }
+
 
 const Product: FC<IProductProp> = ({ product }) => {
 	const {
@@ -30,7 +31,8 @@ const Product: FC<IProductProp> = ({ product }) => {
 	} = product;
 
 	const { cart } = useAppSelector(state => state.goodReducer);
-	const findedProductInCart = cart.find((content) => content.product.id === product.id);
+	const findedProductInCart = cart
+		.find((content) => content.product.id === product.id);
 
 	return (
 		<div className={styles.content}>
@@ -51,7 +53,11 @@ const Product: FC<IProductProp> = ({ product }) => {
 					<span className={styles.in_stock}>В наличии</span>
 					<h1 className={styles.title_product}>{title}</h1>
 					<div className={styles.size}>
-						<img className={styles.icon} src={typeSize === 'г' ? grams : milliliters} alt="Тип" />
+						<img
+							className={styles.icon}
+							src={typeSize === 'г' ? grams : milliliters}
+							alt="Тип"
+						/>
 						<span className={styles.count}>{size}</span>
 						<span>{typeSize}</span>
 					</div>
@@ -59,7 +65,9 @@ const Product: FC<IProductProp> = ({ product }) => {
 						<span className={styles.price}>{`${price} ₽`}</span>
 						<ManagingQuantityInCart
 							product={product}
-							alreadyAddedCount={findedProductInCart ? findedProductInCart.count : 0}
+							alreadyAddedCount={findedProductInCart
+								? findedProductInCart.count
+								: 0}
 						/>
 						<ButtonToCartFromProduct />
 					</div>

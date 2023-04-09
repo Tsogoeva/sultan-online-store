@@ -1,13 +1,13 @@
-import { FC, useEffect, useMemo } from "react";
+import { FC, useEffect, useMemo } from 'react';
 import styles from './product-table.module.scss';
 
-import { useAppDispatch, useAppSelector } from "../../../hooks";
-import { fetchData } from "../../../store/actionCreators";
+import { useAppDispatch, useAppSelector } from '../../../hooks';
+import { fetchData } from '../../../store/actionCreators';
 
-import ProductBox from "../ProductBox/ProductBox";
-import { IProduct } from "../../../types/IProduct";
-import { IChecked } from "../../../store/goodSlice";
-import Pagination from "../Pagination/Pagination";
+import ProductBox from '../ProductBox/ProductBox';
+import Pagination from '../Pagination/Pagination';
+import { IChecked, IProduct } from '../../../interfaces';
+
 
 const filterByPrice = (goods: IProduct[], min: number, max: number) => goods.filter((product) => {
 	const productPrice = Number(product.price);
@@ -16,6 +16,7 @@ const filterByPrice = (goods: IProduct[], min: number, max: number) => goods.fil
 		return product;
 	}
 });
+
 
 const filterByManufacturer = (goods: IProduct[], manufacturers: IChecked[], value: string) => goods.filter((product) => {
 	let countOfFalse = 0;
