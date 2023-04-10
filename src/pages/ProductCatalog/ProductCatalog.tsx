@@ -16,7 +16,7 @@ const ProductCatalog: FC = () => {
 	}
 
 	return (
-		<div className={styles.product_catalog}>
+		<div className={styles.flex}>
 			<div className={styles.content}>
 				<div className={styles.header}>
 					<span

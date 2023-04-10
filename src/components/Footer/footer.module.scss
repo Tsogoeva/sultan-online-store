@@ -13,8 +13,8 @@
 	background-color: rgba(63, 78, 101, 1);
 
 	.content {
-		min-height: 500px;
 		max-width: 1366px;
+		min-height: 500px;
 		margin: 0 auto;
 
 		.container {
@@ -26,16 +26,21 @@
 			min-height: 500px;
 
 			.about {
+				display: flex;
+				flex-direction: column;
+				max-width: 320px;
+				margin: 3px;
+
 				.description {
 					font-size: 16px;
-
-					max-width: 320px;
 					margin: 15px 3px 45px 1px;
 				}
 				.appeal {
 					font-size: 12px;
-
 					margin: 0 3px 14px 1px;
+				}
+				.input_container {
+					max-width: 230px;
 				}
 			}
 
@@ -43,17 +48,18 @@
 				font-weight: 600;
 				font-size: 20px;
 
-				margin-bottom: 25px;
+				margin: 3px 3px 25px 3px;
 			}
 			.section_item {
-				margin-bottom: 20px;
+				margin: 3px 3px 20px 3px;
 			}
 
 			.connection_text {
-				margin: 20px 2px 15px 0;
+				margin: 20px 3px 15px 3px;
 			}
 			.connection_icons {
 				display: flex;
+				margin: 3px;
 
 				.connection_whatsapp {
 					margin-right: 10px;
@@ -61,7 +67,7 @@
 			}
 
 			.email {
-				margin: 25px 0;
+				margin: 25px 3px;
 
 				.email_info {
 					font-weight: 600;
@@ -74,6 +80,149 @@
 
 			.logo_visa {
 				margin-right: 5px;
+			}
+
+			.container_mobile {
+				display: none;
+			}
+
+			@media screen and (max-width: 320px) {
+				.about,
+				.text,
+				.section_title,
+				.section_item,
+				.section_up,
+				.connection_text,
+				.connection_icons,
+				.email,
+				.logo_visa {
+					display: none;
+				}
+
+				.content_mobile {
+					max-width: 290px;
+					min-height: 500px;
+
+					margin: 20px auto;
+
+					font-size: 12px;
+					line-height: 150%;
+					color: #ffffff;
+
+					.top_footer_mobile {
+						display: flex;
+						justify-content: space-between;
+						margin-bottom: 15px;
+					}
+					.appeal {
+						margin: 15px 0;
+					}
+					.input_container {
+						position: relative;
+						margin-bottom: 30px;
+
+						.input {
+							padding: 20px 120px 20px 20px;
+							background-color: rgba(237, 237, 237, 1);
+							border-radius: 36px;
+						}
+
+						::placeholder {
+							color: rgba(92, 99, 112, 0.5);
+						}
+
+						.button {
+							position: absolute;
+							top: 8px;
+							right: 10px;
+
+							width: 40px;
+							height: 40px;
+							background-color: rgba(255, 200, 94, 1);
+
+							border-radius: 50%;
+							.icon {
+								width: 15px;
+							}
+						}
+					}
+					.container_section {
+						display: flex;
+						justify-content: space-between;
+
+						.section_up_mobile {
+							margin-bottom: 40px;
+						}
+						.text_mobile {
+							color: rgba(255, 255, 255, 1);
+							line-height: 150%;
+						}
+						.section_title_mobile {
+							font-weight: 600;
+							font-size: 20px;
+
+							margin: 3px 3px 25px 3px;
+						}
+						.section_item_mobile {
+							font-size: 12px;
+							font-weight: 300;
+							margin: 3px 3px 20px 3px;
+						}
+					}
+					.container_connection {
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+
+						.text_mobile {
+							flex-basis: 60%;
+							color: rgba(255, 255, 255, 1);
+							line-height: 150%;
+
+							margin: 3px 3px 25px 3px;
+
+							.section_title_mobile {
+								font-weight: 600;
+								font-size: 20px;
+
+								margin: 3px 3px 25px 3px;
+							}
+
+							.email_mobile {
+								margin: 25px 3px;
+
+								.email_info_mobile {
+									font-weight: 600;
+								}
+								.email_details_mobile {
+									font-weight: 300;
+									font-size: 12px;
+								}
+							}
+
+							.logo_visa_mobile {
+								margin-right: 5px;
+							}
+						}
+
+						.section_up_mobile {
+							flex-basis: 40%;
+							margin: 10% 0 40% 0;
+
+							.connection_text_mobile {
+								margin: 20px 3px 15px 3px;
+							}
+							.connection_icons_mobile {
+								display: flex;
+								margin: 3px;
+
+								.connection_whatsapp_mobile {
+									margin-right: 10px;
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}

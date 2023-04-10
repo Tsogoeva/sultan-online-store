@@ -1,176 +1,186 @@
-.content {
+.flex {
 	flex: 1 0 auto;
 
-	max-width: 1366px;
-	margin: 0 auto;
+	.content {
+		max-width: 1366px;
+		margin: 0 auto;
 
-	.path_and_back {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		.path_and_back {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
 
-		.path {
-			display: inline-block;
-			color: rgba(63, 78, 101, 1);
-			font-weight: 300;
-			line-height: 120%;
-
-			margin: 45px 0 50px 0;
-		}
-
-		.back {
-			width: 184px;
-			height: 59px;
-
-			margin: 2px 11px 2px 2px;
-			padding: 10px;
-
-			box-shadow: 0px 15px 70px -11px rgba(43, 28, 1, 0.1);
-			border-radius: 30px;
-			background-color: #ffffff;
-
-			color: rgba(63, 78, 101, 1);
-			text-align: center;
-		}
-	}
-	.container {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-
-		.image {
-			flex-basis: 50%;
-			img {
-				min-height: 300px;
-				min-width: 150px;
-				display: block;
-				margin: 0 auto;
-			}
-		}
-		.info {
-			flex-basis: 50%;
-			.in_stock {
+			.path {
 				display: inline-block;
-				font-weight: 500;
-				line-height: 130%;
-				color: rgba(31, 216, 93, 1);
+				color: rgba(63, 78, 101, 1);
+				font-weight: 300;
+				line-height: 120%;
 
-				margin-bottom: 10px;
+				margin: 45px 0 50px 0;
 			}
-			.title_product {
-				font-size: 30px;
-				line-height: 150%;
 
-				margin-bottom: 10px;
+			.back {
+				margin: 3px;
+				padding: 20px 30px;
+
+				box-shadow: 0px 15px 70px -11px rgba(43, 28, 1, 0.1);
+				border-radius: 30px;
+				background-color: #ffffff;
+
+				color: rgba(63, 78, 101, 1);
+				text-align: center;
 			}
-			.size {
-				color: rgba(63, 78, 101, 0.5);
-				font-size: 12px;
-				line-height: 130%;
+		}
+		.container {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
 
-				margin-bottom: 10px;
-
-				.icon {
-					margin-right: 3px;
+			.image {
+				flex-basis: 50%;
+				img {
+					display: block;
+					margin: 30px auto;
 				}
-				.count {
-					margin-right: 3px;
-				}
 			}
-			.price_and_cart {
-				display: flex;
-				justify-content: space-between;
-
-				max-width: 530px;
-				margin: 20px 0;
-
-				.price {
-					font-weight: 800;
-					font-size: 30px;
+			.info {
+				flex-basis: 50%;
+				.in_stock {
+					display: inline-block;
+					font-weight: 500;
 					line-height: 130%;
-				}
-			}
-			.extra_options {
-				display: flex;
-				margin-bottom: 35px;
+					color: rgba(31, 216, 93, 1);
 
-				.share {
-					box-shadow: 0px 15px 70px -11px rgba(43, 28, 1, 0.1);
-					border-radius: 10px;
-
-					padding: 28px;
+					margin-bottom: 10px;
 				}
-				.offers {
-					font-size: 12px;
+				.title_product {
+					font-size: 30px;
 					line-height: 150%;
-					color: rgba(63, 78, 101, 1);
 
-					text-align: center;
-					box-shadow: 0px 15px 70px -11px rgba(43, 28, 1, 0.1);
-					border-radius: 10px;
-
-					padding: 20.5px 35.5px;
-					margin: 0 10px;
+					margin-bottom: 10px;
 				}
-				.price_list {
-					display: flex;
-					box-shadow: 0px 15px 70px -11px rgba(43, 28, 1, 0.1);
-					border-radius: 10px;
-					font-weight: 700;
-					line-height: 17px;
-					color: rgba(63, 78, 101, 1);
+				.size {
+					color: rgba(63, 78, 101, 0.5);
+					font-size: 12px;
+					line-height: 130%;
 
-					padding: 30px 37px;
+					margin-bottom: 10px;
 
-					span {
-						white-space: nowrap;
-						margin-right: 12px;
+					.icon {
+						margin-right: 3px;
+					}
+					.count {
+						margin-right: 3px;
 					}
 				}
-			}
-			.detailed_info {
-				.feature {
-					margin-bottom: 30px;
-					.feature_title {
-						display: block;
-						font-weight: 300;
+				.price_and_cart {
+					display: flex;
+					justify-content: space-between;
+					flex-wrap: wrap;
+					align-items: center;
+
+					max-width: 530px;
+					margin: 20px 0;
+
+					.price {
+						font-weight: 800;
+						font-size: 30px;
+						line-height: 130%;
+						margin: 5px;
+					}
+				}
+				.extra_options {
+					display: flex;
+					flex-wrap: wrap;
+					margin-bottom: 35px;
+
+					.share {
+						box-shadow: 0px 15px 70px -11px rgba(43, 28, 1, 0.1);
+						border-radius: 10px;
+
+						padding: 28px;
+						margin: 3px;
+					}
+					.offers {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						text-align: center;
+						font-size: 12px;
 						line-height: 150%;
-
 						color: rgba(63, 78, 101, 1);
-						margin-bottom: 5px;
 
-						.feature_data {
-							font-weight: 500;
-							color: rgba(17, 17, 17, 1);
+						box-shadow: 0px 15px 70px -11px rgba(43, 28, 1, 0.1);
+						border-radius: 10px;
+
+						max-width: 316px;
+						padding: 0 10px;
+						margin: 3px;
+					}
+					.price_list {
+						display: flex;
+						box-shadow: 0px 15px 70px -11px rgba(43, 28, 1, 0.1);
+						border-radius: 10px;
+						font-weight: 700;
+						line-height: 17px;
+						color: rgba(63, 78, 101, 1);
+
+						padding: 30px 37px;
+						margin: 3px;
+
+						span {
+							white-space: nowrap;
+							margin-right: 12px;
 						}
 					}
 				}
-			}
-			.description_block {
-				border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
-				margin-bottom: 20px;
+				.detailed_info {
+					margin: 5px;
+					.feature {
+						margin: 3px 3px 30px 3px;
+						.feature_title {
+							display: block;
+							font-weight: 300;
+							line-height: 150%;
 
-				.title {
-					font-weight: 500;
-					font-size: 16px;
-					line-height: 150%;
+							color: rgba(63, 78, 101, 1);
+							margin-bottom: 5px;
+
+							.feature_data {
+								font-weight: 500;
+								color: rgba(17, 17, 17, 1);
+							}
+						}
+					}
 				}
-				.description {
-					font-weight: 300;
-					font-size: 12px;
-					line-height: 150%;
-					color: rgba(63, 78, 101, 1);
+				.description_block {
+					border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+					margin: 5px 5px 20px 3px;
 
-					padding: 15px 0 20px 0;
+					.title {
+						font-weight: 500;
+						font-size: 16px;
+						line-height: 150%;
+					}
+					.description {
+						font-weight: 300;
+						font-size: 12px;
+						line-height: 150%;
+						color: rgba(63, 78, 101, 1);
+
+						padding: 20px 10px 20px 0px;
+					}
 				}
-			}
-			.full_parameter {
-				.title {
-					font-weight: 500;
-					font-size: 16px;
-					line-height: 150%;
+				.full_parameter {
+					.title {
+						font-weight: 500;
+						font-size: 16px;
+						line-height: 150%;
 
-					margin-bottom: 15px;
+						margin: 20px 3px 15px 3px;
+					}
 				}
 			}
 		}

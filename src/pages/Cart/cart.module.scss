@@ -1,182 +1,182 @@
-.content {
+.container {
 	flex: 1 0 auto;
 
-	max-width: 1366px;
-	margin: 0 auto;
+	.content {
+		max-width: 1366px;
+		margin: 40px auto;
 
-	.path_and_back {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-
-		.path {
-			display: inline-block;
-			color: rgba(63, 78, 101, 1);
-			font-weight: 300;
-			line-height: 120%;
-
-			margin: 45px 0 50px 0;
-		}
-
-		.back {
-			width: 240px;
-			height: 59px;
-
-			margin: 2px 11px 2px 2px;
-			padding: 10px 20px;
-
-			box-shadow: 0px 15px 70px -11px rgba(43, 28, 1, 0.1);
-			border-radius: 30px;
-			background-color: #ffffff;
-
-			color: rgba(63, 78, 101, 1);
-			text-align: center;
-			white-space: nowrap;
-		}
-	}
-	.title {
-		font-weight: 500;
-		font-size: 40px;
-		line-height: 120%;
-
-		text-transform: uppercase;
-
-		margin-bottom: 50px;
-	}
-
-	.product_container {
-		display: flex;
-		flex-direction: column;
-
-		.product {
+		.path_and_back {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			flex-wrap: wrap;
 
-			min-width: 1366px;
-
-			border-top: 1px dashed rgba(0, 0, 0, 0.2);
-			border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
-
-			padding: 50px 0;
-
-			.info {
-				display: flex;
-				align-items: center;
-
-				flex-basis: 60%;
-				.image {
-					padding: 0 50px;
-				}
-				.text {
-					margin-left: 50px;
-					max-width: 450px;
-					.size {
-						color: rgba(63, 78, 101, 0.5);
-						font-size: 12px;
-						line-height: 130%;
-
-						margin-bottom: 10px;
-
-						.icon {
-							margin-right: 3px;
-						}
-						.count {
-							margin-right: 3px;
-						}
-					}
-					.description_block {
-						.title_product {
-							font-weight: 700;
-							font-size: 30px;
-							line-height: 36px;
-						}
-						.description {
-							font-weight: 300;
-							font-size: 12px;
-							line-height: 150%;
-							color: rgba(63, 78, 101, 1);
-
-							padding: 10px 0;
-						}
-					}
-				}
-			}
-
-			.managing {
-				flex-basis: 40%;
-				display: flex;
-				justify-content: flex-end;
-				.border_manage {
-					border-left: 1px dashed rgba(0, 0, 0, 0.2);
-					padding: 0 45px;
-				}
-				.sum_product {
-					font-weight: 700;
-					font-size: 30px;
-					line-height: 130%;
-
-					border-left: 1px dashed rgba(0, 0, 0, 0.2);
-					border-right: 1px dashed rgba(0, 0, 0, 0.2);
-
-					padding: 0 45px;
-				}
-				.remove_button {
-					margin-left: 45px;
-
-					width: 59px;
-					height: 59px;
-
-					background-color: rgba(255, 200, 94, 1);
-					border-radius: 50%;
-				}
-			}
-		}
-
-		.empty {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-
-			min-width: 1366px;
-			min-height: 700px;
-			padding: 50px 0;
-
-			.empty_title {
-				font-weight: 500;
-				font-size: 36px;
+			.path {
+				display: inline-block;
+				color: rgba(63, 78, 101, 1);
+				font-weight: 300;
 				line-height: 120%;
-				text-transform: uppercase;
+
+				margin: 3px;
+			}
+
+			.back {
+				width: 240px;
+				height: 59px;
+
+				margin: 2px 11px 2px 2px;
+				padding: 10px 20px;
+
+				box-shadow: 0px 15px 70px -11px rgba(43, 28, 1, 0.1);
+				border-radius: 30px;
+				background-color: #ffffff;
 
 				color: rgba(63, 78, 101, 1);
-
-				margin: 0 auto;
+				text-align: center;
+				white-space: nowrap;
 			}
 		}
-	}
+		.title {
+			font-weight: 500;
+			font-size: 40px;
+			line-height: 120%;
 
-	.place_order_container {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+			text-transform: uppercase;
 
-		margin: 30px 0;
-
-		.order_button {
-			width: 192px;
-			height: 59px;
-
-			background-color: rgba(255, 200, 94, 1);
-			border-radius: 30px;
-
-			color: rgba(255, 255, 255, 1);
-			font-weight: 700;
-			line-height: 17px;
+			margin: 20px 3px 50px 3px;
 		}
-		.total_order_amount {
-			font-weight: 700;
-			font-size: 30px;
-			line-height: 130%;
+
+		.product_container {
+			display: flex;
+			flex-direction: column;
+
+			.product {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-wrap: wrap;
+
+				border-top: 1px dashed rgba(0, 0, 0, 0.2);
+				border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+
+				padding: 50px 0;
+
+				.info {
+					display: flex;
+					align-items: center;
+
+					flex-basis: 60%;
+					.image {
+						padding: 0 50px;
+					}
+					.text {
+						margin-left: 50px;
+						max-width: 450px;
+						.size {
+							color: rgba(63, 78, 101, 0.5);
+							font-size: 12px;
+							line-height: 130%;
+
+							margin-bottom: 10px;
+
+							.icon {
+								margin-right: 3px;
+							}
+							.count {
+								margin-right: 3px;
+							}
+						}
+						.description_block {
+							.title_product {
+								font-weight: 700;
+								font-size: 30px;
+								line-height: 36px;
+							}
+							.description {
+								font-weight: 300;
+								font-size: 12px;
+								line-height: 150%;
+								color: rgba(63, 78, 101, 1);
+
+								padding: 10px 0;
+							}
+						}
+					}
+				}
+
+				.managing {
+					flex-basis: 40%;
+					display: flex;
+					justify-content: flex-end;
+
+					.border_manage {
+						border-left: 1px dashed rgba(0, 0, 0, 0.2);
+						padding: 0 45px;
+					}
+					.sum_product {
+						font-weight: 700;
+						font-size: 30px;
+						line-height: 130%;
+
+						border-left: 1px dashed rgba(0, 0, 0, 0.2);
+						border-right: 1px dashed rgba(0, 0, 0, 0.2);
+
+						padding: 3px 45px;
+					}
+					.remove_button {
+						margin-left: 45px;
+						padding: 20px;
+
+						background-color: rgba(255, 200, 94, 1);
+						border-radius: 50%;
+					}
+				}
+			}
+
+			.empty {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				min-height: 500px;
+				padding: 50px 0;
+
+				.empty_title {
+					font-weight: 500;
+					font-size: 36px;
+					line-height: 120%;
+					text-transform: uppercase;
+
+					color: rgba(63, 78, 101, 1);
+
+					margin: 0 auto;
+				}
+			}
+		}
+
+		.place_order_container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			margin: 30px 5px;
+
+			.order_button {
+				width: 192px;
+				height: 59px;
+
+				background-color: rgba(255, 200, 94, 1);
+				border-radius: 30px;
+
+				color: rgba(255, 255, 255, 1);
+				font-weight: 700;
+				line-height: 17px;
+			}
+			.total_order_amount {
+				font-weight: 700;
+				font-size: 30px;
+				line-height: 130%;
+			}
 		}
 	}
 }

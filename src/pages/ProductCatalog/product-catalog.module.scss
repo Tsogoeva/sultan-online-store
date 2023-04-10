@@ -1,4 +1,4 @@
-.product_catalog {
+.flex {
 	flex: 1 0 auto;
 
 	.content {
@@ -9,6 +9,7 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			flex-wrap: wrap;
 
 			.path {
 				display: inline-block;
@@ -31,6 +32,7 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			flex-wrap: wrap;
 
 			.category {
 				color: rgba(17, 17, 17, 1);

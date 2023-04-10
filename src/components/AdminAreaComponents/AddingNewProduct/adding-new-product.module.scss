@@ -1,8 +1,9 @@
 .container {
-	flex: 0 1 30%;
-	padding: 0 20px 0 5px;
+	flex: 0 1 35%;
+	padding: 0 10px 0 5px;
 
 	.title {
+		text-align: center;
 		font-weight: 500;
 		font-size: 26px;
 		line-height: 120%;
@@ -13,9 +14,12 @@
 	}
 	.form {
 		.input_container {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
 			margin: 20px 0 0 0;
 			.label {
-				display: inline-block;
+				display: block;
 				font-weight: 500;
 				font-size: 16px;
 				line-height: 150%;
@@ -24,7 +28,7 @@
 			.input {
 				border: 1px solid rgba(255, 200, 94, 0.5);
 				border-radius: 30px;
-				padding: 5px 40px;
+				padding: 5px 50px;
 			}
 			.textarea {
 				height: 80px;

@@ -1,27 +1,25 @@
 .container {
+	margin: 3px;
 	.big_size {
-		width: 195px;
-		height: 60px;
+		padding: 20px 40px;
+		font-weight: 700;
 	}
 
 	.mini_size {
-		width: 153px;
-		height: 45px;
+		padding: 10px 20px;
+		font-weight: 600;
 	}
 
 	button {
-		width: 195px;
-		height: 60px;
-
+		padding: 20px 40px;
 		background-color: rgba(255, 200, 94, 1);
 		border-radius: 30px;
 
 		color: rgba(255, 255, 255, 1);
-		font-weight: 700;
-		line-height: 17px;
+		line-height: 150%;
 
 		img {
-			margin: 2px 0 0 12px;
+			margin: 2px 0 0 10px;
 		}
 	}
 }

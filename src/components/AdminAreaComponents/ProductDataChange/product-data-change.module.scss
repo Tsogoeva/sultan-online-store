@@ -1,9 +1,11 @@
 .content {
-	flex: 0 1 30%;
+	flex: 0 1 35%;
 	border-left: 1px dashed rgba(63, 78, 101, 0.2);
 	border-right: 1px dashed rgba(63, 78, 101, 0.2);
 
 	padding: 0 20px 0 20px;
+	text-align: center;
+
 	.title {
 		font-weight: 500;
 		font-size: 26px;

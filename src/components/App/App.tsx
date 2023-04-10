@@ -21,7 +21,7 @@ const App: FC = () => {
         <Header />
         <AppRouter />
         <Footer />
-      </div >
+      </div>
     </BrowserRouter>
   )
 }

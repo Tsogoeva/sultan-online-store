@@ -150,10 +150,20 @@ const ProductTable: FC = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.table}>
-				{productsForCureentPage && productsForCureentPage.map((product: IProduct) => <ProductBox key={product.id} product={product} />)}
+				{productsForCureentPage
+					&& productsForCureentPage
+						.map((product: IProduct) => <ProductBox
+							key={product.id}
+							product={product}
+						/>
+						)}
 			</div>
 			<Pagination goods={relatedGoods} />
-			<p className={styles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis. Faucibus consectetur aliquet sed pellentesque consequat consectetur congue mauris venenatis. Nunc elit, dignissim sed nulla ullamcorper enim, malesuada.</p>
+			<p
+				className={styles.description}
+			>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate feugiat massa vestibulum duis. Faucibus consectetur aliquet sed pellentesque consequat consectetur congue mauris venenatis. Nunc elit, dignissim sed nulla ullamcorper enim, malesuada.
+			</p>
 		</div>
 	)
 }

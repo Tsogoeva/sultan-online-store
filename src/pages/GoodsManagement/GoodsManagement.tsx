@@ -26,28 +26,29 @@ const GoodsManagement: FC = () => {
 	}
 
 	return (
-		<div className={styles.content}>
-			<div className={styles.container}>
-				<div className={styles.header}>
-					<h2
-						className={styles.title}
-					>
-						Управление товарами
-					</h2>
-					<div
-						className={styles.back}
-						onClick={clickHandler}
-					>
-						Вернуться в каталог
+		<div className={styles.flex}>
+			<div className={styles.content}>
+				<div className={styles.container}>
+					<div className={styles.header}>
+						<h2
+							className={styles.title}
+						>
+							Управление товарами
+						</h2>
+						<div
+							className={styles.back}
+							onClick={clickHandler}
+						>
+							Вернуться в каталог
+						</div>
+					</div>
+					<div className={styles.panels}>
+						<AddingNewProduct />
+						<ProductDataChange />
+						<ProductRemoval />
 					</div>
 				</div>
-				<div className={styles.panels}>
-					<AddingNewProduct />
-					<ProductDataChange />
-					<ProductRemoval />
-				</div>
 			</div>
-
 		</div>
 	)
 }
