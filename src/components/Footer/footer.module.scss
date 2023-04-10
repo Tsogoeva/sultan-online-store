@@ -82,7 +82,7 @@
 				margin-right: 5px;
 			}
 
-			.container_mobile {
+			.content_mobile {
 				display: none;
 			}
 
@@ -100,6 +100,7 @@
 				}
 
 				.content_mobile {
+					display: block;
 					max-width: 290px;
 					min-height: 500px;
 
