@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/sultan-online-store/static/css/main.4a35a9d5.css",
-    "main.js": "/sultan-online-store/static/js/main.3e2061d7.js",
+    "main.css": "/sultan-online-store/static/css/main.71df97ae.css",
+    "main.js": "/sultan-online-store/static/js/main.6068ce4a.js",
     "static/media/operator.svg": "/sultan-online-store/static/media/operator.c8a2ae2560094f630b6db713b01cff52.svg",
     "static/media/logo-sultan-mini-dark.svg": "/sultan-online-store/static/media/logo-sultan-mini-dark.3d7c822266f7a2c63491f275df0ef5ec.svg",
     "static/media/logo-sultan-mini-light.svg": "/sultan-online-store/static/media/logo-sultan-mini-light.ca804c5a483ae90d483e5b8d9a62b964.svg",
@@ -60,11 +60,11 @@
     "static/media/logo-light-sultan-t.svg": "/sultan-online-store/static/media/logo-light-sultan-t.b1e397b006737d97e418cf1dd4e52bef.svg",
     "static/media/logo-sultan-t-mini-light.svg": "/sultan-online-store/static/media/logo-sultan-t-mini-light.0b295bdadc1cc2c0ba02ace43a589b71.svg",
     "static/media/email-icon.svg": "/sultan-online-store/static/media/email-icon.35ab94e2f8817f324bd31c2293385fa8.svg",
-    "main.4a35a9d5.css.map": "/sultan-online-store/static/css/main.4a35a9d5.css.map",
-    "main.3e2061d7.js.map": "/sultan-online-store/static/js/main.3e2061d7.js.map"
+    "main.71df97ae.css.map": "/sultan-online-store/static/css/main.71df97ae.css.map",
+    "main.6068ce4a.js.map": "/sultan-online-store/static/js/main.6068ce4a.js.map"
   },
   "entrypoints": [
-    "static/css/main.4a35a9d5.css",
-    "static/js/main.3e2061d7.js"
+    "static/css/main.71df97ae.css",
+    "static/js/main.6068ce4a.js"
   ]
 }
