@@ -107,8 +107,6 @@ const EditProductForm: FC<IEditProductProp> = ({ product, onSubmit }) => {
 		setDescription('');
 		setPrice('');
 
-		console.log({ goods })
-
 		onSubmit(false);
 	}
 
@@ -153,30 +151,24 @@ const EditProductForm: FC<IEditProductProp> = ({ product, onSubmit }) => {
 
 			<div className={styles.checkbox_container}>
 				<span className={styles.checkbox_title}>{'Тип товара: '}</span>
-				{checkedTypes.map(({ name, isChecked }) => {
-					return (
-						<CheckboxForManagement
-							key={name}
-							name={name}
-							isChecked={isChecked}
-							onClick={checkTypeProduct}
-						/>
-					)
-				})}
+				{checkedTypes.map(({ name, isChecked }) => <CheckboxForManagement
+					key={name}
+					name={name}
+					isChecked={isChecked}
+					onClick={checkTypeProduct}
+				/>
+				)}
 			</div>
 
 			<div className={styles.checkbox_container}>
 				<span className={styles.checkbox_title}>{'Подтип товара: '}</span>
-				{checkedSubtypes.map(({ name, isChecked }) => {
-					return (
-						<CheckboxForManagement
-							key={name}
-							name={name}
-							isChecked={isChecked}
-							onClick={checkSubtypeProduct}
-						/>
-					)
-				})}
+				{checkedSubtypes.map(({ name, isChecked }) => <CheckboxForManagement
+					key={name}
+					name={name}
+					isChecked={isChecked}
+					onClick={checkSubtypeProduct}
+				/>
+				)}
 			</div>
 
 			<div className={styles.input_container}>
@@ -323,7 +315,6 @@ const ChangeProductDetails: FC = () => {
 	const [currentProductNotFound, setCurrentProductNotFound] = useState(false);
 
 	const submitHandler = (e: React.SyntheticEvent) => {
-		console.log('SUBMIT');
 		e.preventDefault();
 
 		setCurrentProduct(goods.find((product) => product.barcode === searchedProduct));
@@ -334,8 +325,6 @@ const ChangeProductDetails: FC = () => {
 		} else {
 			setShouldShowEditForm(true);
 		}
-
-		// setCurrentProduct(null);
 	}
 
 	useEffect(() => {

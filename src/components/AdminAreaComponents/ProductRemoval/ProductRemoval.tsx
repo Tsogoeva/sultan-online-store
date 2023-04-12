@@ -89,7 +89,6 @@ const ProductRemoval: FC = () => {
 
 	}, [currentProduct])
 
-	console.log({ goods })
 	return (
 		<div className={styles.content}>
 			<div className={styles.container}>

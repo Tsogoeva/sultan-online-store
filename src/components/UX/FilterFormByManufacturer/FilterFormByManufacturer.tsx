@@ -20,10 +20,7 @@ const Checkbox: FC<ICheckboxProps> = ({ value, isChecked }) => {
 
 
 	const clickHandler = () => {
-		console.log('CLICK')
-		console.log({ beforeToggle: checked })
 		toggleChecked(!checked);
-		console.log({ afterToggle: checked })
 		dispatch(runFilterByManufacturer({ name: value, isChecked: !checked }));
 	}
 
@@ -56,7 +53,6 @@ const FilterFormByManufacturer: FC = () => {
 	useMemo(() => {
 		if (show) {
 			shownManufacturers = manufacturers;
-			console.log(shownManufacturers)
 		} else {
 			shownManufacturers = shownManufacturers.slice(0, 4);
 		}

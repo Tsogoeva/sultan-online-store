@@ -29,9 +29,6 @@ const ManagingQuantityInCart: FC<IManagingQuantityInCartProps> = ({ product, alr
 		}
 	}
 
-	const { cart } = useAppSelector(state => state.goodReducer);
-	console.log({ cart })
-
 	return (
 		<div className={styles.container}>
 			<button

@@ -33,9 +33,6 @@ const AddingNewProduct: FC = () => {
 	useEffect(() => {
 		updateCheckedTypes(cloneTypes);
 		updateCheckedSubtypes(cloneSubtypes);
-
-		console.log("USEEFFECT")
-
 	}, [managingTypes, goods]);
 
 
@@ -87,18 +84,15 @@ const AddingNewProduct: FC = () => {
 		dispatch(addNewProduct(newProduct));
 
 		const storage = localStorage.getItem('addedGoods');
-		let parse: IProduct[];
+		let parsedData: IProduct[];
 
 		if (typeof storage === 'string') {
 			// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-			parse = JSON.parse(storage);
-			const updatedStorage = [...parse, newProduct];
+			parsedData = JSON.parse(storage);
+			const updatedStorage = [...parsedData, newProduct];
 			localStorage.setItem('addedGoods', JSON.stringify(updatedStorage));
 		}
 
-		// updateCheckedTypes(cloneTypes.map((type) => ({ ...type, isChecked: false })));
-		// console.log({ managingTypes });
-		// updateCheckedSubtypes(cloneSubtypes);
 		setTitle('');
 		setImgUrl('');
 		setTypeSize('');
@@ -108,29 +102,25 @@ const AddingNewProduct: FC = () => {
 		setBrand('');
 		setDescription('');
 		setPrice('');
-
-		console.log({ checkedTypesReset: checkedTypes })
-
 	}
 
-	console.log({ goods })
+	const renderTypeCheckBox = () => checkedTypes
+		.map(({ name, isChecked }) => <CheckboxForManagement
+			key={name}
+			name={name}
+			isChecked={isChecked}
+			onClick={checkTypeProduct}
+		/>
+		);
 
-	const renderTypeCheckBox = () => checkedTypes.map(({ name, isChecked }) => {
-		console.log({ checkedTypesProductINRENDER: checkedTypes })
-		return (
-			<CheckboxForManagement key={name} name={name} isChecked={isChecked} onClick={checkTypeProduct} />
-		)
-	});
-
-	const renderSubtypeCheckBox = () => checkedSubtypes.map(({ name, isChecked }) => {
-		console.log('321');
-		return (
-			<CheckboxForManagement key={name} name={name} isChecked={isChecked} onClick={checkSubtypeProduct} />
-		)
-	});
-
-	console.log({ checkedTypesAfter: checkedTypes });
-
+	const renderSubtypeCheckBox = () => checkedSubtypes
+		.map(({ name, isChecked }) => <CheckboxForManagement
+			key={name}
+			name={name}
+			isChecked={isChecked}
+			onClick={checkSubtypeProduct}
+		/>
+		);
 
 	return (
 		<div className={styles.container}>

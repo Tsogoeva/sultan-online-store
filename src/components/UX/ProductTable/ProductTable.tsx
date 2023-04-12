@@ -127,8 +127,6 @@ const ProductTable: FC = () => {
 	}, [])
 
 	useMemo(() => {
-		console.log('!!!');
-
 		relatedGoods = goods;
 		relatedGoods = filterByPrice(relatedGoods, minPrice, maxPrice);
 		relatedGoods = filterByManufacturer(relatedGoods, manufacturers, inputManufacturerValue);
