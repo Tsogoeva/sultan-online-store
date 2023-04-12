@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styles from './product-box.module.scss';
 
 import { useAppDispatch } from '../../../hooks';
@@ -14,7 +14,6 @@ import cartIcon from './assets/cart-icon.svg';
 interface IProductBoxProps {
 	product: IProduct,
 }
-
 
 const ProductBox: FC<IProductBoxProps> = ({ product }) => {
 	const dispatch = useAppDispatch();
@@ -65,7 +64,7 @@ const ProductBox: FC<IProductBoxProps> = ({ product }) => {
 					<span
 						className={styles.feature_title}
 					>
-						Штрихкод:
+						{'Штрихкод: '}
 						<span
 							className={styles.feature_data}
 						>
@@ -75,7 +74,7 @@ const ProductBox: FC<IProductBoxProps> = ({ product }) => {
 					<span
 						className={styles.feature_title}
 					>
-						Производитель:
+						{'Производитель: '}
 						<span
 							className={styles.feature_data}
 						>
@@ -85,7 +84,7 @@ const ProductBox: FC<IProductBoxProps> = ({ product }) => {
 					<span
 						className={styles.feature_title}
 					>
-						Бренд:
+						{'Бренд: '}
 						<span
 							className={styles.feature_data}
 						>

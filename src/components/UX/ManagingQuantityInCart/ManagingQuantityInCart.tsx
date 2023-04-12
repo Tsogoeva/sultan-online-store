@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import styles from './managing-quantity-in.cart.module.scss';
 
-import { useAppDispatch, useAppSelector } from '../../../hooks';
+import { useAppDispatch } from '../../../hooks';
 import { changeProductToCartCount, removeProductFromCart } from '../../../store/goodSlice';
 import { IProduct } from '../../../interfaces';
 

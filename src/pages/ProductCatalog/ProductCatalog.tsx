@@ -37,9 +37,15 @@ const ProductCatalog: FC = () => {
 					>
 						Бытовая химия
 					</h2>
-					<SortingProducts />
+					<div className={styles.sorting_product}>
+
+						<SortingProducts />
+					</div>
 				</div>
-				<FilterTypeProductHeader />
+				<div className={styles.filter_type}>
+					<FilterTypeProductHeader />
+
+				</div>
 				<div className={styles.container_filtering_and_table}>
 					<CatalogFilter />
 					<ProductTable />

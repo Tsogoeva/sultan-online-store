@@ -9,4 +9,39 @@
 
 		margin-bottom: 10px;
 	}
+
+	.btn_mobile {
+		display: none;
+	}
+
+	.sorting_product {
+		display: none;
+	}
+
+	@media screen and (max-width: 320px) {
+		.header {
+			display: flex;
+			justify-content: space-between;
+
+			.btn_mobile {
+				display: block;
+				text-align: center;
+				padding: 4px 13px 9px 13px;
+
+				background: linear-gradient(90deg, rgba(255, 198, 80, 0.3) 0%, rgba(254, 202, 110, 0.3) 97.25%);
+				border-radius: 1000px;
+				color: rgba(63, 78, 101, 1);
+			}
+		}
+		.options_open {
+			display: block;
+		}
+		.options_close {
+			display: none;
+		}
+		.sorting_product {
+			display: block;
+			margin: 20px 3px;
+		}
+	}
 }

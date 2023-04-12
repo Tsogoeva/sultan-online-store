@@ -5,6 +5,12 @@
 		max-width: 1366px;
 		margin: 0 auto;
 
+		@media screen and (max-width: 320px) {
+			.content {
+				max-width: 290px;
+			}
+		}
+
 		.header {
 			display: flex;
 			justify-content: space-between;
@@ -19,6 +25,12 @@
 
 				margin: 45px 0 50px 0;
 			}
+
+			@media screen and (max-width: 320px) {
+				.path {
+					display: none;
+				}
+			}
 			.manage {
 				padding: 20px;
 				background-color: rgba(255, 200, 94, 1);
@@ -26,6 +38,14 @@
 				color: #ffffff;
 				font-weight: 700;
 				font-size: 16px;
+			}
+
+			@media screen and (max-width: 320px) {
+				.manage {
+					margin: 30px auto;
+					font-size: 14px;
+					font-weight: 500;
+				}
 			}
 		}
 		.sorting {
@@ -43,11 +63,33 @@
 
 				margin-bottom: 25px;
 			}
+
+			@media screen and (max-width: 320px) {
+				.category {
+					font-size: 20px;
+					margin: 3px 3px 20px 3px;
+				}
+				.sorting_product {
+					display: none;
+				}
+			}
+		}
+
+		@media screen and (max-width: 320px) {
+			.filter_type {
+				display: none;
+			}
 		}
 
 		.container_filtering_and_table {
 			display: flex;
 			justify-content: space-between;
+		}
+
+		@media screen and (max-width: 320px) {
+			.container_filtering_and_table {
+				flex-wrap: wrap;
+			}
 		}
 	}
 }

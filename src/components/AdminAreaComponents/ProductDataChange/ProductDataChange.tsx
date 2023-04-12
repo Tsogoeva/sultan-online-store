@@ -17,7 +17,7 @@ interface IEditProductProp {
 const EditProductForm: FC<IEditProductProp> = ({ product, onSubmit }) => {
 	const dispatch = useAppDispatch();
 
-	const { goods, managingTypes, managingSubtypes } = useAppSelector(state => state.goodReducer);
+	const { managingTypes, managingSubtypes } = useAppSelector(state => state.goodReducer);
 
 	const cloneTypes = _.clone(managingTypes);
 	const currentTypes = cloneTypes.map((cloneType) => {
