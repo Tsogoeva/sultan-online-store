@@ -13,7 +13,7 @@ Online-Store Sultan
 * Flexbox
 * Webpack
 * JSON
-* Deploy GitPages
+* Deploy [GitPages](https://tsogoeva.github.io/sultan-online-store/)
 
 ____________
 
