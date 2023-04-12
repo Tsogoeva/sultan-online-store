@@ -110,7 +110,12 @@ const ProductRemoval: FC = () => {
 							name="barcode"
 							type="text"
 						/>
-						<button className={styles.submit} type="submit">Удалить</button>
+						<button
+							className={styles.submit}
+							type="submit"
+						>
+							Удалить
+						</button>
 					</div>
 				</form>
 				{currentProduct
