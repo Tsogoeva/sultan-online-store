@@ -1,0 +1,15 @@
+.not_found_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.not_found_info {
+		margin: 5px;
+		padding: 10px 8px;
+		text-align: center;
+		font-size: 20px;
+
+		color: rgba(63, 78, 101, 1);
+	}
+}

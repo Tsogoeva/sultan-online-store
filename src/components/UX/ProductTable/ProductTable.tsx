@@ -6,6 +6,7 @@ import { fetchData } from '../../../store/actionCreators';
 
 import ProductBox from '../ProductBox/ProductBox';
 import Pagination from '../Pagination/Pagination';
+import NoSuchProducts from '../NoSuchProducts/NoSuchProducts';
 import { IChecked, IProduct } from '../../../interfaces';
 
 
@@ -53,9 +54,9 @@ const filterByType = (goods: IProduct[], currentType: string) => {
 		return goods;
 	}
 
-	const currentProduct = goods.filter((product) => product.types.includes(currentType));
+	const currentProducts = goods.filter((product) => product.types.includes(currentType));
 
-	return currentProduct.length ? currentProduct : goods;
+	return currentProducts;
 }
 
 const filterBySubtype = (goods: IProduct[], currentSubtype: string) => {
@@ -63,9 +64,9 @@ const filterBySubtype = (goods: IProduct[], currentSubtype: string) => {
 		return goods;
 	}
 
-	const currentProduct = goods.filter((product) => product.subtypes.includes(currentSubtype));
+	const currentProducts = goods.filter((product) => product.subtypes.includes(currentSubtype));
 
-	return currentProduct.length ? currentProduct : goods;
+	return currentProducts;
 }
 
 const getSortingProducts = (goods: IProduct[], typeSorting: string) => {
@@ -117,12 +118,12 @@ const ProductTable: FC = () => {
 	} = useAppSelector(state => state.goodReducer);
 
 	let relatedGoods: IProduct[] = goods;
-	let productsForCureentPage: IProduct[] = goods;
+	let productsForCurrentPage: IProduct[] = goods;
 
 	useEffect(() => {
 		// eslint-disable-next-line @typescript-eslint/no-floating-promises
 		dispatch(fetchData());
-		productsForCureentPage = changePage(relatedGoods, currentPage, perPage);
+		productsForCurrentPage = changePage(relatedGoods, currentPage, perPage);
 	}, [])
 
 	useMemo(() => {
@@ -135,7 +136,7 @@ const ProductTable: FC = () => {
 		relatedGoods = filterBySubtype(relatedGoods, currentSubtype);
 		relatedGoods = getSortingProducts(relatedGoods, currentSorting);
 
-		productsForCureentPage = changePage(relatedGoods, currentPage, perPage);
+		productsForCurrentPage = changePage(relatedGoods, currentPage, perPage);
 	}, [
 		minPrice,
 		maxPrice,
@@ -150,13 +151,14 @@ const ProductTable: FC = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.table}>
-				{productsForCureentPage
-					&& productsForCureentPage
+				{productsForCurrentPage
+					&& productsForCurrentPage
 						.map((product: IProduct) => <ProductBox
 							key={product.id}
 							product={product}
 						/>
 						)}
+				{!productsForCurrentPage.length && <NoSuchProducts />}
 			</div>
 			<Pagination goods={relatedGoods} />
 			<p
