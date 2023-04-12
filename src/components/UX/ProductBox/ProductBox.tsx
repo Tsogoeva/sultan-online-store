@@ -18,7 +18,6 @@ interface IProductBoxProps {
 
 const ProductBox: FC<IProductBoxProps> = ({ product }) => {
 	const dispatch = useAppDispatch();
-	const navigate = useNavigate();
 
 	const {
 		id,
@@ -39,7 +38,6 @@ const ProductBox: FC<IProductBoxProps> = ({ product }) => {
 			count: 1,
 			price: Number(price)
 		}));
-		navigate('/sultan-online-store/cart');
 	}
 
 	return (

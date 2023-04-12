@@ -130,6 +130,17 @@ export const goodSlice = createSlice({
 		},
 
 		removeProductFromGoods: (state, { payload }: PayloadAction<string>) => {
+			if (payload.startsWith('new_')) {
+				const storage = localStorage.getItem('addedGoods');
+				let parsedData: IProduct[];
+
+				if (typeof storage === 'string') {
+					// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+					parsedData = JSON.parse(storage);
+					const updatedStorage = parsedData.filter((currentProduct) => currentProduct.id !== payload);
+					localStorage.setItem('addedGoods', JSON.stringify(updatedStorage));
+				}
+			}
 			state.goods = state.goods.filter((product) => payload !== product.id);
 		}
 

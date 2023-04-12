@@ -22,6 +22,7 @@ const FilterFormByType: FC = () => {
 					<ul>
 						{currentType === type && subtypes.map((subtype) => (
 							<li
+								key={subtype}
 								className={currentSubtype === subtype ? cn(styles.subtype, styles.active) : styles.subtype}
 								onClick={() => dispatch(toggleCurrentSubtype(subtype))}
 							>

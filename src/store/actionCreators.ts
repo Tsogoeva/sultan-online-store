@@ -9,11 +9,11 @@ export const fetchData = createAsyncThunk(
 
 		try {
 			const storage = localStorage.getItem('addedGoods');
-			let parse: string[] = [];
+			let parsedData: string[] = [];
 
 			if (typeof storage === 'string') {
 				// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-				parse = JSON.parse(storage);
+				parsedData = JSON.parse(storage);
 			}
 
 			// cant use json-server on github pages
@@ -21,7 +21,7 @@ export const fetchData = createAsyncThunk(
 			// const responseTypes = await axios.get<ITypes[]>(`http://localhost:5000/types`);
 
 			// use stub instead
-			const responseGoods = [...db.goods, ...parse];
+			const responseGoods = [...db.goods, ...parsedData];
 			const responseTypes = db.types;
 
 			return { goods: responseGoods, types: responseTypes };
