@@ -32,6 +32,12 @@ ____________
 
 ____________
 
+* Shopping Cart
+
+<img src="./readme-assets/Screenshot-sultan-6.png" width="800">
+
+____________
+
 * Admin panel for goods management
 
 <img src="./readme-assets/Screenshot-sultan-4.png" width="800">
