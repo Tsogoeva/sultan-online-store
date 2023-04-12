@@ -6,6 +6,17 @@
 	padding: 0 20px 0 20px;
 	text-align: center;
 
+	@media screen and (max-width: 320px) {
+		max-width: 290px;
+		margin: 0 auto;
+		padding-top: 20px;
+
+		border-left: none;
+		border-right: none;
+		border-top: 1px dashed rgba(63, 78, 101, 0.2);
+		border-bottom: 1px dashed rgba(63, 78, 101, 0.2);
+	}
+
 	.title {
 		font-weight: 500;
 		font-size: 26px;
@@ -24,7 +35,6 @@
 		margin: 20px 0;
 
 		.label {
-			// display: block;
 			font-weight: 500;
 			font-size: 16px;
 			line-height: 150%;
