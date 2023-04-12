@@ -23,5 +23,10 @@
 		color: rgba(63, 78, 101, 1);
 
 		margin: 12px 20px 0;
+
+		@media screen and (max-width: 320px) {
+			margin: 12px 10px 0;
+			font-size: 14px;
+		}
 	}
 }

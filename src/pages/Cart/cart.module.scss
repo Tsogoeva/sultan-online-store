@@ -5,11 +5,20 @@
 		max-width: 1366px;
 		margin: 40px auto;
 
+		@media screen and (max-width: 320px) {
+			max-width: 290px;
+			margin: 30px auto;
+		}
+
 		.path_and_back {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 			flex-wrap: wrap;
+
+			@media screen and (max-width: 320px) {
+				justify-content: center;
+			}
 
 			.path {
 				display: inline-block;
@@ -18,6 +27,10 @@
 				line-height: 120%;
 
 				margin: 3px;
+
+				@media screen and (max-width: 320px) {
+					display: none;
+				}
 			}
 
 			.back {
@@ -44,6 +57,10 @@
 			text-transform: uppercase;
 
 			margin: 20px 3px 50px 3px;
+
+			@media screen and (max-width: 320px) {
+				font-size: 20px;
+			}
 		}
 
 		.product_container {
@@ -66,12 +83,25 @@
 					align-items: center;
 
 					flex-basis: 60%;
+
+					@media screen and (max-width: 320px) {
+						flex-wrap: wrap;
+						flex-basis: auto;
+					}
 					.image {
 						padding: 0 50px;
+
+						@media screen and (max-width: 320px) {
+							margin: 0 auto;
+						}
 					}
 					.text {
 						margin-left: 50px;
 						max-width: 450px;
+
+						@media screen and (max-width: 320px) {
+							margin-left: 2px;
+						}
 						.size {
 							color: rgba(63, 78, 101, 0.5);
 							font-size: 12px;
@@ -91,6 +121,11 @@
 								font-weight: 700;
 								font-size: 30px;
 								line-height: 36px;
+
+								@media screen and (max-width: 320px) {
+									font-weight: 500;
+									font-size: 20px;
+								}
 							}
 							.description {
 								font-weight: 300;
@@ -109,9 +144,21 @@
 					display: flex;
 					justify-content: flex-end;
 
+					@media screen and (max-width: 320px) {
+						max-width: 290px;
+						flex-basis: auto;
+						justify-content: center;
+						align-items: center;
+					}
+
 					.border_manage {
 						border-left: 1px dashed rgba(0, 0, 0, 0.2);
 						padding: 0 45px;
+
+						@media screen and (max-width: 320px) {
+							padding: 0 5px 0 0;
+							border-left: none;
+						}
 					}
 					.sum_product {
 						font-weight: 700;
@@ -122,6 +169,12 @@
 						border-right: 1px dashed rgba(0, 0, 0, 0.2);
 
 						padding: 3px 45px;
+
+						@media screen and (max-width: 320px) {
+							font-size: 16px;
+							padding: 3px 15px;
+							white-space: nowrap;
+						}
 					}
 					.remove_button {
 						margin-left: 45px;
@@ -129,6 +182,10 @@
 
 						background-color: rgba(255, 200, 94, 1);
 						border-radius: 50%;
+
+						@media screen and (max-width: 320px) {
+							margin-left: 15px;
+						}
 					}
 				}
 			}
@@ -161,6 +218,10 @@
 
 			margin: 30px 5px;
 
+			@media screen and (max-width: 320px) {
+				flex-direction: column-reverse;
+			}
+
 			.order_button {
 				width: 192px;
 				height: 59px;
@@ -176,6 +237,10 @@
 				font-weight: 700;
 				font-size: 30px;
 				line-height: 130%;
+
+				@media screen and (max-width: 320px) {
+					margin-bottom: 20px;
+				}
 			}
 		}
 	}
