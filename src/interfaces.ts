@@ -35,6 +35,10 @@ export interface IProduct {
 	price: string
 }
 
+export interface IProductForTestTypeFilter {
+	types: string[]
+}
+
 export interface IChecked {
 	name: string,
 	isChecked: boolean

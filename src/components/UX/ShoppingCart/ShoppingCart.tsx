@@ -18,7 +18,7 @@ const ShoppingCart: FC = () => {
 	}
 
 	return (
-		<div className={styles.container} onClick={clickHandler}>
+		<div data-testid={'shopping-cart-link'} className={styles.container} onClick={clickHandler}>
 			<div className={styles.cart}>
 				<img src={cartImg} alt="Корзина" />
 				<div className={styles.count}>{totalCount}</div>

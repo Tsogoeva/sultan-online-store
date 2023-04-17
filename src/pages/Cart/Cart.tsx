@@ -27,7 +27,7 @@ const Cart: FC = () => {
 	}
 
 	return (
-		<div className={styles.container}>
+		<div data-testid={'shopping-cart-page'} className={styles.container}>
 			<div className={styles.content}>
 				<div className={styles.path_and_back}>
 					<p className={styles.path}>{`Главная / Корзина`}</p>

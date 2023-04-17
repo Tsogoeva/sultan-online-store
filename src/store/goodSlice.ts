@@ -4,7 +4,7 @@ import { ICart, IChecked, IFetchedData, IGoodState, IProduct } from '../interfac
 import { fetchData } from './actionCreators';
 
 
-const initialState: IGoodState = {
+export const initialState: IGoodState = {
 	isLoading: false,
 	error: '',
 	goods: [],
