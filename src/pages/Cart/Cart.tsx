@@ -110,6 +110,7 @@ const Cart: FC = () => {
 
 				<div className={styles.place_order_container}>
 					<button
+						data-testid={'order-btn'}
 						type="button"
 						onClick={submitHandler}
 						className={styles.order_button}

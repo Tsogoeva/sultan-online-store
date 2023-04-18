@@ -1,12 +1,13 @@
 import '../../setupTests'
+import { Provider } from 'react-redux';
+import { MemoryRouter } from 'react-router-dom';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import App from '../components/App/App';
-import { Provider } from 'react-redux';
-import { setupStore } from '../store/reducers';
-import { MemoryRouter } from 'react-router-dom';
-import ProductCatalog from '../pages/ProductCatalog/ProductCatalog';
 import { act } from 'react-dom/test-utils';
+
+import { setupStore } from '../store/reducers';
+import App from '../components/App/App';
+import ProductCatalog from '../pages/ProductCatalog/ProductCatalog';
 
 
 describe('Test Router', () => {
@@ -21,7 +22,7 @@ describe('Test Router', () => {
 		);
 		const shoppingCartLink = screen.getByTestId('shopping-cart-link');
 		await waitFor(() => {
-			userEvent.click(shoppingCartLink)
+			userEvent.click(shoppingCartLink);
 			expect(screen.getByTestId('shopping-cart-page')).toBeInTheDocument();
 		})
 	});

@@ -23,7 +23,11 @@ const ThanksModal: FC = () => {
 	}
 
 	return (
-		<div className={getClassname(styles.background)}>
+		<div
+			data-testid={'modal'}
+			style={modal ? { display: 'block' } : { display: 'none' }}
+			className={getClassname(styles.background)}
+		>
 			<div className={getClassname(styles.modal)}>
 				<img
 					onClick={closeHandler}

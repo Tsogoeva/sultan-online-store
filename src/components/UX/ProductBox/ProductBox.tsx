@@ -93,7 +93,7 @@ const ProductBox: FC<IProductBoxProps> = ({ product }) => {
 					</span>
 					<div className={styles.price_and_button}>
 						<span className={styles.price}>{`${price} ₽`}</span>
-						<div onClick={clickHandler}>
+						<div data-testid={'adding-to-cart'} onClick={clickHandler}>
 							<Button
 								text={'В корзину'}
 								icon={cartIcon}
