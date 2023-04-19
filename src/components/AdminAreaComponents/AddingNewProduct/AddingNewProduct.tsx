@@ -83,16 +83,6 @@ const AddingNewProduct: FC = () => {
 
 		dispatch(addNewProduct(newProduct));
 
-		const storage = localStorage.getItem('addedGoods');
-		let parsedData: IProduct[];
-
-		if (typeof storage === 'string') {
-			// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-			parsedData = JSON.parse(storage);
-			const updatedStorage = [...parsedData, newProduct];
-			localStorage.setItem('addedGoods', JSON.stringify(updatedStorage));
-		}
-
 		setTitle('');
 		setImgUrl('');
 		setTypeSize('');

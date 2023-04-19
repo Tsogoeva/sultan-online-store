@@ -95,6 +95,16 @@ export const goodSlice = createSlice({
 		},
 
 		addNewProduct: (state, { payload }: PayloadAction<IProduct>) => {
+			const storage = localStorage.getItem('addedGoods');
+			let parsedData: IProduct[];
+
+			if (typeof storage === 'string') {
+				// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+				parsedData = JSON.parse(storage);
+				const updatedStorage = [...parsedData, payload];
+				localStorage.setItem('addedGoods', JSON.stringify(updatedStorage));
+			}
+
 			state.goods = [...state.goods, payload];
 		},
 
