@@ -10,6 +10,10 @@ describe('Test Utils', () => {
 		expect(filterByType(goodsForTest, 'Средство для стирки')).toEqual(resultFilterByType);
 	});
 
+	test('Util filterByType, no goods', async () => {
+		expect(filterByType(goodsForTest, 'Неизвестный тип средства')).toEqual([]);
+	});
+
 	test('Util sortProducts', async () => {
 		const sorted = sortProducts(goodsForTest, 'sortByNameAbc');
 		expect(sorted).toEqual(resultSortProducts);
