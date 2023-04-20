@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshots renders render Button component 1`] = `
+<div
+  className="container"
+>
+  <button
+    className="big_size"
+    type="button"
+  >
+    Тест
+    <img
+      alt="Иконка"
+      src="mini-cart-icon.svg"
+    />
+  </button>
+</div>
+`;
+
+exports[`Snapshots renders render NoSuchProducts component 1`] = `
+<div
+  className="not_found_container"
+>
+  <h4
+    className="not_found_info"
+  >
+    Товары по заданным параметрам отсутствуют!
+  </h4>
+</div>
+`;
