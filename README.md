@@ -13,6 +13,7 @@ Online-Store Sultan
 * Flexbox
 * Webpack
 * JSON
+* Jest and React testing library
 * Deploy [GitPages](https://tsogoeva.github.io/sultan-online-store/)
 
 ____________
@@ -48,6 +49,8 @@ ____________
 * `npm ci`
 * `npm run build`
 * `npm run start`
+
+*For test*: `npm run test`
 
 __________
 
