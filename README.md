@@ -41,7 +41,7 @@ ____________
 
 * Version for mobile devices (320px)
 
-<img src="./readme-assets/Screenshot-sultan-7.png" width="800">
+<img src="./readme-assets/Screenshot-sultan-7.png" width="400">
 
 ____________
 
