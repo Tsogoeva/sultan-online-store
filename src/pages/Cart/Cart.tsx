@@ -3,12 +3,8 @@ import { Link } from 'react-router-dom';
 import styles from './cart.module.scss';
 
 import { useAppDispatch, useAppSelector } from '../../hooks';
-import { changeStateModal, removeProductFromCart } from '../../store/goodSlice';
-import GoodsInCartCounter from '../../components/UX/GoodsInCartCounter/GoodsInCartCounter';
-
-import grams from './assets/type-g.svg';
-import milliliters from './assets/type-ml.svg';
-import removeIcon from './assets/remove-icon.svg';
+import { changeStateModal } from '../../store/goodSlice';
+import CardCart from '../../components/UX/CardCart/CardCart';
 
 
 const Cart: FC = () => {
@@ -39,73 +35,15 @@ const Cart: FC = () => {
 				</div>
 				<h2 className={styles.title}>Корзина</h2>
 				<div className={styles.product_container}>
-					{cart.length ? cart.map((cartItem) => {
-						const findedProductInCart = cart
-							.find((content) => content.product.id === cartItem.product.id);
-						const formatedTitle = cartItem.product.title.length > 40
-							? cartItem.product.title.slice(0, 40) + '...'
-							: cartItem.product.title;
-
-						const removeHandler = () => {
-							dispatch(removeProductFromCart(cartItem.product.id));
-						}
-
-						return (
-							<div key={cartItem.product.id} className={styles.product}>
-								<div className={styles.info}>
-									<img
-										className={styles.image}
-										src={cartItem.product.imgUrl}
-										alt="Изображение товара"
-									/>
-									<div className={styles.text}>
-										<div className={styles.size}>
-											<img
-												className={styles.icon}
-												src={cartItem.product.typeSize === 'г' ? grams : milliliters}
-												alt="Тип"
-											/>
-											<span className={styles.count}>{cartItem.product.size}</span>
-											<span>{cartItem.product.typeSize}</span>
-										</div>
-										<div className={styles.description_block}>
-											<h5
-												className={styles.title_product}
-											>
-												{formatedTitle}
-											</h5>
-											<p
-												className={styles.description}
-											>
-												{cartItem.product.description}
-											</p>
-										</div>
-									</div>
-								</div>
-								<div className={styles.managing}>
-									<div className={styles.border_manage}>
-
-										<GoodsInCartCounter
-											product={cartItem.product}
-											alreadyAddedCount={findedProductInCart ? findedProductInCart.count : 0}
-										/>
-									</div>
-									<div className={styles.sum_product}>
-										{`${cartItem.price} ₽`}
-									</div>
-									<button
-										type="button"
-										onClick={removeHandler}
-										className={styles.remove_button}
-									>
-										<img src={removeIcon} alt="Удалить из корзины" />
-									</button>
-								</div>
-							</div>
-						)
-					}) : <div className={styles.empty}>
-						<h3 className={styles.empty_title}>Корзина пуста!</h3>
-					</div>}
+					{cart.length
+						? cart.map((cartItem) => <CardCart
+							key={cartItem.product.id}
+							cartItem={cartItem}
+						/>)
+						:
+						<div className={styles.empty}>
+							<h3 className={styles.empty_title}>Корзина пуста!</h3>
+						</div>}
 				</div>
 
 				<div className={styles.place_order_container}>

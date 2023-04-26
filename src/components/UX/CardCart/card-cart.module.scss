@@ -1,0 +1,141 @@
+.product {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 350px;
+
+	border-top: 1px dashed rgba(0, 0, 0, 0.2);
+	border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+
+	padding: 50px 0;
+
+	@media screen and (max-width: 320px) {
+		flex-wrap: wrap;
+		margin: 0 5px;
+	}
+
+	.info {
+		display: flex;
+		align-items: center;
+		flex-basis: 55%;
+		justify-content: space-between;
+
+		margin-right: 10px;
+
+		@media screen and (max-width: 320px) {
+			flex-direction: column;
+			margin: auto;
+			flex-wrap: wrap;
+			flex-basis: auto;
+		}
+		.image {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			padding: 20px;
+			max-height: 330px;
+			flex: 0 1 30%;
+			overflow: hidden;
+
+			@media screen and (max-width: 320px) {
+				margin: 0 auto;
+			}
+		}
+		.text {
+			margin-left: 50px;
+			max-width: 450px;
+			flex: 1 0 60%;
+
+			@media screen and (max-width: 320px) {
+				margin-left: 2px;
+			}
+			.size {
+				color: rgba(63, 78, 101, 0.5);
+				font-size: 12px;
+				line-height: 130%;
+
+				margin-bottom: 10px;
+
+				.icon {
+					margin-right: 3px;
+				}
+				.count {
+					margin-right: 3px;
+				}
+			}
+			.description_block {
+				.title_product {
+					font-weight: 700;
+					font-size: 30px;
+					line-height: 36px;
+
+					@media screen and (max-width: 320px) {
+						font-weight: 500;
+						font-size: 20px;
+					}
+				}
+				.description {
+					font-weight: 300;
+					font-size: 12px;
+					line-height: 150%;
+					color: rgba(63, 78, 101, 1);
+
+					padding: 10px 0;
+				}
+			}
+		}
+	}
+
+	.managing {
+		flex-basis: 45%;
+		display: flex;
+		justify-content: flex-end;
+
+		@media screen and (max-width: 320px) {
+			max-width: 290px;
+			flex-basis: auto;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.border_manage {
+			border-left: 1px dashed rgba(0, 0, 0, 0.2);
+			padding: 0 45px;
+
+			@media screen and (max-width: 320px) {
+				padding: 0 5px 0 0;
+				border-left: none;
+			}
+		}
+		.sum_product {
+			font-weight: 700;
+			font-size: 30px;
+			line-height: 130%;
+			white-space: nowrap;
+
+			border-left: 1px dashed rgba(0, 0, 0, 0.2);
+			border-right: 1px dashed rgba(0, 0, 0, 0.2);
+
+			padding: 3px 45px;
+
+			@media screen and (max-width: 320px) {
+				font-size: 16px;
+				padding: 3px 15px;
+				white-space: nowrap;
+			}
+		}
+		.remove_button {
+			margin-left: 45px;
+			padding: 20px;
+
+			background-color: rgba(255, 200, 94, 1);
+			border-radius: 50%;
+
+			@media screen and (max-width: 320px) {
+				margin-left: 15px;
+				padding: 15px;
+			}
+		}
+	}
+}
