@@ -1,5 +1,5 @@
-import { createSlice, current, PayloadAction } from '@reduxjs/toolkit';
-import { stat } from 'fs';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+
 import { IPriceRange } from '../components/UX/FilterFormByPrice/FilterFormByPrice';
 import { ICart, IChecked, IFetchedData, IGoodState, IProduct } from '../interfaces';
 import { fetchData } from './actionCreators';
