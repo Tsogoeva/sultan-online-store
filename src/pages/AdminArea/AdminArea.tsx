@@ -1,15 +1,15 @@
 import { FC } from 'react';
 import { useNavigate } from 'react-router';
-import styles from './goods-management.module.scss';
+import styles from './admin-area.module.scss';
 
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { fetchData } from '../../store/actionCreators';
 import AddingNewProduct from '../../components/AdminAreaComponents/AddingNewProduct/AddingNewProduct';
-import ProductDataChange from '../../components/AdminAreaComponents/ProductDataChange/ProductDataChange';
-import ProductRemoval from '../../components/AdminAreaComponents/ProductRemoval/ProductRemoval';
+import ChangingProductData from '../../components/AdminAreaComponents/ChangingProductData/ChangingProductData';
+import RemovalProduct from '../../components/AdminAreaComponents/RemovalProduct/RemovalProduct';
 
 
-const GoodsManagement: FC = () => {
+const AdminArea: FC = () => {
 	const dispatch = useAppDispatch();
 	const navigate = useNavigate();
 
@@ -44,8 +44,8 @@ const GoodsManagement: FC = () => {
 					</div>
 					<div className={styles.panels}>
 						<AddingNewProduct />
-						<ProductDataChange />
-						<ProductRemoval />
+						<ChangingProductData />
+						<RemovalProduct />
 					</div>
 				</div>
 			</div>
@@ -53,4 +53,4 @@ const GoodsManagement: FC = () => {
 	)
 }
 
-export default GoodsManagement;
+export default AdminArea;

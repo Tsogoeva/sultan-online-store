@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import styles from './product-not-found.module.scss';
+import styles from './not-found-product.module.scss';
 
 
-const ProductNotFound: FC = () => {
+const NotFoundProduct: FC = () => {
 	return (
 		<div className={styles.not_found_container}>
 			<h4
@@ -14,4 +14,4 @@ const ProductNotFound: FC = () => {
 	)
 }
 
-export default ProductNotFound;
+export default NotFoundProduct;

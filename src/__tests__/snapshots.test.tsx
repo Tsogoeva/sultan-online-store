@@ -1,7 +1,7 @@
 import renderer from 'react-test-renderer';
 import Button from '../components/UX/Button/Button';
 import NoSuchProducts from '../components/UX/NoSuchProducts/NoSuchProducts';
-import cartIcon from '../components/UX/ButtonToCartFromProduct/assets/mini-cart-icon.svg';
+import cartIcon from '../components/UX/FromCardToCartButton/assets/mini-cart-icon.svg';
 
 describe('Snapshots renders', () => {
 

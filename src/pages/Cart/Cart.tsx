@@ -4,7 +4,7 @@ import styles from './cart.module.scss';
 
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { changeStateModal, removeProductFromCart } from '../../store/goodSlice';
-import ManagingQuantityInCart from '../../components/UX/ManagingQuantityInCart/ManagingQuantityInCart';
+import GoodsInCartCounter from '../../components/UX/GoodsInCartCounter/GoodsInCartCounter';
 
 import grams from './assets/type-g.svg';
 import milliliters from './assets/type-ml.svg';
@@ -85,7 +85,7 @@ const Cart: FC = () => {
 								<div className={styles.managing}>
 									<div className={styles.border_manage}>
 
-										<ManagingQuantityInCart
+										<GoodsInCartCounter
 											product={cartItem.product}
 											alreadyAddedCount={findedProductInCart ? findedProductInCart.count : 0}
 										/>

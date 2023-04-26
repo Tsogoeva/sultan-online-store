@@ -1,9 +1,9 @@
 import { FC, useEffect, useState } from 'react';
-import styles from './product-removal.module.scss';
+import styles from './removal-product.module.scss';
 
 import { useAppDispatch, useAppSelector } from '../../../hooks';
 import { removeProductFromGoods } from '../../../store/goodSlice';
-import ProductNotFound from '../ProductNotFound/ProductNotFound';
+import NotFoundProduct from '../NotFoundProduct/NotFoundProduct';
 import { IProduct } from '../../../interfaces';
 
 interface IConfirmationProps {
@@ -11,7 +11,7 @@ interface IConfirmationProps {
 	cancelClick: () => void
 }
 
-const ConfirmationProductRemoval: FC<IConfirmationProps> = ({ removeClick, cancelClick }) => {
+const ConfirmationRemovalProduct: FC<IConfirmationProps> = ({ removeClick, cancelClick }) => {
 
 	const confirmClick = () => {
 		removeClick(true);
@@ -41,7 +41,7 @@ const ConfirmationProductRemoval: FC<IConfirmationProps> = ({ removeClick, cance
 }
 
 
-const ProductRemoval: FC = () => {
+const RemovalProduct: FC = () => {
 	const dispatch = useAppDispatch();
 	const { goods } = useAppSelector(state => state.goodReducer);
 	const [searchedProduct, setSearchedProduct] = useState('');
@@ -119,17 +119,17 @@ const ProductRemoval: FC = () => {
 				</form>
 				{currentProduct
 					&& confirmRemovalProduct
-					&& <ConfirmationProductRemoval
+					&& <ConfirmationRemovalProduct
 						removeClick={setRemoveProduct}
 						cancelClick={cancelRemoval}
 					/>
 				}
 				{currentProductNotFound
-					&& <ProductNotFound />
+					&& <NotFoundProduct />
 				}
 			</div>
 		</div>
 	)
 }
 
-export default ProductRemoval;
+export default RemovalProduct;

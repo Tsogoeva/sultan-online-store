@@ -1,4 +1,5 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, current, PayloadAction } from '@reduxjs/toolkit';
+import { stat } from 'fs';
 import { IPriceRange } from '../components/UX/FilterFormByPrice/FilterFormByPrice';
 import { ICart, IChecked, IFetchedData, IGoodState, IProduct } from '../interfaces';
 import { fetchData } from './actionCreators';
@@ -77,9 +78,17 @@ export const goodSlice = createSlice({
 			state.form.currentSorting = payload;
 		},
 
+		addProductToCart: (state, { payload }: PayloadAction<ICart>) => {
+			state.cart.push(payload);
+		},
+
 		changeProductToCartCount: (state, { payload }: PayloadAction<ICart>) => {
-			state.cart = state.cart.filter((current) => current.product.id !== payload.product.id);
-			state.cart = [payload, ...state.cart];
+			state.cart = state.cart.map((current) => {
+				if (current.product.id === payload.product.id) {
+					return payload;
+				}
+				return current;
+			});
 		},
 
 		removeProductFromCart: (state, { payload }: PayloadAction<string>) => {
@@ -191,6 +200,7 @@ export const {
 	toggleCurrentType,
 	toggleCurrentSubtype,
 	setCurrentSorting,
+	addProductToCart,
 	changeProductToCartCount,
 	removeProductFromCart,
 	changeStateModal,

@@ -1,10 +1,10 @@
 import { FC, useEffect, useMemo } from 'react';
-import styles from './product-table.module.scss';
+import styles from './table-product.module.scss';
 
 import { useAppDispatch, useAppSelector } from '../../../hooks';
 import { fetchData } from '../../../store/actionCreators';
 
-import ProductBox from '../ProductBox/ProductBox';
+import CardProduct from '../CardProduct/CardProduct';
 import Pagination from '../Pagination/Pagination';
 import NoSuchProducts from '../NoSuchProducts/NoSuchProducts';
 import { IProduct } from '../../../interfaces';
@@ -18,7 +18,7 @@ import {
 } from './utils';
 
 
-const ProductTable: FC = () => {
+const TableProduct: FC = () => {
 	const dispatch = useAppDispatch()
 	const {
 		goods,
@@ -71,7 +71,7 @@ const ProductTable: FC = () => {
 			<div className={styles.table}>
 				{productsForCurrentPage
 					&& productsForCurrentPage
-						.map((product: IProduct) => <ProductBox
+						.map((product: IProduct) => <CardProduct
 							key={product.id}
 							product={product}
 						/>
@@ -88,4 +88,4 @@ const ProductTable: FC = () => {
 	)
 }
 
-export default ProductTable;
+export default TableProduct;

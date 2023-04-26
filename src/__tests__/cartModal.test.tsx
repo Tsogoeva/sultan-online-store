@@ -8,7 +8,7 @@ import { act } from 'react-dom/test-utils';
 import { setupStore } from '../store/reducers';
 import Cart from '../pages/Cart/Cart';
 import ThanksModal from '../components/UX/ThanksModal/ThanksModal';
-import ProductCatalog from '../pages/ProductCatalog/ProductCatalog';
+import CatalogProduct from '../pages/CatalogProduct/CatalogProduct';
 import Header from '../components/Header/Header';
 
 
@@ -39,7 +39,7 @@ describe('Test Modal', () => {
 				<MemoryRouter>
 					<Header />
 					<ThanksModal />
-					<ProductCatalog />
+					<CatalogProduct />
 					<Cart />
 				</MemoryRouter>
 			</Provider>

@@ -4,8 +4,8 @@ import styles from './product.module.scss';
 import { Link } from 'react-router-dom';
 import { IProduct } from '../../interfaces';
 import { useAppSelector } from '../../hooks';
-import ManagingQuantityInCart from '../../components/UX/ManagingQuantityInCart/ManagingQuantityInCart';
-import ButtonToCartFromProduct from '../../components/UX/ButtonToCartFromProduct/ButtonToCartFromProduct';
+import GoodsInCartCounter from '../../components/UX/GoodsInCartCounter/GoodsInCartCounter';
+import FromCardToCartButton from '../../components/UX/FromCardToCartButton/FromCardToCartButton';
 
 import grams from './assets/type-g.svg';
 import milliliters from './assets/type-ml.svg';
@@ -64,13 +64,13 @@ const Product: FC<IProductProp> = ({ product }) => {
 						</div>
 						<div className={styles.price_and_cart}>
 							<span className={styles.price}>{`${price} ₽`}</span>
-							<ManagingQuantityInCart
+							<GoodsInCartCounter
 								product={product}
 								alreadyAddedCount={findedProductInCart
 									? findedProductInCart.count
 									: 0}
 							/>
-							<ButtonToCartFromProduct />
+							<FromCardToCartButton />
 						</div>
 						<div className={styles.extra_options}>
 							<div className={styles.share}>

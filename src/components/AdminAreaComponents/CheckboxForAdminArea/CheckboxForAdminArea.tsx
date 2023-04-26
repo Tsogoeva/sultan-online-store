@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import styles from './checkbox-for-management.module.scss';
+import styles from './checkbox-for-admin-area.module.scss';
 
 
 export interface ICheckboxProps {
@@ -8,7 +8,7 @@ export interface ICheckboxProps {
 	onClick: (type: string, isChecked: boolean) => void
 }
 
-const CheckboxForManagement: FC<ICheckboxProps> = ({ name, isChecked, onClick }) => {
+const CheckboxForAdminArea: FC<ICheckboxProps> = ({ name, isChecked, onClick }) => {
 
 	const clickHandler = () => {
 		onClick(name, isChecked);
@@ -24,4 +24,4 @@ const CheckboxForManagement: FC<ICheckboxProps> = ({ name, isChecked, onClick })
 	);
 }
 
-export default CheckboxForManagement;
+export default CheckboxForAdminArea;

@@ -1,16 +1,16 @@
 import { FC } from 'react';
-import styles from './managing-quantity-in.cart.module.scss';
+import styles from './goods-in-cart-counter.module.scss';
 
 import { useAppDispatch } from '../../../hooks';
 import { changeProductToCartCount, removeProductFromCart } from '../../../store/goodSlice';
 import { IProduct } from '../../../interfaces';
 
-interface IManagingQuantityInCartProps {
+interface ICounterProps {
 	product: IProduct,
 	alreadyAddedCount: number
 }
 
-const ManagingQuantityInCart: FC<IManagingQuantityInCartProps> = ({ product, alreadyAddedCount }) => {
+const GoodsInCartCounter: FC<ICounterProps> = ({ product, alreadyAddedCount }) => {
 	const dispatch = useAppDispatch();
 	let count = alreadyAddedCount;
 
@@ -48,4 +48,4 @@ const ManagingQuantityInCart: FC<IManagingQuantityInCartProps> = ({ product, alr
 	)
 }
 
-export default ManagingQuantityInCart;
+export default GoodsInCartCounter;

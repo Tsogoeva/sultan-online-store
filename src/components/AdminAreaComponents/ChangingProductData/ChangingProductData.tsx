@@ -1,11 +1,11 @@
 import { FC, useEffect, useState } from 'react';
 import _ from 'lodash';
-import styles from './product-data-change.module.scss';
+import styles from './changing-product-data.module.scss';
 
 import { useAppDispatch, useAppSelector } from '../../../hooks';
 import { addModifiedProductToGoods } from '../../../store/goodSlice';
-import CheckboxForManagement from '../CheckboxForManagement/CheckboxForManagement';
-import ProductNotFound from '../ProductNotFound/ProductNotFound';
+import CheckboxForAdminArea from '../CheckboxForAdminArea/CheckboxForAdminArea';
+import NotFoundProduct from '../NotFoundProduct/NotFoundProduct';
 import { IChecked, IProduct } from '../../../interfaces';
 
 
@@ -151,7 +151,7 @@ const EditProductForm: FC<IEditProductProp> = ({ product, onSubmit }) => {
 
 			<div className={styles.checkbox_container}>
 				<span className={styles.checkbox_title}>{'Тип товара: '}</span>
-				{checkedTypes.map(({ name, isChecked }) => <CheckboxForManagement
+				{checkedTypes.map(({ name, isChecked }) => <CheckboxForAdminArea
 					key={name}
 					name={name}
 					isChecked={isChecked}
@@ -162,7 +162,7 @@ const EditProductForm: FC<IEditProductProp> = ({ product, onSubmit }) => {
 
 			<div className={styles.checkbox_container}>
 				<span className={styles.checkbox_title}>{'Подтип товара: '}</span>
-				{checkedSubtypes.map(({ name, isChecked }) => <CheckboxForManagement
+				{checkedSubtypes.map(({ name, isChecked }) => <CheckboxForAdminArea
 					key={name}
 					name={name}
 					isChecked={isChecked}
@@ -372,7 +372,7 @@ const ChangeProductDetails: FC = () => {
 			</div>
 
 			{currentProduct && shouldShowEditForm && <EditProductForm product={currentProduct} onSubmit={() => setShouldShowEditForm(false)} />}
-			{currentProductNotFound && <ProductNotFound />}
+			{currentProductNotFound && <NotFoundProduct />}
 
 		</div>
 	)

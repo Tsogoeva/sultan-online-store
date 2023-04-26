@@ -1,5 +1,5 @@
 import { ChangeEvent, FC, FormEvent, useState } from 'react';
-import styles from './input-filter-by-manufacturer.module.scss';
+import styles from './filter-by-manufacturer-input.module.scss';
 
 import { useAppDispatch } from '../../../hooks';
 import { runFilterByManufacturerForInput } from '../../../store/goodSlice';
@@ -9,7 +9,7 @@ interface IInputProps {
 	icon: string;
 }
 
-const InputFilterByManufacturer: FC<IInputProps> = ({ placeholder, icon }) => {
+const FilterByManufacturerInput: FC<IInputProps> = ({ placeholder, icon }) => {
 	const [name, setName] = useState<string>('');
 	const dispatch = useAppDispatch();
 
@@ -43,4 +43,4 @@ const InputFilterByManufacturer: FC<IInputProps> = ({ placeholder, icon }) => {
 	)
 }
 
-export default InputFilterByManufacturer;
+export default FilterByManufacturerInput;

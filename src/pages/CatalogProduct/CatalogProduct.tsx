@@ -1,14 +1,14 @@
 import { FC } from 'react';
 import { useNavigate } from 'react-router';
-import styles from './product-catalog.module.scss';
+import styles from './catalog-product.module.scss';
 
 import SortingProducts from '../../components/UX/SortingProducts/SortingProducts';
 import FilterTypeProductHeader from '../../components/UX/FilterTypeProductHeader/FilterTypeProductHeader';
-import CatalogFilter from '../../components/UX/CatalogFilter/CatalogFilter';
-import ProductTable from '../../components/UX/ProductTable/ProductTable';
+import FilterCatalog from '../../components/UX/FilterCatalog/FilterCatalog';
+import TableProduct from '../../components/UX/TableProduct/TableProduct';
 
 
-const ProductCatalog: FC = () => {
+const CatalogProduct: FC = () => {
 	const navigate = useNavigate()
 
 	const clickHandler = () => {
@@ -47,8 +47,8 @@ const ProductCatalog: FC = () => {
 
 				</div>
 				<div className={styles.container_filtering_and_table}>
-					<CatalogFilter />
-					<ProductTable />
+					<FilterCatalog />
+					<TableProduct />
 				</div>
 
 			</div>
@@ -56,4 +56,4 @@ const ProductCatalog: FC = () => {
 	)
 }
 
-export default ProductCatalog;
+export default CatalogProduct;

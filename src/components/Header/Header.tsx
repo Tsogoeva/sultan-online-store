@@ -8,7 +8,7 @@ import Button from '../UX/Button/Button';
 import Input from '../UX/Input/Input';
 import ShortInfo from '../UI/ShortInfo/ShortInfo';
 
-import ShoppingCart from '../UX/ShoppingCart/ShoppingCart';
+import PaneCart from '../UX/PaneCart/PaneCart';
 import MiniShoppingCart from '../UX/MiniShoppingCart/MiniShoppingCart';
 
 import iconAddress from './assets/icon-address.svg';
@@ -76,7 +76,7 @@ const Header: FC = () => {
 								<Button text={'Прайс-лист'} icon={buttonDownloadIcon} size={'big'} />
 
 							</div>
-							<ShoppingCart />
+							<PaneCart />
 						</div>
 						<div className={styles.container_options_mobile}>
 							<div className={styles.flex_mobile}>

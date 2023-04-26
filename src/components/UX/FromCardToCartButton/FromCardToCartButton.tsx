@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './button-to-cart-from-product.module.scss';
+import styles from './from-card-to-cart-button.module.scss';
 
 import cartIcon from './assets/mini-cart-icon.svg';
 
 
-const ButtonToCartFromProduct: FC = () => {
+const FromCardToCartButton: FC = () => {
 
 	return (
 		<div className={styles.container}>
@@ -20,4 +20,4 @@ const ButtonToCartFromProduct: FC = () => {
 	)
 }
 
-export default ButtonToCartFromProduct;
+export default FromCardToCartButton;

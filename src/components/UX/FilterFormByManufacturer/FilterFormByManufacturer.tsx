@@ -5,7 +5,7 @@ import { useAppDispatch, useAppSelector } from '../../../hooks';
 
 import icon from './assets/search-icon.svg';
 import { runFilterByManufacturer } from '../../../store/goodSlice';
-import InputFilterByManufacturer from '../InputFilterByManufacturer/InputFilterByManufacturer';
+import FilterByManufacturerInput from '../FilterByManufacturerInput/FilterByManufacturerInput';
 
 
 export interface ICheckboxProps {
@@ -61,7 +61,7 @@ const FilterFormByManufacturer: FC = () => {
 	return (
 		<div className={styles.container}>
 			<h4 className={styles.title}>Производитель</h4>
-			<InputFilterByManufacturer placeholder={'Поиск...'} icon={icon} />
+			<FilterByManufacturerInput placeholder={'Поиск...'} icon={icon} />
 			<form className={styles.form}>
 				{shownManufacturers.map(({ name, isChecked }) => {
 					return (

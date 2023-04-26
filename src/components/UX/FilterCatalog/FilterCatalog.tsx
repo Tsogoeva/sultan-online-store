@@ -1,12 +1,13 @@
 import { FC, useState } from 'react';
+import styles from './filter-catalog.module.scss';
+
 import FilterFormByPrice from '../FilterFormByPrice/FilterFormByPrice';
 import FilterFormByManufacturer from '../FilterFormByManufacturer/FilterFormByManufacturer';
-import styles from './catalog-filter.module.scss';
 import FilterFormByType from '../FilterFormByType/FilterFormByType';
 import SortingProducts from '../SortingProducts/SortingProducts';
 
 
-const CatalogFilter: FC = () => {
+const FilterCatalog: FC = () => {
 	const [showOptions, setShowOptions] = useState(false);
 
 	return (
@@ -32,4 +33,4 @@ const CatalogFilter: FC = () => {
 	)
 }
 
-export default CatalogFilter;
+export default FilterCatalog;

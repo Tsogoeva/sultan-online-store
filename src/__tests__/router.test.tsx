@@ -7,7 +7,7 @@ import { act } from 'react-dom/test-utils';
 
 import { setupStore } from '../store/reducers';
 import App from '../components/App/App';
-import ProductCatalog from '../pages/ProductCatalog/ProductCatalog';
+import CatalogProduct from '../pages/CatalogProduct/CatalogProduct';
 
 
 describe('Test Router', () => {
@@ -33,7 +33,7 @@ describe('Test Router', () => {
 		await act(async () => render(
 			<Provider store={store}>
 				<MemoryRouter initialEntries={["/unknown-path"]}>
-					<ProductCatalog />
+					<CatalogProduct />
 				</MemoryRouter>
 			</Provider>
 

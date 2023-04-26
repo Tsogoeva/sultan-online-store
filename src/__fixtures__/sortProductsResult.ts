@@ -1,6 +1,6 @@
 import { IProduct } from '../interfaces';
 
-const resultSortProducts: IProduct[] = [
+const sortProductsResult: IProduct[] = [
 	{
 		id: '434',
 		imgUrl: 'image3',
@@ -45,4 +45,4 @@ const resultSortProducts: IProduct[] = [
 	}
 ];
 
-export default resultSortProducts;
+export default sortProductsResult;

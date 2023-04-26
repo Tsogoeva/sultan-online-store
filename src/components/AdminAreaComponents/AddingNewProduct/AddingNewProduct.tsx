@@ -4,7 +4,7 @@ import styles from './adding-new-product.module.scss';
 
 import { useAppDispatch, useAppSelector } from '../../../hooks';
 import { addNewProduct } from '../../../store/goodSlice';
-import CheckboxForManagement from '../CheckboxForManagement/CheckboxForManagement';
+import CheckboxForAdminArea from '../CheckboxForAdminArea/CheckboxForAdminArea';
 import { IChecked, IProduct } from '../../../interfaces';
 
 
@@ -95,7 +95,7 @@ const AddingNewProduct: FC = () => {
 	}
 
 	const renderTypeCheckBox = () => checkedTypes
-		.map(({ name, isChecked }) => <CheckboxForManagement
+		.map(({ name, isChecked }) => <CheckboxForAdminArea
 			key={name}
 			name={name}
 			isChecked={isChecked}
@@ -104,7 +104,7 @@ const AddingNewProduct: FC = () => {
 		);
 
 	const renderSubtypeCheckBox = () => checkedSubtypes
-		.map(({ name, isChecked }) => <CheckboxForManagement
+		.map(({ name, isChecked }) => <CheckboxForAdminArea
 			key={name}
 			name={name}
 			isChecked={isChecked}

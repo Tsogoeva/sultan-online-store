@@ -3,9 +3,9 @@ import { Route, Routes } from 'react-router-dom';
 import { useAppSelector } from '../hooks';
 
 import Cart from '../pages/Cart/Cart';
-import GoodsManagement from '../pages/GoodsManagement/GoodsManagement';
+import AdminArea from '../pages/AdminArea/AdminArea';
 import Product from '../pages/Product/Product';
-import ProductCatalog from '../pages/ProductCatalog/ProductCatalog';
+import CatalogProduct from '../pages/CatalogProduct/CatalogProduct';
 
 
 const AppRouter: FC = () => {
@@ -13,7 +13,7 @@ const AppRouter: FC = () => {
 
 	return (
 		<Routes>
-			<Route path="/" element={<ProductCatalog />} />
+			<Route path="/" element={<CatalogProduct />} />
 			{goods.map((product) => <Route
 				key={product.id}
 				path={`/sultan-online-store/product/${product.id}`}
@@ -31,10 +31,10 @@ const AppRouter: FC = () => {
 			<Route
 				path="/sultan-online-store/management"
 				element={
-					<GoodsManagement />
+					<AdminArea />
 				}
 			/>
-			<Route path="*" element={<ProductCatalog />} />
+			<Route path="*" element={<CatalogProduct />} />
 		</Routes>
 	)
 }

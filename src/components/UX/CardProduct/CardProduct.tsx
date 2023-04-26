@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './product-box.module.scss';
+import styles from './card-product.module.scss';
 
-import { useAppDispatch } from '../../../hooks';
-import { changeProductToCartCount } from '../../../store/goodSlice';
+import { useAppDispatch, useAppSelector } from '../../../hooks';
+import { addProductToCart, changeProductToCartCount } from '../../../store/goodSlice';
 import Button from '../Button/Button';
 import { IProduct } from '../../../interfaces';
 
@@ -11,12 +11,13 @@ import grams from './assets/type-g.svg';
 import milliliters from './assets/type-ml.svg';
 import cartIcon from './assets/cart-icon.svg';
 
-interface IProductBoxProps {
+interface ICardProps {
 	product: IProduct,
 }
 
-const ProductBox: FC<IProductBoxProps> = ({ product }) => {
+const CardProduct: FC<ICardProps> = ({ product }) => {
 	const dispatch = useAppDispatch();
+	const { cart } = useAppSelector(state => state.goodReducer);
 
 	const {
 		id,
@@ -31,12 +32,23 @@ const ProductBox: FC<IProductBoxProps> = ({ product }) => {
 	} = product;
 
 	const clickHandler = () => {
+		const foundProductInCart = cart
+			.find((content) => content.product.id === product.id);
 
-		dispatch(changeProductToCartCount({
-			product,
-			count: 1,
-			price: Number(price)
-		}));
+		if (foundProductInCart) {
+			const count = foundProductInCart.count + 1;
+			dispatch(changeProductToCartCount({
+				product,
+				count: count,
+				price: Number(price) * count
+			}));
+		} else {
+			dispatch(addProductToCart({
+				product,
+				count: 1,
+				price: Number(price)
+			}));
+		}
 	}
 
 	return (
@@ -108,4 +120,4 @@ const ProductBox: FC<IProductBoxProps> = ({ product }) => {
 	)
 }
 
-export default ProductBox;
+export default CardProduct;

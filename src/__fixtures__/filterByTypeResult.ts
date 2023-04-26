@@ -1,20 +1,6 @@
 import { IProduct } from '../interfaces';
 
-const goodsForTest: IProduct[] = [
-	{
-		id: '456',
-		imgUrl: 'image1',
-		title: 'C',
-		types: ["Средство для мытья посуды"],
-		subtypes: ["Гель"],
-		typeSize: 'мл',
-		size: '450',
-		barcode: '457567568678',
-		manufacturer: 'BioMio',
-		brand: 'BioMio',
-		description: 'Lorem ipsum, dolor sit amet consectetur',
-		price: '200'
-	},
+const filterByTypeResult: IProduct[] = [
 	{
 		id: '467',
 		imgUrl: 'image2',
@@ -45,4 +31,4 @@ const goodsForTest: IProduct[] = [
 	}
 ];
 
-export default goodsForTest;
+export default filterByTypeResult;
