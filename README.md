@@ -39,6 +39,12 @@ ____________
 
 ____________
 
+* Version for mobile devices (320px)
+
+<img src="./readme-assets/Screenshot-sultan-7.png" width="800">
+
+____________
+
 * Admin panel for goods management
 
 <img src="./readme-assets/Screenshot-sultan-4.png" width="800">
