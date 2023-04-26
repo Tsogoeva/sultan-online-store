@@ -33,7 +33,7 @@ const CardProduct: FC<ICardProps> = ({ product }) => {
 
 	const clickHandler = () => {
 		const foundProductInCart = cart
-			.find((content) => content.product.id === product.id);
+			.find((current) => current.product.id === product.id);
 
 		if (foundProductInCart) {
 			const count = foundProductInCart.count + 1;

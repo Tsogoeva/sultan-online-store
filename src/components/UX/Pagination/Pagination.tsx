@@ -13,7 +13,7 @@ interface IPaginationProps {
 
 const Pagination: FC<IPaginationProps> = ({ goods }) => {
 	const dispatch = useAppDispatch();
-	const { pagination: { currentPage, perPage } } = useAppSelector(state => state.goodReducer)
+	const { pagination: { currentPage, perPage } } = useAppSelector(state => state.goodReducer);
 
 	const totalCount = goods.length;
 	const totalPages = Math.ceil(totalCount / perPage);
