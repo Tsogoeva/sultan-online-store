@@ -4,7 +4,7 @@ import styles from './table-product.module.scss';
 import { useAppDispatch, useAppSelector } from '../../../hooks';
 import { fetchData } from '../../../store/actionCreators';
 
-import CardProduct from '../CardProduct/CardProduct';
+import CardCatalog from '../CardCatalog/CardCatalog';
 import Pagination from '../Pagination/Pagination';
 import NoSuchProducts from '../NoSuchProducts/NoSuchProducts';
 import { IProduct } from '../../../interfaces';
@@ -34,7 +34,8 @@ const TableProduct: FC = () => {
 		pagination: {
 			currentPage,
 			perPage,
-		}
+		},
+		cart
 	} = useAppSelector(state => state.goodReducer);
 
 	let relatedGoods: IProduct[] = goods;
@@ -63,7 +64,8 @@ const TableProduct: FC = () => {
 		currentPage,
 		currentType,
 		currentSubtype,
-		currentSorting
+		currentSorting,
+		cart
 	])
 
 	return (
@@ -71,7 +73,7 @@ const TableProduct: FC = () => {
 			<div className={styles.table}>
 				{productsForCurrentPage
 					&& productsForCurrentPage
-						.map((product: IProduct) => <CardProduct
+						.map((product: IProduct) => <CardCatalog
 							key={product.id}
 							product={product}
 						/>
