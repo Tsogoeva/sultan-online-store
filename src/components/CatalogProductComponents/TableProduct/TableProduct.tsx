@@ -6,7 +6,7 @@ import { fetchData } from '../../../store/actionCreators';
 
 import CardCatalog from '../CardCatalog/CardCatalog';
 import Pagination from '../Pagination/Pagination';
-import NoSuchProducts from '../NoSuchProducts/NoSuchProducts';
+import NoSuchProducts from '../../UX/NoSuchProducts/NoSuchProducts';
 import { IProduct } from '../../../interfaces';
 import {
 	changePage,

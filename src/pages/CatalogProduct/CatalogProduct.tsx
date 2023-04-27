@@ -2,10 +2,10 @@ import { FC } from 'react';
 import { useNavigate } from 'react-router';
 import styles from './catalog-product.module.scss';
 
-import SortingProducts from '../../components/UX/SortingProducts/SortingProducts';
-import FilterTypeProductHeader from '../../components/UX/FilterTypeProductHeader/FilterTypeProductHeader';
-import FilterCatalog from '../../components/UX/FilterCatalog/FilterCatalog';
-import TableProduct from '../../components/UX/TableProduct/TableProduct';
+import SortingProducts from '../../components/CatalogProductComponents/SortingProducts/SortingProducts';
+import FilterTypeProductHeader from '../../components/CatalogProductComponents/FilterTypeProductHeader/FilterTypeProductHeader';
+import FilterCatalog from '../../components/CatalogProductComponents/FilterCatalog/FilterCatalog';
+import TableProduct from '../../components/CatalogProductComponents/TableProduct/TableProduct';
 
 
 const CatalogProduct: FC = () => {

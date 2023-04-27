@@ -1,5 +1,5 @@
 import '../../setupTests';
-import { filterByType, sortProducts } from '../components/UX/TableProduct/utils';
+import { filterByType, sortProducts } from '../components/CatalogProductComponents/TableProduct/utils';
 import testGoods from '../__fixtures__/testGoods';
 import filterByTypeResult from '../__fixtures__/filterByTypeResult';
 import sortProductsResult from '../__fixtures__/sortProductsResult';

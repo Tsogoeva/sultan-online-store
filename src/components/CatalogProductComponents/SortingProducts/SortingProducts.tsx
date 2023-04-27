@@ -1,7 +1,8 @@
 import { ChangeEvent, FC, useState } from 'react';
+import styles from './sorting-products.module.scss';
+
 import { useAppDispatch } from '../../../hooks';
 import { setCurrentSorting } from '../../../store/goodSlice';
-import styles from './sorting-products.module.scss';
 
 
 const SortingProducts: FC = () => {

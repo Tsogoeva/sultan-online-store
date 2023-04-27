@@ -1,7 +1,13 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { IPriceRange } from '../components/UX/FilterFormByPrice/FilterFormByPrice';
-import { ICart, IChecked, IFetchedData, IGoodState, IProduct } from '../interfaces';
+import {
+	ICart,
+	IChecked,
+	IFetchedData,
+	IGoodState,
+	IPriceRange,
+	IProduct
+} from '../interfaces';
 import { fetchData } from './actionCreators';
 
 

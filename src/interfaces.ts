@@ -69,4 +69,7 @@ export interface ICart {
 	price: number
 }
 
-
+export interface IPriceRange {
+	min: number;
+	max: number;
+}

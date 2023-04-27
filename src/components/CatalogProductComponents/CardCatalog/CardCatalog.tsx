@@ -4,7 +4,7 @@ import styles from './card-catalog.module.scss';
 
 import { useAppDispatch, useAppSelector } from '../../../hooks';
 import { addProductToCart, changeProductToCartCount } from '../../../store/goodSlice';
-import Button from '../Button/Button';
+import Button from '../../UX/Button/Button';
 import { IProduct } from '../../../interfaces';
 
 import grams from './assets/type-g.svg';

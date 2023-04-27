@@ -4,11 +4,8 @@ import styles from './filter-form-by-price.module.scss';
 
 import { useAppDispatch } from '../../../hooks';
 import { runFilterByPrice } from '../../../store/goodSlice';
+import { IPriceRange } from '../../../interfaces';
 
-export interface IPriceRange {
-	min: number;
-	max: number;
-}
 
 const defaultValues = { min: 0, max: 10000 };
 
