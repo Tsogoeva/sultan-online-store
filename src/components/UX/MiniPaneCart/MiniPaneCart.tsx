@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import styles from './mini-shopping-cart.module.scss';
+import styles from './mini-pane-cart.module.scss';
 
 import { useAppSelector } from '../../../hooks';
 import { useNavigate } from 'react-router';
@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router';
 import cartImg from './assets/mini-shopping-cart-icon.svg';
 
 
-const MiniShoppingCart: FC = () => {
+const MiniPaneCart: FC = () => {
 	const navigate = useNavigate();
 	const { cart } = useAppSelector(state => state.goodReducer);
 	const totalCount = cart.reduce((sum, productData) => sum + productData.count, 0);
@@ -26,4 +26,4 @@ const MiniShoppingCart: FC = () => {
 	)
 }
 
-export default MiniShoppingCart;
+export default MiniPaneCart;

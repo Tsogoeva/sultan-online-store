@@ -9,7 +9,7 @@ import Input from '../UX/Input/Input';
 import ShortInfo from '../UI/ShortInfo/ShortInfo';
 
 import PaneCart from '../UX/PaneCart/PaneCart';
-import MiniShoppingCart from '../UX/MiniShoppingCart/MiniShoppingCart';
+import MiniPaneCart from '../UX/MiniPaneCart/MiniPaneCart';
 
 import iconAddress from './assets/icon-address.svg';
 import iconImail from './assets/icon-email.svg';
@@ -50,7 +50,7 @@ const Header: FC = () => {
 								<div className={styles.mini_logo}>
 									<LogoMini theme={'dark'} />
 								</div>
-								<MiniShoppingCart />
+								<MiniPaneCart />
 							</div>
 							<div className={styles.navBar}>
 								<span className={styles.navBar_item}>О компании</span>
