@@ -42,9 +42,11 @@ const TableProduct: FC = () => {
 	let productsForCurrentPage: IProduct[] = goods;
 
 	useEffect(() => {
-		// eslint-disable-next-line @typescript-eslint/no-floating-promises
-		dispatch(fetchData());
-		productsForCurrentPage = changePage(relatedGoods, currentPage, perPage);
+		if (!goods.length) {
+			// eslint-disable-next-line @typescript-eslint/no-floating-promises
+			dispatch(fetchData());
+			productsForCurrentPage = changePage(relatedGoods, currentPage, perPage);
+		}
 	}, [])
 
 	useMemo(() => {
